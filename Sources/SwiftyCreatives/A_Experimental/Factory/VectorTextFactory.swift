@@ -12,12 +12,16 @@ import Metal
 
 public extension FunctionBase {
     func char(_ character: Character, factory: VectorTextFactory, primitiveType: MTLPrimitiveType = .triangle, applyOffsetBefore: ((f2) -> ())? = nil, applySizeAfter: ((f2) -> ())? = nil) {
-        applyOffsetBefore?(factory.cached[character]!.offset)
-        privateEncoder?.setVertexBuffer(factory.cached[character]!.buffer, offset: 0, index: VertexBufferIndex.Position.rawValue)
-        privateEncoder?.setVertexBytes([f3.one], length: f3.memorySize, index: VertexBufferIndex.ModelScale.rawValue)
-        privateEncoder?.setFragmentBytes([false], length: Bool.memorySize, index: FragmentBufferIndex.HasTexture.rawValue)
-        privateEncoder?.drawPrimitives(type: primitiveType, vertexStart: 0, vertexCount: factory.cached[character]!.verticeCount)
-        applySizeAfter?(factory.cached[character]!.size)
+        if let cached = factory.cached[character] {
+            applyOffsetBefore?(cached.offset)
+            privateEncoder?.setVertexBuffer(cached.buffer, offset: 0, index: VertexBufferIndex.Position.rawValue)
+            privateEncoder?.setVertexBytes([f3.one], length: f3.memorySize, index: VertexBufferIndex.ModelScale.rawValue)
+            privateEncoder?.setFragmentBytes([false], length: Bool.memorySize, index: FragmentBufferIndex.HasTexture.rawValue)
+            privateEncoder?.drawPrimitives(type: primitiveType, vertexStart: 0, vertexCount: cached.verticeCount)
+            applySizeAfter?(cached.size)
+        } else {
+            print("no caches for \(character)")
+        }
     }
     func word(_ str: String, factory: VectorTextFactory) {
         var spacerFactor: Float = 0

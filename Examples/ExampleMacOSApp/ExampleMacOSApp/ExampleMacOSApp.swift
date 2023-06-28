@@ -15,8 +15,8 @@ struct ExampleMacOSApp: App {
             ZStack {
                 VStack {
                     HStack {
-//                        SketchView(Sample1())
-                        SketchView(Sample2())
+                        SketchView(Sample1())
+//                        SketchView(Sample2())
                     }
 //                    HStack {
 //                        SketchView(Sample3())

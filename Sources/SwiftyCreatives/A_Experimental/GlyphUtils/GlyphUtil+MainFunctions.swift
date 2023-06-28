@@ -165,7 +165,7 @@ extension GlyphUtil {
             var path: [Point] = []
             var holes: [Hole] = []
         }
-        static let TRIANGULATOR = Triangulator()
+        static let TRIANGULATOR = Triangulator(precision: 0.0001)
         static func triangulate(_ calculatedPaths: [LetterPath], isClockwiseFont: Bool) -> [TriangulatedLetterPath] {
             var triangulatedPaths: [TriangulatedLetterPath] = []
             for letter in calculatedPaths {
