@@ -278,12 +278,12 @@ open class MyTextGeometry {
                 pointsPtr += 1
                 let myA = myPath.data.last!
                 let myC = simd_make_float2(Float(pointsPtr.pointee.x), Float(pointsPtr.pointee.y))
-                let aVel = simd_normalize(quadraticBezierVelocity2(myA, myB, myC, 0.0))
-                let bVel = simd_normalize(quadraticBezierVelocity2(myA, myB, myC, 0.5))
-                let cVel = simd_normalize(quadraticBezierVelocity2(myA, myB, myC, 1.0))
+                let aVel = simd_normalize(GlyphUtil.HelperFunctions.quadraticBezierVelocity2(myA, myB, myC, 0.0))
+                let bVel = simd_normalize(GlyphUtil.HelperFunctions.quadraticBezierVelocity2(myA, myB, myC, 0.5))
+                let cVel = simd_normalize(GlyphUtil.HelperFunctions.quadraticBezierVelocity2(myA, myB, myC, 1.0))
                 var data: [simd_float2] = []
                 data.append(myA)
-                _adaptiveQuadraticBezierCurve2(a: myA, b: myB, c: myC, aVel: aVel, bVel: bVel, cVel: cVel, angleLimit: angleLimit, depth: 0, line: &data)
+                GlyphUtil.MainFunctions.adaptiveQuadraticBezierCurve2(a: myA, b: myB, c: myC, aVel: aVel, bVel: bVel, cVel: cVel, angleLimit: angleLimit, depth: 0, line: &data)
                 data.append(myC)
                 data.removeFirst()
                 myPath.data += data
@@ -295,12 +295,12 @@ open class MyTextGeometry {
                 pointsPtr += 1
                 let myD = simd_make_float2(Float(pointsPtr.pointee.x), Float(pointsPtr.pointee.y))
                 
-                let aVel = simd_normalize(cubicBezierVelocity2(myA, myB, myC, myD, 0.0))
-                let bVel = simd_normalize(cubicBezierVelocity2(myA, myB, myC, myD, 0.5))
-                let cVel = simd_normalize(cubicBezierVelocity2(myA, myB, myC, myD, 1.0))
+                let aVel = simd_normalize(GlyphUtil.HelperFunctions.cubicBezierVelocity2(myA, myB, myC, myD, 0.0))
+                let bVel = simd_normalize(GlyphUtil.HelperFunctions.cubicBezierVelocity2(myA, myB, myC, myD, 0.5))
+                let cVel = simd_normalize(GlyphUtil.HelperFunctions.cubicBezierVelocity2(myA, myB, myC, myD, 1.0))
                 var data: [simd_float2] = []
                 data.append(myA)
-                _adaptiveQubicBezierCurve2(a: myA, b: myB, c: myC, d: myD, aVel: aVel, bVel: bVel, cVel: cVel, angleLimit: angleLimit, depth: 0, line: &data)
+                GlyphUtil.MainFunctions.adaptiveQubicBezierCurve2(a: myA, b: myB, c: myC, d: myD, aVel: aVel, bVel: bVel, cVel: cVel, angleLimit: angleLimit, depth: 0, line: &data)
                 data.append(myD)
                 data.removeFirst()
                 myPath.data += data
@@ -336,77 +336,10 @@ open class MyTextGeometry {
         return myGlyphPaths
     }
     
-    func cubicBezierVelocity2(_ a: f2, _ b: f2, _ c: f2, _ d: f2, _ t: Float) -> f2 {
-        let oneMinusT = 1.0 - t
-        let oneMinusT2 = oneMinusT * oneMinusT
-        
-        let temp1 = 3.0 * oneMinusT2 * (b - a)
-        let temp2 = 6.0 * oneMinusT * t * (c - b)
-        let temp3 = 3.0 * t * t * (d - c)
-        return temp1 + temp2 + temp3
-    }
     
     
-    func quadraticBezierVelocity2(_ a: f2, _ b: f2, _ c: f2, _ t: Float) -> f2 {
-        let oneMinusT: Float = 1.0 - t
-        return 2 * oneMinusT * (b-a) + 2 * t * (c-b)
-    }
     
-    func _adaptiveQuadraticBezierCurve2(
-        a: simd_float2,
-        b: simd_float2,
-        c: simd_float2,
-        aVel: simd_float2,
-        bVel: simd_float2,
-        cVel: simd_float2,
-        angleLimit: Float,
-        depth: Int,
-        line: inout [simd_float2]
-    ) {
-        if depth > 8 { return }
-        let startMiddleAngle: Float = acos(simd_dot(aVel, bVel))
-        let middleEndAngle: Float = acos(simd_dot(bVel, cVel))
-        if startMiddleAngle + middleEndAngle > angleLimit {
-            let ab = (a+b) * 0.5
-            let bc = (b+c) * 0.5
-            let abc = (ab + bc) * 0.5
-            let sVel = simd_normalize(quadraticBezierVelocity2(a, ab, abc, 0.5))
-            _adaptiveQuadraticBezierCurve2(a: a, b: ab, c: abc, aVel: aVel, bVel: sVel, cVel: bVel, angleLimit: angleLimit, depth: depth+1, line: &line)
-            line.append(abc)
-            let eVel = simd_normalize(quadraticBezierVelocity2(abc, bc, c, 0.5))
-            _adaptiveQuadraticBezierCurve2(a: abc, b: bc, c: c, aVel: bVel, bVel: eVel, cVel: cVel, angleLimit: angleLimit, depth: depth+1, line: &line)
-        }
-    }
     
-    func _adaptiveQubicBezierCurve2(
-        a: simd_float2,
-        b: simd_float2,
-        c: simd_float2,
-        d: simd_float2,
-        aVel: simd_float2,
-        bVel: simd_float2,
-        cVel: simd_float2,
-        angleLimit: Float,
-        depth: Int,
-        line: inout [simd_float2]
-    ) {
-        if depth > 8 { return }
-        let startMiddleAngle: Float = acos(simd_dot(aVel, bVel))
-        let middleEndAngle: Float = acos(simd_dot(bVel, cVel))
-        if startMiddleAngle + middleEndAngle > angleLimit {
-            let ab = (a+b) * 0.5
-            let bc = (b+c) * 0.5
-            let cd = (c+d) * 0.5
-            let abc = (ab + bc) * 0.5
-            let bcd = (bc + cd) * 0.5
-            let abcd = (abc + bcd) * 0.5
-            let sVel = simd_normalize(cubicBezierVelocity2(a, ab, abc, abcd, 0.5))
-            _adaptiveQubicBezierCurve2(a: a, b: ab, c: abc, d: abcd, aVel: aVel, bVel: sVel, cVel: bVel, angleLimit: angleLimit, depth: depth+1, line: &line)
-            line.append(abcd)
-            let eVel = simd_normalize(cubicBezierVelocity2(abcd, bcd, cd, d, 0.5))
-            _adaptiveQubicBezierCurve2(a: abcd, b: bcd, c: cd, d: d, aVel: bVel, bVel: eVel, cVel: cVel, angleLimit: angleLimit, depth: depth+1, line: &line)
-        }
-    }
     
 //    public var caches: [String: MTLBuffer] = [:]
 //    public var cacheSpacing: [String: Float] = [:]

@@ -19,7 +19,7 @@ class MyText: MyTextGeometry {
 
 final class Sample1: Sketch {
     var texts: [MyText?] = []
-    let count = 1000
+    let count = 100
     override init() {
         super.init()
         for _ in 0..<count {
