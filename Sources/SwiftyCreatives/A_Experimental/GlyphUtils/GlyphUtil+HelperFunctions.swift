@@ -21,5 +21,18 @@ extension GlyphUtil {
             let oneMinusT: Float = 1.0 - t
             return 2 * oneMinusT * (b-a) + 2 * t * (c-b)
         }
+        
+        // maybe not working? unused.
+        static func isVertexStructureClockwise(data: [f2]) -> Bool {
+            var area: Float = 0
+            for i in 0..<data.count {
+                let i0 = i
+                let i1 = (i+1) % data.count
+                let a = data[i0]
+                let b = data[i1]
+                area += (b.x - a.x) * (b.y + a.y)
+            }
+            return area >= 0 ? false : true
+        }
     }
 }

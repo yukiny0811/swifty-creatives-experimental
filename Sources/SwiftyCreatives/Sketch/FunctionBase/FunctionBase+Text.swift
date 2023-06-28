@@ -17,41 +17,11 @@ public extension FunctionBase {
         privateEncoder?.setFragmentTexture(textObj.texture, index: FragmentTextureIndex.MainTexture.rawValue)
         privateEncoder?.drawPrimitives(type: RectShapeInfo.primitiveType, vertexStart: 0, vertexCount: RectShapeInfo.vertices.count)
     }
-    
-//    func polytext(_ textGeometry: MyTextGeometry) {
-//        for letter in textGeometry.triangulatedPaths {
-//            for portion in letter.glyph {
-//                let posBuffer = ShaderCore.device.makeBuffer(bytes: portion, length: portion.count * f3.memorySize)
-//                privateEncoder?.setVertexBuffer(posBuffer, offset: 0, index: VertexBufferIndex.Position.rawValue)
-//                
-//                let uvBuffer = ShaderCore.device.makeBuffer(bytes: Array<f2>(repeating: f2.zero, count: portion.count), length: portion.count * f2.memorySize)
-//                privateEncoder?.setVertexBuffer(uvBuffer, offset: 0, index: VertexBufferIndex.UV.rawValue)
-//                
-//                let normalBuffer = ShaderCore.device.makeBuffer(bytes: Array<f3>(repeating: f3(0, 0, 1), count: portion.count), length: portion.count * f3.memorySize)
-//                privateEncoder?.setVertexBuffer(normalBuffer, offset: 0, index: VertexBufferIndex.Normal.rawValue)
-//                
-//                privateEncoder?.setVertexBytes([f3.one], length: f3.memorySize, index: VertexBufferIndex.ModelScale.rawValue)
-//                privateEncoder?.setFragmentBytes([false], length: Bool.memorySize, index: FragmentBufferIndex.HasTexture.rawValue)
-//                privateEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: portion.count)
-//            }
-//        }
-//    }
-    
     func polytext(_ textGeometry: MyTextGeometry, primitiveType: MTLPrimitiveType = .triangle) {
         privateEncoder?.setVertexBuffer(textGeometry.posBuffer!, offset: 0, index: VertexBufferIndex.Position.rawValue)
-//        privateEncoder?.setVertexBuffer(textGeometry.uvBuffer, offset: 0, index: VertexBufferIndex.UV.rawValue)
-//        privateEncoder?.setVertexBuffer(textGeometry.normalBuffer, offset: 0, index: VertexBufferIndex.Normal.rawValue)
-                
         privateEncoder?.setVertexBytes([f3.one], length: f3.memorySize, index: VertexBufferIndex.ModelScale.rawValue)
         privateEncoder?.setFragmentBytes([false], length: Bool.memorySize, index: FragmentBufferIndex.HasTexture.rawValue)
         privateEncoder?.drawPrimitives(type: primitiveType, vertexStart: 0, vertexCount: textGeometry.finalVertices.count)
-    }
-    
-    func polytext(_ textBuffer: MTLBuffer, count: Int, primitiveType: MTLPrimitiveType = .triangle) {
-        privateEncoder?.setVertexBuffer(textBuffer, offset: 0, index: VertexBufferIndex.Position.rawValue)
-        privateEncoder?.setVertexBytes([f3.one], length: f3.memorySize, index: VertexBufferIndex.ModelScale.rawValue)
-        privateEncoder?.setFragmentBytes([false], length: Bool.memorySize, index: FragmentBufferIndex.HasTexture.rawValue)
-        privateEncoder?.drawPrimitives(type: primitiveType, vertexStart: 0, vertexCount: count)
     }
 }
 
@@ -62,10 +32,6 @@ import Foundation
 import iShapeTriangulation
 import Metal
 import iGeometry
-
-public struct MyPolyLine2D {
-    public var data: [f2] = []
-}
 
 open class MyTextGeometry {
     public enum VerticalAlignment: Int, Codable {
@@ -170,7 +136,7 @@ open class MyTextGeometry {
     }
     var ctFont: CTFont
     
-    public var calculatedPaths: [(glyph: [MyPolyLine2D], offset: f2)] = []
+    public var calculatedPaths: [(glyph: [GlyphLine], offset: f2)] = []
     public var triangulatedPaths: [(glyph: [[f3]], offset: f3)] = []
     
     public var isClockwiseFont: Bool = false
@@ -243,9 +209,9 @@ open class MyTextGeometry {
         
     }
 
-    func getPolylines(_ glyphPath: CGPath, _ angleLimit: Float, _ distanceLimit: Float) -> [MyPolyLine2D] {
-        var myPath = MyPolyLine2D()
-        var myGlyphPaths = [MyPolyLine2D]()
+    func getPolylines(_ glyphPath: CGPath, _ angleLimit: Float, _ distanceLimit: Float) -> [GlyphLine] {
+        var myPath = GlyphLine()
+        var myGlyphPaths = [GlyphLine]()
         glyphPath.applyWithBlock { (elementPtr: UnsafePointer<CGPathElement>) in
             let element = elementPtr.pointee
             var pointsPtr = element.points
@@ -253,9 +219,9 @@ open class MyTextGeometry {
 
             switch element.type {
             case .moveToPoint:
-                myPath.data.append(pt) //ADD
+                myPath.append(pt) //ADD
             case .addLineToPoint:
-                let myA = myPath.data.last!
+                let myA = myPath.last!
                 let length = simd_length(pt - myA)
                 var data: [simd_float2] = []
                 if length > distanceLimit {
@@ -272,11 +238,11 @@ open class MyTextGeometry {
                     data.append(pt)
                 }
                 data.removeFirst()
-                myPath.data += data
+                myPath += data
             case .addQuadCurveToPoint:
                 let myB = pt
                 pointsPtr += 1
-                let myA = myPath.data.last!
+                let myA = myPath.last!
                 let myC = simd_make_float2(Float(pointsPtr.pointee.x), Float(pointsPtr.pointee.y))
                 let aVel = simd_normalize(GlyphUtil.HelperFunctions.quadraticBezierVelocity2(myA, myB, myC, 0.0))
                 let bVel = simd_normalize(GlyphUtil.HelperFunctions.quadraticBezierVelocity2(myA, myB, myC, 0.5))
@@ -286,9 +252,9 @@ open class MyTextGeometry {
                 GlyphUtil.MainFunctions.adaptiveQuadraticBezierCurve2(a: myA, b: myB, c: myC, aVel: aVel, bVel: bVel, cVel: cVel, angleLimit: angleLimit, depth: 0, line: &data)
                 data.append(myC)
                 data.removeFirst()
-                myPath.data += data
+                myPath += data
             case .addCurveToPoint:
-                let myA = myPath.data.last!
+                let myA = myPath.last!
                 let myB = pt
                 pointsPtr += 1
                 let myC = simd_make_float2(Float(pointsPtr.pointee.x), Float(pointsPtr.pointee.y))
@@ -303,12 +269,12 @@ open class MyTextGeometry {
                 GlyphUtil.MainFunctions.adaptiveQubicBezierCurve2(a: myA, b: myB, c: myC, d: myD, aVel: aVel, bVel: bVel, cVel: cVel, angleLimit: angleLimit, depth: 0, line: &data)
                 data.append(myD)
                 data.removeFirst()
-                myPath.data += data
+                myPath += data
             case .closeSubpath:
-                if myPath.data.first! == myPath.data.last! {
-                    myPath.data.removeLast()
+                if myPath.first! == myPath.last! {
+                    myPath.removeLast()
                 }
-                let myA = myPath.data.last!
+                let myA = myPath.last!
                 let length = simd_length(pt - myA)
                 var data: [simd_float2] = []
                 if length > distanceLimit {
@@ -326,9 +292,9 @@ open class MyTextGeometry {
                 }
                 data.removeLast()
                 data.removeFirst()
-                myPath.data += data
-                myGlyphPaths.append(MyPolyLine2D(data: myPath.data))
-                myPath.data.removeAll()
+                myPath += data
+                myGlyphPaths.append(myPath)
+                myPath.removeAll()
             default:
                 break
             }
@@ -336,13 +302,6 @@ open class MyTextGeometry {
         return myGlyphPaths
     }
     
-    
-    
-    
-    
-    
-//    public var caches: [String: MTLBuffer] = [:]
-//    public var cacheSpacing: [String: Float] = [:]
     public var textBuffer: MTLBuffer?
     public var vertexCount: Int?
     let triangulator = Triangulator()
@@ -351,41 +310,20 @@ open class MyTextGeometry {
             triangulatedPaths.append(([], f3(letter.offset.x, letter.offset.y, 0)))
             var temp: [(path: [Point], hole: [[Point]])] = []
             for portion in letter.glyph {
-                
-//                if isVertexStructureClockwise(data: portion.data) {
-//                    temp.append((portion.data.map{$0.shapePoint}, []))
-//                } else {
-//                    if temp.isEmpty {
-//                        temp.append(([], []))
-//                        temp[temp.count-1].path = portion.data.map{$0.shapePoint}
-//                    } else {
-//                        temp[temp.count-1].hole.append(portion.data.map{$0.shapePoint})
-//                    }
-//                }
                 if temp.isEmpty {
                     temp.append(([], []))
                     if isClockwiseFont {
-                        temp[temp.count-1].path = portion.data.map{$0.shapePoint}.reversed()
+                        temp[temp.count-1].path = portion.map{$0.shapePoint}.reversed()
                     } else {
-                        temp[temp.count-1].path = portion.data.map{$0.shapePoint}
+                        temp[temp.count-1].path = portion.map{$0.shapePoint}
                     }
                 } else {
                     if isClockwiseFont {
-                        temp[temp.count-1].hole.append(portion.data.map{$0.shapePoint}.reversed())
+                        temp[temp.count-1].hole.append(portion.map{$0.shapePoint}.reversed())
                     } else {
-                        temp[temp.count-1].hole.append(portion.data.map{$0.shapePoint})
+                        temp[temp.count-1].hole.append(portion.map{$0.shapePoint})
                     }
                 }
-//                if !isClockwiseFont {
-//                    
-//                } else {
-//                    if temp.isEmpty {
-//                        temp.append(([], []))
-//                        temp[temp.count-1].path = portion.data.map{$0.shapePoint}.reversed()
-//                    } else {
-//                        temp[temp.count-1].hole.append(portion.data.map{$0.shapePoint}.reversed())
-//                    }
-//                }
             }
             
             
@@ -405,47 +343,11 @@ open class MyTextGeometry {
                     hull: allPath[0..<t.path.count],
                     holes: slices,
                     extraPoints: nil) {
-                    //                    textBuffer = ShaderCore.device.makeBuffer(bytes: triangles.map{
-                    //                        f3(portion.data[$0].x, portion.data[$0].y, 0)
-                    //                    }, length: f3.memorySize * triangles.count)
-                    //                    vertexCount = triangles.count
                     triangulatedPaths[triangulatedPaths.count-1].glyph.append( triangles.map{
                         f3(allPath[$0].x, allPath[$0].y, 0) + f3(letter.offset.x, letter.offset.y, 0)
                     })
                 }
             }
         }
-    }
-    
-    func isVertexStructureClockwise(data: [f2]) -> Bool {
-        var area: Float = 0
-        for i in 0..<data.count {
-            let i0 = i
-            let i1 = (i+1) % data.count
-            let a = data[i0]
-            let b = data[i1]
-            area += (b.x - a.x) * (b.y + a.y)
-        }
-        return area >= 0 ? false : true
-//        return false
-    }
-    
-//    bool isVertexStructureClockwise(tsVertex *vertices, int length)
-//    {
-//        float area = 0;
-//        for (int i = 0; i < length; i++) {
-//            int i0 = i;
-//            int i1 = (i + 1) % length;
-//            simd_float2 a = vertices[i0].v;
-//            simd_float2 b = vertices[i1].v;
-//            area += (b.x - a.x) * (b.y + a.y);
-//        }
-//        return !signbit(area);
-//    }
-}
-
-public extension f2 {
-    var shapePoint: iGeometry.Point {
-        Point(x: self.x, y: self.y)
     }
 }
