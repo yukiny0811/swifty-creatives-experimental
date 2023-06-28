@@ -10,7 +10,7 @@ import Metal
 import AppKit
 import CoreGraphics
 
-class MyText: MyTextGeometry {
+class MyText: VectorWord {
     var rotationValue: Float = Float.random(in: 0...10)
     var height: Float = Float.random(in: -30...30)
     var rad: Float = Float.random(in: 1...30)
@@ -29,7 +29,7 @@ final class Sample1: Sketch {
             await withTaskGroup(of: Void.self) { group in
                 for i in 0..<count {
                     group.addTask { [self] in
-                        texts[i] = MyText(text: String("こんにちはabcde"),fontName: "AppleSDGothicNeo-Bold", fontSize: 1, isClockwiseCont: true)
+                        texts[i] = MyText(text: String("こんにちはabcde"),fontName: "AppleSDGothicNeo-Bold", fontSize: 1, isClockwiseFont: true)
                         print(i)
                     }
                 }

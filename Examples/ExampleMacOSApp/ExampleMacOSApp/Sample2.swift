@@ -6,16 +6,29 @@
 //
 
 import SwiftyCreatives
+import AppKit
+import CoreGraphics
 
 final class Sample2: Sketch {
+    let factory = VectorTextFactory()
+    
+    var currentText = "a"
+    
     override init() {
         super.init()
+        for c in TextFactory.Template.all {
+            factory.cacheCharacter(char: c)
+        }
     }
-    override func update(camera: some MainCameraBase) {
-        camera.rotateAroundY(0.01)
-    }
+    
     override func draw(encoder: SCEncoder) {
-        color(f4.randomPoint(0...1))
-        rect(f3.one * 5)
+        color(1)
+        word(currentText, factory: factory)
+    }
+    
+    override func keyDown(with event: NSEvent, camera: some MainCameraBase, viewFrame: CGRect) {
+        if let c = event.characters?.first, event.specialKey == nil {
+            currentText += String(c)
+        }
     }
 }

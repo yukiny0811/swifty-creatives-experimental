@@ -6,6 +6,10 @@
 //
 
 import simd
+import CoreGraphics
+import CoreText
+import iGeometry
+import iShapeTriangulation
 
 extension GlyphUtil {
     enum MainFunctions {
@@ -63,6 +67,190 @@ extension GlyphUtil {
                 let eVel = simd_normalize(HelperFunctions.quadraticBezierVelocity2(abc, bc, c, 0.5))
                 adaptiveQuadraticBezierCurve2(a: abc, b: bc, c: c, aVel: bVel, bVel: eVel, cVel: cVel, angleLimit: angleLimit, depth: depth+1, line: &line)
             }
+        }
+        static func getGlyphLines(_ glyphPath: CGPath, _ angleLimit: Float, _ distanceLimit: Float) -> [GlyphLine] {
+            var myPath = GlyphLine()
+            var myGlyphPaths = [GlyphLine]()
+            glyphPath.applyWithBlock { (elementPtr: UnsafePointer<CGPathElement>) in
+                let element = elementPtr.pointee
+                var pointsPtr = element.points
+                let pt = simd_make_float2(Float(pointsPtr.pointee.x), Float(pointsPtr.pointee.y))
+
+                switch element.type {
+                case .moveToPoint:
+                    myPath.append(pt) //ADD
+                case .addLineToPoint:
+                    let myA = myPath.last!
+                    let length = simd_length(pt - myA)
+                    var data: [simd_float2] = []
+                    if length > distanceLimit {
+                        let sections = Int(max(ceil(length / distanceLimit), 2))
+                        let inc = 1.0 / Float(sections - 1)
+                        var t = simd_float2(0.0, 0.0)
+                        for _ in 0..<sections {
+                            data.append(simd_mix(myA, pt, t))
+                            t += inc
+                            t = min(max(t, 0.0), 1.0)
+                        }
+                    } else {
+                        data.append(myA)
+                        data.append(pt)
+                    }
+                    data.removeFirst()
+                    myPath += data
+                case .addQuadCurveToPoint:
+                    let myB = pt
+                    pointsPtr += 1
+                    let myA = myPath.last!
+                    let myC = simd_make_float2(Float(pointsPtr.pointee.x), Float(pointsPtr.pointee.y))
+                    let aVel = simd_normalize(GlyphUtil.HelperFunctions.quadraticBezierVelocity2(myA, myB, myC, 0.0))
+                    let bVel = simd_normalize(GlyphUtil.HelperFunctions.quadraticBezierVelocity2(myA, myB, myC, 0.5))
+                    let cVel = simd_normalize(GlyphUtil.HelperFunctions.quadraticBezierVelocity2(myA, myB, myC, 1.0))
+                    var data: [simd_float2] = []
+                    data.append(myA)
+                    GlyphUtil.MainFunctions.adaptiveQuadraticBezierCurve2(a: myA, b: myB, c: myC, aVel: aVel, bVel: bVel, cVel: cVel, angleLimit: angleLimit, depth: 0, line: &data)
+                    data.append(myC)
+                    data.removeFirst()
+                    myPath += data
+                case .addCurveToPoint:
+                    let myA = myPath.last!
+                    let myB = pt
+                    pointsPtr += 1
+                    let myC = simd_make_float2(Float(pointsPtr.pointee.x), Float(pointsPtr.pointee.y))
+                    pointsPtr += 1
+                    let myD = simd_make_float2(Float(pointsPtr.pointee.x), Float(pointsPtr.pointee.y))
+                    
+                    let aVel = simd_normalize(GlyphUtil.HelperFunctions.cubicBezierVelocity2(myA, myB, myC, myD, 0.0))
+                    let bVel = simd_normalize(GlyphUtil.HelperFunctions.cubicBezierVelocity2(myA, myB, myC, myD, 0.5))
+                    let cVel = simd_normalize(GlyphUtil.HelperFunctions.cubicBezierVelocity2(myA, myB, myC, myD, 1.0))
+                    var data: [simd_float2] = []
+                    data.append(myA)
+                    GlyphUtil.MainFunctions.adaptiveQubicBezierCurve2(a: myA, b: myB, c: myC, d: myD, aVel: aVel, bVel: bVel, cVel: cVel, angleLimit: angleLimit, depth: 0, line: &data)
+                    data.append(myD)
+                    data.removeFirst()
+                    myPath += data
+                case .closeSubpath:
+                    if myPath.first! == myPath.last! {
+                        myPath.removeLast()
+                    }
+                    let myA = myPath.last!
+                    let length = simd_length(pt - myA)
+                    var data: [simd_float2] = []
+                    if length > distanceLimit {
+                        let sections = Int(max(ceil(length / distanceLimit), 2))
+                        let inc = 1.0 / Float(sections - 1)
+                        var t = simd_float2(0.0, 0.0)
+                        for _ in 0..<sections {
+                            data.append(simd_mix(myA, pt, t))
+                            t += inc
+                            t = min(max(t, 0.0), 1.0)
+                        }
+                    } else {
+                        data.append(myA)
+                        data.append(pt)
+                    }
+                    data.removeLast()
+                    data.removeFirst()
+                    myPath += data
+                    myGlyphPaths.append(myPath)
+                    myPath.removeAll()
+                default:
+                    break
+                }
+            }
+            return myGlyphPaths
+        }
+        typealias Hole = [Point]
+        class TriangulateHelperData {
+            var path: [Point] = []
+            var holes: [Hole] = []
+        }
+        static let TRIANGULATOR = Triangulator()
+        static func triangulate(_ calculatedPaths: [LetterPath], isClockwiseFont: Bool) -> [TriangulatedLetterPath] {
+            var triangulatedPaths: [TriangulatedLetterPath] = []
+            for letter in calculatedPaths {
+                triangulatedPaths.append(TriangulatedLetterPath(glyphLines: [], offset: f3(letter.offset.x, letter.offset.y, 0)))
+                var tempHelperDatas: [TriangulateHelperData] = []
+                for portion in letter.glyphs {
+                    if tempHelperDatas.isEmpty {
+                        tempHelperDatas.append(TriangulateHelperData())
+                        if isClockwiseFont {
+                            tempHelperDatas[tempHelperDatas.count-1].path = portion.map{$0.shapePoint}.reversed()
+                        } else {
+                            tempHelperDatas[tempHelperDatas.count-1].path = portion.map{$0.shapePoint}
+                        }
+                    } else {
+                        if isClockwiseFont {
+                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.map{$0.shapePoint}.reversed())
+                        } else {
+                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.map{$0.shapePoint})
+                        }
+                    }
+                }
+                for helperData in tempHelperDatas {
+                    let allPath: [Point] = helperData.path + helperData.holes.reduce([], +)
+                    var slices: [ArraySlice<Point>] = []
+                    var currentIndex = helperData.path.count
+                    for hole in helperData.holes {
+                        slices.append(allPath[currentIndex..<currentIndex+hole.count])
+                        currentIndex += hole.count
+                    }
+                    if let triangles = try? TRIANGULATOR.triangulateDelaunay(
+                        points: allPath,
+                        hull: allPath[0..<helperData.path.count],
+                        holes: slices,
+                        extraPoints: nil) {
+                        triangulatedPaths[triangulatedPaths.count-1].glyphLines.append( triangles.map{
+                            f3(allPath[$0].x, allPath[$0].y, 0) + f3(letter.offset.x, letter.offset.y, 0)
+                        })
+                    }
+                }
+            }
+            return triangulatedPaths
+        }
+        static func triangulateWithoutLetterOffset(_ calculatedPaths: [LetterPath], isClockwiseFont: Bool) -> (paths: [TriangulatedLetterPath], letterOffsets: [f3]) {
+            var triangulatedPaths: [TriangulatedLetterPath] = []
+            var letterOffsets: [f3] = []
+            for letter in calculatedPaths {
+                triangulatedPaths.append(TriangulatedLetterPath(glyphLines: [], offset: f3(letter.offset.x, letter.offset.y, 0)))
+                var tempHelperDatas: [TriangulateHelperData] = []
+                for portion in letter.glyphs {
+                    if tempHelperDatas.isEmpty {
+                        tempHelperDatas.append(TriangulateHelperData())
+                        if isClockwiseFont {
+                            tempHelperDatas[tempHelperDatas.count-1].path = portion.map{$0.shapePoint}.reversed()
+                        } else {
+                            tempHelperDatas[tempHelperDatas.count-1].path = portion.map{$0.shapePoint}
+                        }
+                    } else {
+                        if isClockwiseFont {
+                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.map{$0.shapePoint}.reversed())
+                        } else {
+                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.map{$0.shapePoint})
+                        }
+                    }
+                }
+                for helperData in tempHelperDatas {
+                    let allPath: [Point] = helperData.path + helperData.holes.reduce([], +)
+                    var slices: [ArraySlice<Point>] = []
+                    var currentIndex = helperData.path.count
+                    for hole in helperData.holes {
+                        slices.append(allPath[currentIndex..<currentIndex+hole.count])
+                        currentIndex += hole.count
+                    }
+                    if let triangles = try? TRIANGULATOR.triangulateDelaunay(
+                        points: allPath,
+                        hull: allPath[0..<helperData.path.count],
+                        holes: slices,
+                        extraPoints: nil) {
+                        triangulatedPaths[triangulatedPaths.count-1].glyphLines.append( triangles.map{
+                            f3(allPath[$0].x, allPath[$0].y, 0)
+                        })
+                        letterOffsets.append(f3(letter.offset.x, letter.offset.y, 0))
+                    }
+                }
+            }
+            return (triangulatedPaths, letterOffsets)
         }
     }
 }
