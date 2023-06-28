@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "igeometry",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/iShape-Swift/iGeometry",
+      "state" : {
+        "revision" : "11ca891adb5e874e9f8dabb57e83d65612571b99",
+        "version" : "1.11.2"
+      }
+    },
+    {
+      "identity" : "ishapetriangulation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/iShape-Swift/iShapeTriangulation",
+      "state" : {
+        "revision" : "c1a5760b5d65970002c41ae82790505419b92dd9",
+        "version" : "1.0.3"
+      }
+    },
+    {
+      "identity" : "swift-snapshot-testing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-snapshot-testing",
+      "state" : {
+        "revision" : "cef5b3f6f11781dd4591bdd1dd0a3d22bd609334",
+        "version" : "1.11.0"
+      }
+    }
+  ],
+  "version" : 2
+}
