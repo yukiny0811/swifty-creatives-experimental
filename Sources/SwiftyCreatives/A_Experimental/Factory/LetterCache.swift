@@ -15,3 +15,9 @@ public struct LetterCache {
     public var offset: f2
     public var size: f2
 }
+
+public struct LetterCacheRaw {
+    public var vertices: [f3]
+    public var offset: f2
+    public var size: f2
+}

@@ -18,10 +18,4 @@ public extension FunctionBase {
         privateEncoder?.setFragmentTexture(textObj.texture, index: FragmentTextureIndex.MainTexture.rawValue)
         privateEncoder?.drawPrimitives(type: RectShapeInfo.primitiveType, vertexStart: 0, vertexCount: RectShapeInfo.vertices.count)
     }
-    func polytext(_ vectorWord: VectorWord, primitiveType: MTLPrimitiveType = .triangle) {
-        privateEncoder?.setVertexBuffer(vectorWord.posBuffer!, offset: 0, index: VertexBufferIndex.Position.rawValue)
-        privateEncoder?.setVertexBytes([f3.one], length: f3.memorySize, index: VertexBufferIndex.ModelScale.rawValue)
-        privateEncoder?.setFragmentBytes([false], length: Bool.memorySize, index: FragmentBufferIndex.HasTexture.rawValue)
-        privateEncoder?.drawPrimitives(type: primitiveType, vertexStart: 0, vertexCount: vectorWord.finalVertices.count)
-    }
 }

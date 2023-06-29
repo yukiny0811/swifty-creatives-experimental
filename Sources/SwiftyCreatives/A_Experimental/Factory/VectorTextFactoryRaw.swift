@@ -2,7 +2,7 @@
 //  File.swift
 //  
 //
-//  Created by Yuki Kuwashima on 2023/06/28.
+//  Created by Yuki Kuwashima on 2023/06/29.
 //
 
 import Foundation
@@ -12,7 +12,7 @@ import Metal
 import CommonEntity
 import FontVertexBuilder
 
-public class VectorTextFactory {
+public class VectorTextFactoryRaw {
     
     private var fontName: String
     private var fontSize: Float
@@ -24,7 +24,8 @@ public class VectorTextFactory {
     private var lineSpacing: Float
     private var isClockwiseFont: Bool
     
-    public var cached: [Character: LetterCache] = [:]
+    public var cached: [Character: LetterCacheRaw] = [:]
+    public var cachedBuffer: [Character: LetterCache] = [:]
     
     public func cacheCharacter(char: Character) {
         let vectorText = VectorText(text: String(char), fontName: fontName, fontSize: fontSize, bounds: bounds, pivot: pivot, textAlignment: textAlignment, verticalAlignment: verticalAlignment, kern: kern, lineSpacing: lineSpacing, isClockwiseFont: isClockwiseFont)
@@ -37,7 +38,15 @@ public class VectorTextFactory {
         
         let characterPath = path.glyphLines.flatMap { $0.map { $0 + path.offset } }
         let pathBuffer = ShaderCore.device.makeBuffer(bytes: characterPath, length: characterPath.count * f3.memorySize)!
-        cached[char] = LetterCache(
+        cached[char] = LetterCacheRaw(
+            vertices: characterPath,
+            offset: f2(offset.x, offset.y),
+            size: f2(
+                characterPath.max(by: {$0.x > $1.x})!.x,
+                characterPath.max(by: {$0.y > $1.y})!.y
+            )
+        )
+        cachedBuffer[char] = LetterCache(
             buffer: pathBuffer,
             verticeCount: characterPath.count,
             offset: f2(offset.x, offset.y),
@@ -46,6 +55,15 @@ public class VectorTextFactory {
                 characterPath.max(by: {$0.y > $1.y})!.y
             )
         )
+    }
+    
+    public func resetCache(_ char: Character) {
+        cacheCharacter(char: char)
+    }
+    
+    public func updateCache(_ char: Character, f: (_ vertices: inout [f3]) -> ()) {
+        f(&cached[char]!.vertices)
+        cachedBuffer[char]!.buffer.contents().copyMemory(from: cached[char]!.vertices, byteCount: f3.memorySize * cached[char]!.vertices.count)
     }
     
     public init(fontName: String = "AppleSDGothicNeo-Bold",
