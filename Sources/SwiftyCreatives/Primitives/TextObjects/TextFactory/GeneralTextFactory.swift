@@ -7,6 +7,7 @@
 
 import MetalKit
 import CoreGraphics
+import CommonEntity
 
 public class GeneralTextFactory: TextFactory {
     public override init(font: FontAlias, register characters: String, color: ColorAlias) {

@@ -7,6 +7,7 @@
 
 import MetalKit
 import CoreGraphics
+import CommonEntity
 
 public class NumberTextFactory: TextFactory {
     public init(font: FontAlias, color: ColorAlias) {

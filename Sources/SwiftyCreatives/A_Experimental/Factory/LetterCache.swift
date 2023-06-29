@@ -7,6 +7,7 @@
 
 import Foundation
 import Metal
+import CommonEntity
 
 public struct LetterCache {
     public var buffer: MTLBuffer

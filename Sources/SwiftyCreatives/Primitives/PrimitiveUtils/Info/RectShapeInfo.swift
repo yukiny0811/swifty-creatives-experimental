@@ -6,6 +6,7 @@
 //
 
 import Metal
+import CommonEntity
 
 public struct RectShapeInfo: PrimitiveInfo {
     public static var vertices: [f3] = [

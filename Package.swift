@@ -16,16 +16,35 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.11.0"),
-        .package(url: "https://github.com/iShape-Swift/iShapeTriangulation", from: "1.0.2")
+        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.11.0")
     ],
     targets: [
         .target(
             name: "SwiftyCreatives",
             dependencies: [
-                "iShapeTriangulation"
+                "FontVertexBuilder",
+                "CommonEntity"
             ],
             resources: [.process("Resources")]
+        ),
+        .target(
+            name: "iShapeTriangulation",
+            dependencies: [
+                "iGeometry"
+            ]
+        ),
+        .target(
+            name: "iGeometry"
+        ),
+        .target(
+            name: "FontVertexBuilder",
+            dependencies: [
+                "iShapeTriangulation",
+                "CommonEntity"
+            ]
+        ),
+        .target(
+            name: "CommonEntity"
         ),
         .testTarget(
             name: "SwiftyCreativesTests",

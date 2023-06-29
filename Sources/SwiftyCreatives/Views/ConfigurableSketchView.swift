@@ -7,6 +7,7 @@
 
 import MetalKit
 import SwiftUI
+import CommonEntity
 
 #if os(macOS)
 import AppKit

@@ -6,6 +6,7 @@
 //
 
 import simd
+import CommonEntity
 
 public extension FunctionBase {
     func pushMatrix() {

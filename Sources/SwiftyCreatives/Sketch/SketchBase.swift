@@ -11,6 +11,8 @@ import AppKit
 import UIKit
 #endif
 
+@_exported import CommonEntity
+
 public protocol SketchBase: AnyObject {
     var deltaTime: Float { get set }
     

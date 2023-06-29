@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CommonEntity
 
 public typealias GlyphLine = [f2]
 public typealias GlyphLineF3 = [f3]

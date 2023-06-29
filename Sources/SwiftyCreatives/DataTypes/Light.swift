@@ -5,6 +5,8 @@
 //  Created by Yuki Kuwashima on 2023/01/05.
 //
 
+import CommonEntity
+
 public struct Light {
     public init(position: f3, color: f3, brightness: Float, ambientIntensity: Float, diffuseIntensity: Float, specularIntensity: Float) {
         self.position = position

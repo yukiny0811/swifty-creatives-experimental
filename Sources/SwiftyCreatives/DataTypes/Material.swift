@@ -5,6 +5,8 @@
 //  Created by Yuki Kuwashima on 2023/01/05.
 //
 
+import CommonEntity
+
 public struct Material {
     public init(ambient: f3, diffuse: f3, specular: f3, shininess: Float) {
         self.ambient = ambient

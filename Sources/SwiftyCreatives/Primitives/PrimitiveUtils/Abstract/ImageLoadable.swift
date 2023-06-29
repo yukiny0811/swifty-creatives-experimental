@@ -7,6 +7,7 @@
 
 import Metal
 import CoreGraphics
+import CommonEntity
 
 public protocol ImageLoadable: AnyObject, ScaleSettable {
     var texture: MTLTexture? { get set }

@@ -7,6 +7,8 @@
 
 import Metal
 import CoreText
+import CommonEntity
+import FontVertexBuilder
 
 open class VectorWord: VectorText {
     public var posBuffer: MTLBuffer?

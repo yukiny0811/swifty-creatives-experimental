@@ -6,6 +6,7 @@
 //
 
 import MetalKit
+import CommonEntity
 
 public class AddRenderer<
     CameraConfig: CameraConfigBase,

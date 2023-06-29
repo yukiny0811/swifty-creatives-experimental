@@ -6,6 +6,7 @@
 //
 
 import MetalKit
+import CommonEntity
 
 open class Img: Primitive<RectShapeInfo>, ImageLoadable {
     public override init() { super.init() }

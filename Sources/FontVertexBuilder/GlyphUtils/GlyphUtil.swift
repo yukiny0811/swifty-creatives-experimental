@@ -7,4 +7,4 @@
 
 import simd
 
-enum GlyphUtil {}
+public enum GlyphUtil {}

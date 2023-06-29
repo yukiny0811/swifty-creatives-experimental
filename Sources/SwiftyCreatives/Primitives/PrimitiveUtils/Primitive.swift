@@ -6,6 +6,7 @@
 //
 
 import simd
+import CommonEntity
 
 open class Primitive<Info: PrimitiveInfo>: ScaleSettable {
     

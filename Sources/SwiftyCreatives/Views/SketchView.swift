@@ -14,6 +14,8 @@ import AppKit
 import UIKit
 #endif
 
+import CommonEntity
+
 public struct SketchView: ViewRepresentable {
     typealias CameraConfig = MainCameraConfig
     typealias DrawConfig = MainDrawConfig

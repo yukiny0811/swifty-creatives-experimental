@@ -19,7 +19,7 @@ class MyText: VectorWord {
 
 final class Sample1: Sketch {
     var texts: [MyText?] = []
-    let count = 100
+    let count = 1
     override init() {
         super.init()
         for _ in 0..<count {
@@ -42,13 +42,16 @@ final class Sample1: Sketch {
     override func draw(encoder: SCEncoder) {
         if start == false { return }
         color(1, 1, 1, 0.8)
-        for t in texts {
-            t!.rotationValue += t!.rotationSpeed
-            push {
-                rotateY(t!.rotationValue)
-                translate(0, t!.height, t!.rad)
-                polytext(t!)
-            }
-        }
+//        for t in texts {
+//            t!.rotationValue += t!.rotationSpeed
+//            push {
+//                rotateY(t!.rotationValue)
+//                translate(0, t!.height, t!.rad)
+//                polytext(t!)
+//            }
+//        }
+        polytext(texts[0]!)
+        color(1, 0, 1, 1)
+        polytext(texts[0]!, primitiveType: .lineStrip)
     }
 }

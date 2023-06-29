@@ -8,6 +8,7 @@
 import MetalKit
 import CoreImage.CIFilterBuiltins
 import CoreGraphics
+import CommonEntity
 
 open class TextObject: RectanglePlanePrimitive<RectShapeInfo> {
     private(set) public var originalTexture: MTLTexture?

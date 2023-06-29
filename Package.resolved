@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "igeometry",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/iShape-Swift/iGeometry",
+      "state" : {
+        "revision" : "11ca891adb5e874e9f8dabb57e83d65612571b99",
+        "version" : "1.11.2"
+      }
+    },
+    {
       "identity" : "swift-snapshot-testing",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-snapshot-testing",

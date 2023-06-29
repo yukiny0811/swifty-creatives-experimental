@@ -6,6 +6,7 @@
 //
 
 import Metal
+import CommonEntity
 
 public struct CircleInfo: PrimitiveInfo {
     private static let edgeCount: Int = 30

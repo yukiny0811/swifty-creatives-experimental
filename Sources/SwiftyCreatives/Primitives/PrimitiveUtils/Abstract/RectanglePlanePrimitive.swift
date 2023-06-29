@@ -6,6 +6,7 @@
 //
 
 import simd
+import CommonEntity
 
 open class RectanglePlanePrimitive<Info: PrimitiveInfo>: HitTestablePrimitive<Info> {
     override init() { super.init() }

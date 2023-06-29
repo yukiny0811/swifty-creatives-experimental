@@ -6,6 +6,7 @@
 //
 
 import Metal
+import CommonEntity
 
 public struct ModelObjectInfo: PrimitiveInfo {
     public static var vertices: [f3] = []

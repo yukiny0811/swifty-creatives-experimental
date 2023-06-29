@@ -6,6 +6,7 @@
 //
 
 import Metal
+import CommonEntity
 
 public struct TriangleInfo: PrimitiveInfo {
     public final class VertexPoint {

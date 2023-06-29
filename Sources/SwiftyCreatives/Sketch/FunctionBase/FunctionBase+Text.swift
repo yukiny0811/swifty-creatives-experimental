@@ -6,6 +6,7 @@
 //
 
 import AppKit
+import CommonEntity
 
 public extension FunctionBase {
     func text(_ textObj: TextObject) {

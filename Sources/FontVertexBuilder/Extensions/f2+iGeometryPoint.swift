@@ -6,6 +6,7 @@
 //
 
 import iGeometry
+import CommonEntity
 
 public extension f2 {
     var shapePoint: iGeometry.Point {

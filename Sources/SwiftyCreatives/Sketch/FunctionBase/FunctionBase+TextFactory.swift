@@ -6,6 +6,7 @@
 //
 
 import simd
+import CommonEntity
 
 public extension FunctionBase {
     func drawNumberText<T: Numeric>(encoder: SCEncoder, factory: NumberTextFactory, number: T, spacing: Float = 1, scale: Float = 1) {

@@ -7,6 +7,7 @@
 
 import MetalKit
 import ModelIO
+import CommonEntity
 
 open class ModelObject: Primitive<ModelObjectInfo> {
     

@@ -6,6 +6,7 @@
 //
 
 import CoreImage
+import CommonEntity
 
 public class TextFactory {
     

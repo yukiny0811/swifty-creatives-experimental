@@ -6,6 +6,7 @@
 //
 
 import simd
+import CommonEntity
 
 open class HitTestablePrimitive<Info: PrimitiveInfo>: Primitive<Info> {
     override init() { super.init() }

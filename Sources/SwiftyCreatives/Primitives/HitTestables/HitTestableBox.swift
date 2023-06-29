@@ -6,6 +6,7 @@
 //
 
 import simd
+import CommonEntity
 
 open class HitTestableBox: ScaleSettable {
     

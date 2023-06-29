@@ -6,6 +6,7 @@
 //
 
 import Metal
+import CommonEntity
 
 public protocol PrimitiveInfo {
     static var primitiveType: MTLPrimitiveType { get }

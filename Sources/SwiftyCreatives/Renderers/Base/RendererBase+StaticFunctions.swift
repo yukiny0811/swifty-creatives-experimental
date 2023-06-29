@@ -6,6 +6,7 @@
 //
 
 import Metal
+import CommonEntity
 
 extension RendererBase {
     static func createVertexDescriptor() -> MTLVertexDescriptor {

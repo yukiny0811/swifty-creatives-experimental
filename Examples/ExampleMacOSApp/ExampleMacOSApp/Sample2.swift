@@ -10,7 +10,7 @@ import AppKit
 import CoreGraphics
 
 final class Sample2: Sketch {
-    let factory = VectorTextFactory()
+    let factory = VectorTextFactory(fontName: "Zapfino", isClockwiseFont: false)
     
     var currentText = "H"
     
@@ -39,7 +39,7 @@ final class Sample2: Sketch {
         spiralWord(currentText, factory: factory)
     }
     
-    func spiralWord(_ str: String, factory: VectorTextFactory, radius: Float = 400, translateHeight: Float = 0.015) {
+    func spiralWord(_ str: String, factory: VectorTextFactory, radius: Float = 400, translateHeight: Float = 0.04) {
         var spacerFactor: Float = 0
         let downMultiplier: Float = 1 / radius
         for c in str {

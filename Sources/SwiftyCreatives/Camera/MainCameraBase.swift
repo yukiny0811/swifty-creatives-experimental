@@ -5,6 +5,8 @@
 //  Created by Yuki Kuwashima on 2022/12/15.
 //
 
+import CommonEntity
+
 public protocol MainCameraBase {
     var mainMatrix: [f4x4] { get set }
     var perspectiveMatrix: [f4x4] { get set }

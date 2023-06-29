@@ -9,6 +9,8 @@ import Foundation
 import CoreText
 import CoreGraphics
 import Metal
+import CommonEntity
+import FontVertexBuilder
 
 public extension FunctionBase {
     func char(_ character: Character, factory: VectorTextFactory, primitiveType: MTLPrimitiveType = .triangle, applyOffsetBefore: ((f2) -> ())? = nil, applySizeAfter: ((f2) -> ())? = nil) {
@@ -58,10 +60,13 @@ public class VectorTextFactory {
     public var cached: [Character: LetterCache] = [:]
     
     public func cacheCharacter(char: Character) {
-        let vectorText = VectorText(text: String(char), fontSize: fontSize)
+        let vectorText = VectorText(text: String(char), fontName: fontName, fontSize: fontSize, bounds: bounds, pivot: pivot, textAlignment: textAlignment, verticalAlignment: verticalAlignment, kern: kern, lineSpacing: lineSpacing, isClockwiseFont: isClockwiseFont)
         let resultTuple = GlyphUtil.MainFunctions.triangulateWithoutLetterOffset(vectorText.calculatedPaths, isClockwiseFont: isClockwiseFont)
         let path = resultTuple.paths.first!
-        let offset = resultTuple.letterOffsets.first!
+        guard let offset = resultTuple.letterOffsets.first else {
+            print("failed to cache \(char)")
+            return
+        }
         
         let characterPath = path.glyphLines.flatMap { $0.map { $0 + path.offset } }
         let pathBuffer = ShaderCore.device.makeBuffer(bytes: characterPath, length: characterPath.count * f3.memorySize)!

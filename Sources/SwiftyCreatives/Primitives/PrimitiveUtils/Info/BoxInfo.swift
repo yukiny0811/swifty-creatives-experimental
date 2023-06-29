@@ -6,6 +6,7 @@
 //
 
 import Metal
+import CommonEntity
 
 public struct BoxInfo: PrimitiveInfo {
     public final class VertexPoint {

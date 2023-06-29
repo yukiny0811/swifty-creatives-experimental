@@ -6,6 +6,7 @@
 //
 
 import simd
+import CommonEntity
 
 public extension f4x4 {
     static var memorySize: Int {

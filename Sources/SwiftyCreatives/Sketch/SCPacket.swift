@@ -5,6 +5,8 @@
 //  Created by Yuki Kuwashima on 2023/02/28.
 //
 
+@_exported import CommonEntity
+
 public class SCPacket: FunctionBase {
     public var privateEncoder: SCEncoder?
     public var customMatrix: [f4x4] = []

@@ -6,6 +6,7 @@
 //
 
 import Metal
+import CommonEntity
 
 public protocol FunctionBase: AnyObject {
     var privateEncoder: SCEncoder? { get set }

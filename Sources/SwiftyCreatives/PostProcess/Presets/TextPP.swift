@@ -6,6 +6,7 @@
 //
 
 import Metal
+import CommonEntity
 
 public class TextPostProcessor: PostProcessorBase {
     

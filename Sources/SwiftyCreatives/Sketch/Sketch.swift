@@ -12,6 +12,7 @@ import UIKit
 #endif
 
 import simd
+import CommonEntity
 
 open class Sketch: SketchBase, FunctionBase {
     public let textPostProcessor: TextPostProcessor = TextPostProcessor()
