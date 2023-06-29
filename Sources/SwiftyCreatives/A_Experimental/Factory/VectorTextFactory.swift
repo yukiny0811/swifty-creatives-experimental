@@ -27,6 +27,7 @@ public class VectorTextFactory {
     public var cached: [Character: LetterCache] = [:]
     
     public func cacheCharacter(char: Character) {
+        if char == " " { return }
         let vectorText = VectorText(text: String(char), fontName: fontName, fontSize: fontSize, bounds: bounds, pivot: pivot, textAlignment: textAlignment, verticalAlignment: verticalAlignment, kern: kern, lineSpacing: lineSpacing, isClockwiseFont: isClockwiseFont)
         let resultTuple = GlyphUtil.MainFunctions.triangulateWithoutLetterOffset(vectorText.calculatedPaths, isClockwiseFont: isClockwiseFont)
         let path = resultTuple.paths.first!

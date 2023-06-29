@@ -10,6 +10,7 @@ import SwiftyCreatives
 
 @main
 struct ExampleMacOSApp: App {
+    let innerSketch = InnerSketch()
     var body: some Scene {
         WindowGroup {
             ZStack {
@@ -20,12 +21,13 @@ struct ExampleMacOSApp: App {
 //                    }
 //                    HStack {
 //                        SketchView(Sample3())
-                        SketchView(Sample4())
+//                SketchView(innerSketch).opacity(0)
+//                SketchView(Sample4(inner: innerSketch))
 //                    }
 //                }
 //                VStack {
 //                    HStack {
-//                        SketchView(Sample5())
+                        SketchView(Sample5())
 //                        SketchView(Sample6())
 //                    }
 //                    HStack {

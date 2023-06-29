@@ -9,20 +9,12 @@ import AppKit
 import SwiftyCreatives
 
 final class Sample5: Sketch {
-    var object = TextObject()
-    override init() {
-        super.init()
-        object
-            .setText("Swifty Creatives", font: NSFont.systemFont(ofSize: 60))
-            .multiplyScale(18)
-    }
-    override func preProcess(commandBuffer: MTLCommandBuffer) {
-        object.setColor(commandBuffer: commandBuffer, f4(1, 0, 1, 1))
-    }
+    let vectorWord3D = VectorWord3D(text: "Hello")
     override func update(camera: some MainCameraBase) {
-        camera.rotateAroundY(0.01)
+        vectorWord3D.extrude(0.01)
     }
     override func draw(encoder: SCEncoder) {
-        text(object)
+        color(1)
+        polytext(vectorWord3D)
     }
 }

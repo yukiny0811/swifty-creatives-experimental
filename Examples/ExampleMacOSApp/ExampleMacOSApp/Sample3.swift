@@ -63,6 +63,6 @@ final class Sample3: Sketch {
     }
     
     override func postProcess(texture: MTLTexture, commandBuffer: MTLCommandBuffer) {
-        <#code#>
+        
     }
 }

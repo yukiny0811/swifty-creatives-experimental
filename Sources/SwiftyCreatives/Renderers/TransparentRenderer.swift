@@ -15,7 +15,7 @@
 import MetalKit
 import CommonEntity
     
-class TransparentRenderer<
+public class TransparentRenderer<
     CameraConfig: CameraConfigBase,
     DrawConfig: DrawConfigBase
 >: RendererBase<CameraConfig, DrawConfig> {
@@ -71,7 +71,7 @@ class TransparentRenderer<
         self.drawProcess.setupCamera(camera: camera)
     }
     
-    override func draw(in view: MTKView) {
+    public override func draw(in view: MTKView) {
         super.draw(in: view)
         
         let commandBuffer = ShaderCore.commandQueue.makeCommandBuffer()!

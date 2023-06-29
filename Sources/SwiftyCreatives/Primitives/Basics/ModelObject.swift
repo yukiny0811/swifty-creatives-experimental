@@ -77,6 +77,9 @@ open class ModelObject: Primitive<ModelObjectInfo> {
         }
         return self
     }
+    public func setTexture(_ tex: MTLTexture) {
+        self.texture = tex
+    }
     override public func draw(_ encoder: SCEncoder) {
         
         guard let meshes = self.mesh as? [MTKMesh] else { return }

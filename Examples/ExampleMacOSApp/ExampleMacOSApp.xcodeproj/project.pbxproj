@@ -27,6 +27,8 @@
 		56DC9BAA2A4D427E000B12B7 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 56DC9BA92A4D427E000B12B7 /* DequeModule */; };
 		56DC9BAC2A4D427E000B12B7 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 56DC9BAB2A4D427E000B12B7 /* OrderedCollections */; };
 		56DC9BAF2A4D42A5000B12B7 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 56DC9BAE2A4D42A5000B12B7 /* Algorithms */; };
+		56DC9BB22A4D5171000B12B7 /* sphere.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 56DC9BB02A4D5171000B12B7 /* sphere.mtl */; };
+		56DC9BB32A4D5171000B12B7 /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 56DC9BB12A4D5171000B12B7 /* sphere.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		56C53FCA294A645200962DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56C53FCD294A645200962DD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		56C53FCF294A645200962DD6 /* ExampleMacOSApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExampleMacOSApp.entitlements; sourceTree = "<group>"; };
+		56DC9BB02A4D5171000B12B7 /* sphere.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.mtl; sourceTree = "<group>"; };
+		56DC9BB12A4D5171000B12B7 /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				5643923629A1D9CD0053C6E6 /* Sample12.swift */,
 				56C53FCA294A645200962DD6 /* Assets.xcassets */,
 				56C53FCF294A645200962DD6 /* ExampleMacOSApp.entitlements */,
+				56DC9BB02A4D5171000B12B7 /* sphere.mtl */,
+				56DC9BB12A4D5171000B12B7 /* sphere.obj */,
 				56C53FCC294A645200962DD6 /* Preview Content */,
 			);
 			path = ExampleMacOSApp;
@@ -200,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				56C53FCE294A645200962DD6 /* Preview Assets.xcassets in Resources */,
+				56DC9BB22A4D5171000B12B7 /* sphere.mtl in Resources */,
+				56DC9BB32A4D5171000B12B7 /* sphere.obj in Resources */,
 				56C53FCB294A645200962DD6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

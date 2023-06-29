@@ -11,8 +11,8 @@ public class TouchableMTKView<
     CameraConfig: CameraConfigBase,
     DrawConfig: DrawConfigBase
 >: MTKView {
-    var renderer: RendererBase<CameraConfig, DrawConfig>
-    init(renderer: RendererBase<CameraConfig, DrawConfig>) {
+    public var renderer: RendererBase<CameraConfig, DrawConfig>
+    public init(renderer: RendererBase<CameraConfig, DrawConfig>) {
         self.renderer = renderer
         super.init(frame: .zero, device: ShaderCore.device)
         initializeView()
