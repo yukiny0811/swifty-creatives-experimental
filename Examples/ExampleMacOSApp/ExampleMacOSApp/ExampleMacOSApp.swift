@@ -27,7 +27,7 @@ struct ExampleMacOSApp: App {
 //                }
 //                VStack {
 //                    HStack {
-                        SketchView(Sample5())
+                ConfigurableSketchView<MainCameraConfig, Sample9DrawConfig>(Sample5())
 //                        SketchView(Sample6())
 //                    }
 //                    HStack {
