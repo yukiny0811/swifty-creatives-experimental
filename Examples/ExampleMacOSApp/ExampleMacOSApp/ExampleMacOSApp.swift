@@ -45,7 +45,24 @@ struct ExampleMacOSApp: App {
 //                        SketchView(Sample12())
 //                    }
 //                }
-            }.background(.black)
+            }
+            .background {
+                       ZStack {
+                           RadialGradient(
+                            colors: [.blue.opacity(0.2), .clear],
+                               center: .bottomLeading,
+                               startRadius: 1,
+                               endRadius: 1000
+                           )
+
+                           RadialGradient(
+                            colors: [.pink.opacity(0.2), .clear],
+                               center: .bottomTrailing, startRadius: 1,
+                               endRadius: 1000
+                           )
+                       }
+                   }
+            .background(.black)
         }
     }
 }

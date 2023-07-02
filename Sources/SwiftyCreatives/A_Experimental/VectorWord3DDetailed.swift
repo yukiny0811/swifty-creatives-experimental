@@ -14,7 +14,7 @@ import Algorithms
 open class VectorWord3DDetailed: VectorText {
     public var finalVertices: [f3] = []
     public var extrudingIndices: [Int] = []
-    private var extrudingValue: Float = 0
+    private(set) public var extrudingValue: Float = 0
     
     public var chunkedBlobs: [[f3]] = []
     
@@ -23,6 +23,7 @@ open class VectorWord3DDetailed: VectorText {
     }
     
     public func extrude(_ value: Float) {
+        extrudingValue += value
         for i in extrudingIndices {
             finalVertices[i].z += value
         }
