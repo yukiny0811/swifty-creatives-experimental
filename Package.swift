@@ -23,7 +23,8 @@ let package = Package(
             name: "SwiftyCreatives",
             dependencies: [
                 "FontVertexBuilder",
-                "CommonEntity"
+                "CommonEntity",
+                "SCSound"
             ],
             resources: [.process("Resources")]
         ),
@@ -45,6 +46,9 @@ let package = Package(
         ),
         .target(
             name: "CommonEntity"
+        ),
+        .target(
+            name: "SCSound"
         ),
         .testTarget(
             name: "SwiftyCreativesTests",

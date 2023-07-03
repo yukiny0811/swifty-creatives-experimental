@@ -27,11 +27,11 @@ struct ExampleMacOSApp: App {
 //                }
 //                VStack {
 //                    HStack {
-                SketchView(Sample5())
+//                SketchView(Sample5())
 //                        SketchView(Sample6())
 //                    }
 //                    HStack {
-//                        SketchView(Sample7())
+                        SketchView(Sample7())
 //                        SketchView(Sample8())
 //                    }
 //                }
