@@ -5,95 +5,128 @@
 //  Created by Yuki Kuwashima on 2023/07/03.
 //
 
+#if os(macOS)
+
 import AVFoundation
 import Accelerate
 
-public class AudioCapturer: NSObject, AVCaptureAudioDataOutputSampleBufferDelegate {
+public class AudioCapturer: NSObject {
     
-//    let settings = [
-//        AVFormatIDKey: kAudioFormatMPEG4AAC,
-//        AVNumberOfChannelsKey : 1,
-//        AVSampleRateKey : 44100]
-    let captureSession = AVCaptureSession()
-    let captureQueue = DispatchQueue(label: "audioQueue")
+    private static let audioOutputSettings: [String: Any] = [
+        AVFormatIDKey: kAudioFormatLinearPCM,
+        AVLinearPCMIsFloatKey: true,
+        AVLinearPCMBitDepthKey: 32,
+        AVNumberOfChannelsKey: 1
+    ]
     
-    public var fftResult: [(frequency: Float, magnitude: Float)] = []
+    private let captureSession = AVCaptureSession()
+    private let captureQueue = DispatchQueue(label: "SCAudioQueue" + UUID().uuidString)
     
-    public override init() {
-        super.init()
-        
-//        let captureDevice = AVCaptureDevice.default(.builtInMicrophone, for: .audio, position: .unspecified)!
-        var captureDevice = AVCaptureDevice.default(for: .audio)!
-        
+    public var fftResult: [FFTResultComponent] = []
+    public var fftNoiseExtractionMethod: FFTNoiseExtractionMethod
+    public var fftWindowType: TempiFFTWindowType
+    public var fftMinFreq: Float
+    public var fftMaxFreq: Float
+    public var bandsPerOctave: Int
+    
+    public convenience init(
+        noiseExtractionMethod: FFTNoiseExtractionMethod = .none,
+        fftWindowType: TempiFFTWindowType = .hanning,
+        captureDeviceFindWithName deviceName: String,
+        fftMinFreq: Float = 100,
+        fftMaxFreq: Float = 30000,
+        bandsPerOctave: Int = 32
+    ) {
         let captureDeviceDiscovery = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInMicrophone], mediaType: .audio, position: .unspecified)
+        var searchedDevice: AVCaptureDevice?
         for device in captureDeviceDiscovery.devices {
-            if device.localizedName.contains("BlackHole") {
-                captureDevice = device
+            if device.localizedName.contains(deviceName) {
+                searchedDevice = device
             }
         }
-        let audioInput = try! AVCaptureDeviceInput(device: captureDevice)
+        if let searchedDevice = searchedDevice {
+            self.init(noiseExtractionMethod: noiseExtractionMethod, fftWindowType: fftWindowType, captureDevice: searchedDevice, fftMinFreq: fftMinFreq, fftMaxFreq: fftMaxFreq, bandsPerOctave: bandsPerOctave)
+        } else {
+            print("Audio Capture Device \(deviceName) not found")
+            self.init(noiseExtractionMethod: noiseExtractionMethod, fftWindowType: fftWindowType, fftMinFreq: fftMinFreq, fftMaxFreq: fftMaxFreq, bandsPerOctave: bandsPerOctave)
+        }
+    }
+    
+    public init(
+        noiseExtractionMethod: FFTNoiseExtractionMethod = .none,
+        fftWindowType: TempiFFTWindowType = .hanning,
+        captureDevice: AVCaptureDevice? = AVCaptureDevice.default(for: .audio),
+        fftMinFreq: Float = 100,
+        fftMaxFreq: Float = 30000,
+        bandsPerOctave: Int = 32
+    ) {
+        self.fftNoiseExtractionMethod = noiseExtractionMethod
+        self.fftWindowType = fftWindowType
+        self.fftMinFreq = fftMinFreq
+        self.fftMaxFreq = fftMaxFreq
+        self.bandsPerOctave = bandsPerOctave
+        super.init()
+        guard let captureDevice = captureDevice else { return }
+        guard let audioInput = try? AVCaptureDeviceInput(device: captureDevice) else {
+            print("audio input creation failed")
+            return
+        }
         let audioOutput = AVCaptureAudioDataOutput()
         audioOutput.setSampleBufferDelegate(self, queue: captureQueue)
-        
-        #if os(macOS)
-        audioOutput.audioSettings = [
-            AVFormatIDKey: kAudioFormatLinearPCM,
-            AVLinearPCMIsFloatKey: true,
-            AVLinearPCMBitDepthKey: 32,
-            AVNumberOfChannelsKey: 1
-        ]
-        #elseif os(iOS)
-        #endif
+        audioOutput.audioSettings = Self.audioOutputSettings
         
         captureSession.beginConfiguration()
         captureSession.addInput(audioInput)
         captureSession.addOutput(audioOutput)
         captureSession.commitConfiguration()
-        
+    }
+    
+    public func start() {
         captureQueue.async {
             self.captureSession.startRunning()
         }
     }
     
-    public func captureOutput(_ output: AVCaptureOutput,
-                       didOutput sampleBuffer: CMSampleBuffer,
-                       from connection: AVCaptureConnection) {
-        
+    public func stop() {
+        self.captureSession.stopRunning()
+    }
+}
+
+extension AudioCapturer: AVCaptureAudioDataOutputSampleBufferDelegate {
+    public func captureOutput(
+        _ output: AVCaptureOutput,
+        didOutput sampleBuffer: CMSampleBuffer,
+        from connection: AVCaptureConnection
+    ) {
         guard connection.audioChannels.count > 0 else {
-            print(#function, #line, "no audio channel")
+            print("audio channel not available")
             return
         }
         
         guard sampleBuffer.dataReadiness == .ready else {
-            print(#function, #line, "sampleBuffer not ready")
+            print("sampleBuffer not ready")
             return
         }
         
-//        let numFrames = sampleBuffer.numSamples
-        
-        let pcmBuffer = try! sampleBuffer.withAudioBufferList { audioBufferList, blockBuffer -> AVAudioPCMBuffer? in
-            guard let absd = sampleBuffer.formatDescription?.audioStreamBasicDescription else {
-                print(#function, #line, "absd is nil")
+        let pcmBuffer = try? sampleBuffer.withAudioBufferList { audioBufferList, blockBuffer -> AVAudioPCMBuffer? in
+            guard let asbd = sampleBuffer.formatDescription?.audioStreamBasicDescription else {
+                print("asbd is nil")
                 return nil
             }
-            guard let format = AVAudioFormat(standardFormatWithSampleRate: absd.mSampleRate, channels: absd.mChannelsPerFrame) else {
-                print(#function, #line, "format is nil")
+            guard let format = AVAudioFormat(standardFormatWithSampleRate: asbd.mSampleRate, channels: asbd.mChannelsPerFrame) else {
+                print("format is nil")
                 return nil
             }
             return AVAudioPCMBuffer(pcmFormat: format, bufferListNoCopy: audioBufferList.unsafePointer)
         }
         
         guard let pcmBuffer = pcmBuffer else {
-            print(#function, #line, "pcmBuffer is nil")
+            print("pcmBuffer is nil")
             return
         }
         
-//        print("pcmBuffer frameLength", pcmBuffer.frameLength)
-//        print("pcmBuffer format sampleRate", pcmBuffer.format.sampleRate)
-//        print("pcmBuffer format channelCount", pcmBuffer.format.channelCount)
-//        print("pcmBuffer frameCapacity", pcmBuffer.frameCapacity)
         let floatArrayRaw = Array(UnsafeBufferPointer(start: pcmBuffer.floatChannelData?.pointee, count: Int(pcmBuffer.frameLength)))
-        let floatArray = floatArrayRaw.map { f in
+        var floatArray = floatArrayRaw.map { f in
             var result: Float = 0
             if f < 0 || f.isNaN {
                 result = 0
@@ -103,74 +136,55 @@ public class AudioCapturer: NSObject, AVCaptureAudioDataOutputSampleBufferDelega
             return result
         }
         
-//        var timeDomainArray = floatArray.map { $0 }
-//        var freqDomainArray = floatArray.map { $0 }
-//        
-//        Self.extractSignalFromNoise(
-//            sampleCount: sampleBuffer.numSamples,
-//            noisySignal: floatArray,
-//            threshold: 0.1,
-//            timeDomainDestination: &timeDomainArray,
-//            frequencyDomainDestination: &freqDomainArray)
-        
+        switch fftNoiseExtractionMethod {
+        case .none:
+            break
+        case .freqDomain(let threshold):
+            var timeDomainArray = floatArray.map { $0 }
+            var freqDomainArray = floatArray.map { $0 }
+            NoiseExtractor.extractSignalFromNoise(
+                sampleCount: sampleBuffer.numSamples,
+                noisySignal: floatArray,
+                threshold: threshold,
+                timeDomainDestination: &timeDomainArray,
+                frequencyDomainDestination: &freqDomainArray
+            )
+            floatArray = freqDomainArray
+        case .timeDomain(let threshold):
+            var timeDomainArray = floatArray.map { $0 }
+            var freqDomainArray = floatArray.map { $0 }
+            NoiseExtractor.extractSignalFromNoise(
+                sampleCount: sampleBuffer.numSamples,
+                noisySignal: floatArray,
+                threshold: threshold,
+                timeDomainDestination: &timeDomainArray,
+                frequencyDomainDestination: &freqDomainArray
+            )
+            floatArray = timeDomainArray
+        }
         
         let fft = TempiFFT(withSize: Int(pcmBuffer.frameLength), sampleRate: Float(pcmBuffer.format.sampleRate))
 
-//        // Setting a window type reduces errors
-        fft.windowType = TempiFFTWindowType.hanning
+        // Setting a window type reduces errors
+        fft.windowType = self.fftWindowType
 
         // Perform the FFT
         fft.fftForward(floatArray)
 
         // Map FFT data to logical bands. This gives 4 bands per octave across 7 octaves = 28 bands.
-        fft.calculateLogarithmicBands(minFrequency: 100, maxFrequency: 30000, bandsPerOctave: 32)
+        fft.calculateLogarithmicBands(minFrequency: self.fftMinFreq, maxFrequency: self.fftMaxFreq, bandsPerOctave: self.bandsPerOctave)
         
         // Process some data
         for i in 0..<fft.numberOfBands {
             let f = fft.frequencyAtBand(i)
             let m = fft.magnitudeAtBand(i)
             if fftResult.count-1 < i {
-                fftResult.append((f, m))
+                fftResult.append(FFTResultComponent(frequency: f, magnitude: m))
             } else {
-                fftResult[i] = (f, m)
+                fftResult[i] = FFTResultComponent(frequency: f, magnitude: m)
             }
-//            print(m)
-//            if m > 0 {
-//                print(m)
-//            }
         }
     }
-    
-    static func extractSignalFromNoise(sampleCount: Int,
-        noisySignal: [Float],
-                                           threshold: Double,
-                                           timeDomainDestination: inout [Float],
-                                           frequencyDomainDestination: inout [Float]) {
-        
-        let forwardDCTSetup = vDSP.DCT(count: sampleCount,
-                                       transformType: vDSP.DCTTransformType.II)!
-        let inverseDCTSetup = vDSP.DCT(count: sampleCount,
-                                       transformType: vDSP.DCTTransformType.III)!
-        
-            
-            forwardDCTSetup.transform(noisySignal,
-                                      result: &frequencyDomainDestination)
-            
-            vDSP.threshold(frequencyDomainDestination,
-                           to: Float(threshold),
-                           with: .zeroFill,
-                           result: &frequencyDomainDestination)
-            
-            
-            inverseDCTSetup.transform(frequencyDomainDestination,
-                                      result: &timeDomainDestination)
-            
-            
-            let divisor = Float(sampleCount / 2)
-            
-            vDSP.divide(timeDomainDestination,
-                        divisor,
-                        result: &timeDomainDestination)
-            
-        }
 }
+
+#endif

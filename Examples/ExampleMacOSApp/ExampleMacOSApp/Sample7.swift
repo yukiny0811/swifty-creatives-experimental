@@ -11,10 +11,15 @@ import SCSound
 
 final class Sample7: Sketch {
     
-    let capturer = AudioCapturer()
+    let capturer = AudioCapturer(captureDeviceFindWithName: "BlackHole")
     
     var magsHistory: [[Float]] = []
     var averageMags: [Float] = []
+    
+    override init() {
+        super.init()
+        capturer.start()
+    }
     
     override func draw(encoder: SCEncoder) {
         color(1)
@@ -30,7 +35,7 @@ final class Sample7: Sketch {
         }
         
         magsHistory.append(mags)
-        if magsHistory.count > 10 {
+        if magsHistory.count > 5 {
             magsHistory.removeFirst()
         }
         

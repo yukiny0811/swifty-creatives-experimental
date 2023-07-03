@@ -8,12 +8,6 @@
 
 import Accelerate
 
-enum TempiFFTWindowType: Int {
-    case none
-    case hanning
-    case hamming
-}
-
 public class TempiFFT : NSObject {
     
     /// The length of the sample buffer we'll be analyzing.
