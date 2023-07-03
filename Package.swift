@@ -16,7 +16,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.11.0")
+        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.11.0"),
+        .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0")
     ],
     targets: [
         .target(
@@ -24,7 +25,8 @@ let package = Package(
             dependencies: [
                 "FontVertexBuilder",
                 "CommonEntity",
-                "SCSound"
+                "SCSound",
+                .product(name: "Algorithms", package: "swift-algorithms")
             ],
             resources: [.process("Resources")]
         ),

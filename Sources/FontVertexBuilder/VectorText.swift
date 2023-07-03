@@ -32,7 +32,6 @@ import simd
 import CoreGraphics
 import CoreText
 import CommonEntity
-import AppKit
 
 open class VectorText {
     public enum VerticalAlignment: Int, Codable {

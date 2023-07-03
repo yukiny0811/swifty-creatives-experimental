@@ -6,13 +6,14 @@
 //
 
 import AVFoundation
+import Accelerate
 
 public class AudioCapturer: NSObject, AVCaptureAudioDataOutputSampleBufferDelegate {
     
-    let settings = [
-        AVFormatIDKey: kAudioFormatMPEG4AAC,
-        AVNumberOfChannelsKey : 1,
-        AVSampleRateKey : 44100]
+//    let settings = [
+//        AVFormatIDKey: kAudioFormatMPEG4AAC,
+//        AVNumberOfChannelsKey : 1,
+//        AVSampleRateKey : 44100]
     let captureSession = AVCaptureSession()
     let captureQueue = DispatchQueue(label: "audioQueue")
     
@@ -21,16 +22,28 @@ public class AudioCapturer: NSObject, AVCaptureAudioDataOutputSampleBufferDelega
     public override init() {
         super.init()
         
-        let captureDevice = AVCaptureDevice.default(.builtInMicrophone, for: .audio, position: .unspecified)!
+//        let captureDevice = AVCaptureDevice.default(.builtInMicrophone, for: .audio, position: .unspecified)!
+        var captureDevice = AVCaptureDevice.default(for: .audio)!
+        
+        let captureDeviceDiscovery = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInMicrophone], mediaType: .audio, position: .unspecified)
+        for device in captureDeviceDiscovery.devices {
+            if device.localizedName.contains("BlackHole") {
+                captureDevice = device
+            }
+        }
         let audioInput = try! AVCaptureDeviceInput(device: captureDevice)
         let audioOutput = AVCaptureAudioDataOutput()
         audioOutput.setSampleBufferDelegate(self, queue: captureQueue)
+        
+        #if os(macOS)
         audioOutput.audioSettings = [
             AVFormatIDKey: kAudioFormatLinearPCM,
             AVLinearPCMIsFloatKey: true,
             AVLinearPCMBitDepthKey: 32,
             AVNumberOfChannelsKey: 1
         ]
+        #elseif os(iOS)
+        #endif
         
         captureSession.beginConfiguration()
         captureSession.addInput(audioInput)
@@ -56,8 +69,7 @@ public class AudioCapturer: NSObject, AVCaptureAudioDataOutputSampleBufferDelega
             return
         }
         
-        let numFrames = sampleBuffer.numSamples
-//        print(#function, #line, "numFrames", numFrames)
+//        let numFrames = sampleBuffer.numSamples
         
         let pcmBuffer = try! sampleBuffer.withAudioBufferList { audioBufferList, blockBuffer -> AVAudioPCMBuffer? in
             guard let absd = sampleBuffer.formatDescription?.audioStreamBasicDescription else {
@@ -91,6 +103,17 @@ public class AudioCapturer: NSObject, AVCaptureAudioDataOutputSampleBufferDelega
             return result
         }
         
+//        var timeDomainArray = floatArray.map { $0 }
+//        var freqDomainArray = floatArray.map { $0 }
+//        
+//        Self.extractSignalFromNoise(
+//            sampleCount: sampleBuffer.numSamples,
+//            noisySignal: floatArray,
+//            threshold: 0.1,
+//            timeDomainDestination: &timeDomainArray,
+//            frequencyDomainDestination: &freqDomainArray)
+        
+        
         let fft = TempiFFT(withSize: Int(pcmBuffer.frameLength), sampleRate: Float(pcmBuffer.format.sampleRate))
 
 //        // Setting a window type reduces errors
@@ -100,7 +123,7 @@ public class AudioCapturer: NSObject, AVCaptureAudioDataOutputSampleBufferDelega
         fft.fftForward(floatArray)
 
         // Map FFT data to logical bands. This gives 4 bands per octave across 7 octaves = 28 bands.
-        fft.calculateLogarithmicBands(minFrequency: 100, maxFrequency: 11025, bandsPerOctave: 16)
+        fft.calculateLogarithmicBands(minFrequency: 100, maxFrequency: 30000, bandsPerOctave: 32)
         
         // Process some data
         for i in 0..<fft.numberOfBands {
@@ -117,4 +140,37 @@ public class AudioCapturer: NSObject, AVCaptureAudioDataOutputSampleBufferDelega
 //            }
         }
     }
+    
+    static func extractSignalFromNoise(sampleCount: Int,
+        noisySignal: [Float],
+                                           threshold: Double,
+                                           timeDomainDestination: inout [Float],
+                                           frequencyDomainDestination: inout [Float]) {
+        
+        let forwardDCTSetup = vDSP.DCT(count: sampleCount,
+                                       transformType: vDSP.DCTTransformType.II)!
+        let inverseDCTSetup = vDSP.DCT(count: sampleCount,
+                                       transformType: vDSP.DCTTransformType.III)!
+        
+            
+            forwardDCTSetup.transform(noisySignal,
+                                      result: &frequencyDomainDestination)
+            
+            vDSP.threshold(frequencyDomainDestination,
+                           to: Float(threshold),
+                           with: .zeroFill,
+                           result: &frequencyDomainDestination)
+            
+            
+            inverseDCTSetup.transform(frequencyDomainDestination,
+                                      result: &timeDomainDestination)
+            
+            
+            let divisor = Float(sampleCount / 2)
+            
+            vDSP.divide(timeDomainDestination,
+                        divisor,
+                        result: &timeDomainDestination)
+            
+        }
 }
