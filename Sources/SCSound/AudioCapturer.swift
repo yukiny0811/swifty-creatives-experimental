@@ -174,6 +174,10 @@ extension AudioCapturer: AVCaptureAudioDataOutputSampleBufferDelegate {
         // Map FFT data to logical bands. This gives 4 bands per octave across 7 octaves = 28 bands.
         fft.calculateLogarithmicBands(minFrequency: self.fftMinFreq, maxFrequency: self.fftMaxFreq, bandsPerOctave: self.bandsPerOctave)
         
+        if fftResult.count != fft.numberOfBands {
+            fftResult = []
+        }
+        
         // Process some data
         for i in 0..<fft.numberOfBands {
             let f = fft.frequencyAtBand(i)
