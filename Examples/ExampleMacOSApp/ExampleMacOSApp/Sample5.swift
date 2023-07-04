@@ -60,11 +60,11 @@ final class Sample5: Sketch {
     var elapsedFont: Float = 0
     
     override init() {
-        blobs.append(.init("D"))
-        blobs.append(.init("E"))
-        blobs.append(.init("P"))
+        blobs.append(.init("A"))
+        blobs.append(.init("R"))
         blobs.append(.init("S"))
-        blobs.append(.init("E"))
+//        blobs.append(.init("S"))
+//        blobs.append(.init("E"))
         
         super.init()
 //        blobs.append(.init("発"))
@@ -89,27 +89,27 @@ final class Sample5: Sketch {
         $currentAnim.update(multiplier: 0.08)
         camera.rotateAroundY(sin(elapsedCamera) * 0.001)
         camera.rotateAroundX(sin(elapsedCamera) * 0.002)
-        elapsed += deltaTime
-        elapsedAnim += deltaTime
-        elapsedCamera += deltaTime
-        elapsedFont += deltaTime
-        if elapsed > 10 {
-            isWireframe.toggle()
-            elapsed = 0
-        }
-        if elapsedAnim > 14 {
-            toggleCurrentAnim()
-            elapsedAnim = 0
-        }
-        if elapsedFont > 20 {
-            let rand = MyWordBlob.fonts.randomElement()!
-            blobs[0].reset("D", rand)
-            blobs[1].reset("E", rand)
-            blobs[2].reset("P", rand)
-            blobs[3].reset("S", rand)
-            blobs[4].reset("E", rand)
-            elapsedFont = 0
-        }
+//        elapsed += deltaTime
+//        elapsedAnim += deltaTime
+//        elapsedCamera += deltaTime
+//        elapsedFont += deltaTime
+//        if elapsed > 10 {
+//            isWireframe.toggle()
+//            elapsed = 0
+//        }
+//        if elapsedAnim > 14 {
+//            toggleCurrentAnim()
+//            elapsedAnim = 0
+//        }
+//        if elapsedFont > 20 {
+//            let rand = MyWordBlob.fonts.randomElement()!
+//            blobs[0].reset("A", rand)
+//            blobs[1].reset("R", rand)
+//            blobs[2].reset("S", rand)
+////            blobs[3].reset("S", rand)
+////            blobs[4].reset("E", rand)
+//            elapsedFont = 0
+//        }
     }
     override func draw(encoder: SCEncoder) {
         let spacing: Float = 7
