@@ -15,8 +15,9 @@ struct ExampleMacOSApp: App {
         WindowGroup {
             ZStack {
 //                FFTVisualizerSketch.VIEW()
+                FFTVisualizerSketch2D.VIEW()
 //                TouchSampleSketch.VIEW()
-                TouchSampleSketch2D.VIEW()
+//                TouchSampleSketch2D.VIEW()
             }
             .background(.black)
         }
