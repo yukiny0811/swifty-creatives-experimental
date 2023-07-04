@@ -15,6 +15,7 @@ import simd
 import CommonEntity
 
 open class Sketch: SketchBase, FunctionBase {
+    public var metalDrawableSize: f2 = .zero
     public let textPostProcessor: TextPostProcessor = TextPostProcessor()
     public var customMatrix: [f4x4] = [f4x4.createIdentity()]
     public var privateEncoder: SCEncoder?

@@ -24,6 +24,7 @@ public class RendererBase<
     public func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {}
     public func draw(in view: MTKView) {
         calculateDeltaTime()
+        drawProcess.metalDrawableSize = f2(Float(view.drawableSize.width), Float(view.drawableSize.height))
         view.drawableSize = CGSize(
             width: view.frame.size.width * CGFloat(DrawConfig.contentScaleFactor),
             height: view.frame.size.height * CGFloat(DrawConfig.contentScaleFactor)

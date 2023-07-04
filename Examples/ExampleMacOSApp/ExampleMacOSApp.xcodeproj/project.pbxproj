@@ -29,6 +29,8 @@
 		56DC9BAF2A4D42A5000B12B7 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 56DC9BAE2A4D42A5000B12B7 /* Algorithms */; };
 		56DC9BB22A4D5171000B12B7 /* sphere.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 56DC9BB02A4D5171000B12B7 /* sphere.mtl */; };
 		56DC9BB32A4D5171000B12B7 /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 56DC9BB12A4D5171000B12B7 /* sphere.obj */; };
+		56F868AD2A53BB8100141C9B /* TouchSampleSketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F868AC2A53BB8100141C9B /* TouchSampleSketch.swift */; };
+		56F868AF2A53BE9200141C9B /* TouchSampleSketch2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F868AE2A53BE9200141C9B /* TouchSampleSketch2D.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		56C53FCF294A645200962DD6 /* ExampleMacOSApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExampleMacOSApp.entitlements; sourceTree = "<group>"; };
 		56DC9BB02A4D5171000B12B7 /* sphere.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.mtl; sourceTree = "<group>"; };
 		56DC9BB12A4D5171000B12B7 /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
+		56F868AC2A53BB8100141C9B /* TouchSampleSketch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchSampleSketch.swift; sourceTree = "<group>"; };
+		56F868AE2A53BE9200141C9B /* TouchSampleSketch2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchSampleSketch2D.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				56694B0A298AB89A0022C24D /* Sample4.swift */,
 				56694B0E298AB8D70022C24D /* Sample5.swift */,
 				56694B10298AB8EE0022C24D /* Sample6.swift */,
+				56F868AC2A53BB8100141C9B /* TouchSampleSketch.swift */,
+				56F868AE2A53BE9200141C9B /* TouchSampleSketch2D.swift */,
 				56694B12298AB9070022C24D /* FFTVisualizerSketch.swift */,
 				569EBEAD2995583D0090F5AB /* Sample8.swift */,
 				569A83982999236000F62062 /* Sample9.swift */,
@@ -220,6 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				56C53FC7294A645100962DD6 /* ExampleMacOSApp.swift in Sources */,
+				56F868AF2A53BE9200141C9B /* TouchSampleSketch2D.swift in Sources */,
+				56F868AD2A53BB8100141C9B /* TouchSampleSketch.swift in Sources */,
 				5643923329A187740053C6E6 /* Sample11.swift in Sources */,
 				56694B13298AB9070022C24D /* FFTVisualizerSketch.swift in Sources */,
 				569EBEAE2995583D0090F5AB /* Sample8.swift in Sources */,

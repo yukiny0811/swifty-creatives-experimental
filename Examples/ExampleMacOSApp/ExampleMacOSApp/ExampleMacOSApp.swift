@@ -14,7 +14,9 @@ struct ExampleMacOSApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                FFTVisualizerSketch.VIEW()
+//                FFTVisualizerSketch.VIEW()
+//                TouchSampleSketch.VIEW()
+                TouchSampleSketch2D.VIEW()
             }
             .background(.black)
         }

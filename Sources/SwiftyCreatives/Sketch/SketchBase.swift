@@ -15,6 +15,7 @@ import UIKit
 
 public protocol SketchBase: AnyObject {
     var deltaTime: Float { get set }
+    var metalDrawableSize: f2 { get set }
     
     // MARK: functions
     func setupCamera(camera: some MainCameraBase)
