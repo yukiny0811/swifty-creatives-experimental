@@ -27,10 +27,10 @@ public class TempiFFT : NSObject {
     private var magnitudes: [Float] = []
     
     /// After calling calculateLinearBands() or calculateLogarithmicBands(), contains a magnitude for each band.
-    private(set) var bandMagnitudes: [Float]!
+    private(set) public var bandMagnitudes: [Float]!
     
     /// After calling calculateLinearBands() or calculateLogarithmicBands(), contains the average frequency for each band
-    private(set) var bandFrequencies: [Float]!
+    private(set) public var bandFrequencies: [Float]!
     
     /// The average bandwidth throughout the spectrum (nyquist / magnitudes.count)
     var bandwidth: Float {
@@ -66,7 +66,7 @@ public class TempiFFT : NSObject {
         
         // Check if the size is a power of two
         let lg2 = logbf(sizeFloat)
-        assert(remainderf(sizeFloat, powf(2.0, lg2)) == 0, "size must be a power of 2")
+        assert(remainderf(sizeFloat, powf(2.0, lg2)) == 0, "size \(sizeFloat) must be a power of 2")
         
         self.size = inSize
         self.halfSize = inSize / 2
@@ -275,7 +275,6 @@ public class TempiFFT : NSObject {
     public func magnitudeAtBand(_ inBand: Int) -> Float {
         assert(hasPerformedFFT, "*** Perform the FFT first.")
         assert(bandMagnitudes != nil, "*** Call calculateLinearBands() or calculateLogarithmicBands() first")
-        
         return bandMagnitudes[inBand]
     }
     

@@ -12,6 +12,7 @@ public class FFTVisualizer {
     public var baseUpOffset: Float = 20
     public var historyCount: Int = 5
     public var averageMags: [Float] = []
+    public var freqArray: [Float] = []
     
     var magsHistory: [[Float]] = []
     
@@ -26,6 +27,7 @@ public class FFTVisualizer {
             }
             return db + baseUpOffset
         }
+        freqArray = capturer.fftResult.map { $0.frequency }
         
         if averageMags.count != mags.count {
             averageMags = mags

@@ -16,7 +16,9 @@ public class AudioCapturer: NSObject {
         AVFormatIDKey: kAudioFormatLinearPCM,
         AVLinearPCMIsFloatKey: true,
         AVLinearPCMBitDepthKey: 32,
-        AVNumberOfChannelsKey: 1
+        AVNumberOfChannelsKey: 1,
+        AVLinearPCMIsBigEndianKey: false,
+        AVLinearPCMIsNonInterleaved: false
     ]
     
     private let captureSession = AVCaptureSession()
@@ -27,15 +29,14 @@ public class AudioCapturer: NSObject {
     public var fftWindowType: TempiFFTWindowType
     public var fftMinFreq: Float
     public var fftMaxFreq: Float
-    public var bandsPerOctave: Int
+    public var bandCalculationMethod: FFTBandCalculationMethod = .linear(1024)
     
     public convenience init(
         noiseExtractionMethod: FFTNoiseExtractionMethod = .none,
         fftWindowType: TempiFFTWindowType = .hanning,
         captureDeviceFindWithName deviceName: String,
         fftMinFreq: Float = 100,
-        fftMaxFreq: Float = 30000,
-        bandsPerOctave: Int = 32
+        fftMaxFreq: Float = 30000
     ) {
         let captureDeviceDiscovery = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInMicrophone], mediaType: .audio, position: .unspecified)
         var searchedDevice: AVCaptureDevice?
@@ -45,10 +46,10 @@ public class AudioCapturer: NSObject {
             }
         }
         if let searchedDevice = searchedDevice {
-            self.init(noiseExtractionMethod: noiseExtractionMethod, fftWindowType: fftWindowType, captureDevice: searchedDevice, fftMinFreq: fftMinFreq, fftMaxFreq: fftMaxFreq, bandsPerOctave: bandsPerOctave)
+            self.init(noiseExtractionMethod: noiseExtractionMethod, fftWindowType: fftWindowType, captureDevice: searchedDevice, fftMinFreq: fftMinFreq, fftMaxFreq: fftMaxFreq)
         } else {
             print("Audio Capture Device \(deviceName) not found")
-            self.init(noiseExtractionMethod: noiseExtractionMethod, fftWindowType: fftWindowType, fftMinFreq: fftMinFreq, fftMaxFreq: fftMaxFreq, bandsPerOctave: bandsPerOctave)
+            self.init(noiseExtractionMethod: noiseExtractionMethod, fftWindowType: fftWindowType, fftMinFreq: fftMinFreq, fftMaxFreq: fftMaxFreq)
         }
     }
     
@@ -57,14 +58,12 @@ public class AudioCapturer: NSObject {
         fftWindowType: TempiFFTWindowType = .hanning,
         captureDevice: AVCaptureDevice? = AVCaptureDevice.default(for: .audio),
         fftMinFreq: Float = 100,
-        fftMaxFreq: Float = 30000,
-        bandsPerOctave: Int = 32
+        fftMaxFreq: Float = 30000
     ) {
         self.fftNoiseExtractionMethod = noiseExtractionMethod
         self.fftWindowType = fftWindowType
         self.fftMinFreq = fftMinFreq
         self.fftMaxFreq = fftMaxFreq
-        self.bandsPerOctave = bandsPerOctave
         super.init()
         guard let captureDevice = captureDevice else { return }
         guard let audioInput = try? AVCaptureDeviceInput(device: captureDevice) else {
@@ -125,16 +124,7 @@ extension AudioCapturer: AVCaptureAudioDataOutputSampleBufferDelegate {
             return
         }
         
-        let floatArrayRaw = Array(UnsafeBufferPointer(start: pcmBuffer.floatChannelData?.pointee, count: Int(pcmBuffer.frameLength)))
-        var floatArray = floatArrayRaw.map { f in
-            var result: Float = 0
-            if f < 0 || f.isNaN {
-                result = 0
-            } else {
-                result = f
-            }
-            return result
-        }
+        var floatArray = Array(UnsafeBufferPointer(start: pcmBuffer.floatChannelData?.pointee, count: Int(pcmBuffer.frameLength)))
         
         switch fftNoiseExtractionMethod {
         case .none:
@@ -171,8 +161,14 @@ extension AudioCapturer: AVCaptureAudioDataOutputSampleBufferDelegate {
         // Perform the FFT
         fft.fftForward(floatArray)
 
-        // Map FFT data to logical bands. This gives 4 bands per octave across 7 octaves = 28 bands.
-        fft.calculateLogarithmicBands(minFrequency: self.fftMinFreq, maxFrequency: self.fftMaxFreq, bandsPerOctave: self.bandsPerOctave)
+        switch bandCalculationMethod {
+        case .linear(let bandCount):
+            fft.calculateLinearBands(minFrequency: self.fftMinFreq, maxFrequency: self.fftMaxFreq, numberOfBands: bandCount)
+        case .logarithmic(let bandsPerOctave):
+            // Map FFT data to logical bands. This gives 4 bands per octave across 7 octaves = 28 bands.
+            fft.calculateLogarithmicBands(minFrequency: self.fftMinFreq, maxFrequency: self.fftMaxFreq, bandsPerOctave: bandsPerOctave)
+        }
+        
         
         if fftResult.count != fft.numberOfBands {
             fftResult = []

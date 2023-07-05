@@ -21,11 +21,6 @@ final class FFTVisualizerSketch: Sketch {
             HStack {
                 SketchView(sketch)
                 VStack {
-                    Slider(value: $bandsPerOctave, in: 1...64) {
-                        Text("bandsPerOctave")
-                    } onEditingChanged: { changed in
-                        sketch.capturer.bandsPerOctave = Int(bandsPerOctave)
-                    }
                     Slider(value: $noiseExtractionThreshold, in: 0.001...1) {
                         Text("noiseExtractionThreshold")
                     }

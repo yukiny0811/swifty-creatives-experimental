@@ -21,27 +21,80 @@ final class FFTVisualizerSketch2D: Sketch {
         }
     }
     
+    let textFactory = VectorTextFactory()
+    
     let capturer = AudioCapturer(captureDeviceFindWithName: "BlackHole")
+    let capturer2 = AudioCapturer(captureDeviceFindWithName: "BlackHole")
     let fftVisualizer = FFTVisualizer()
+    let fftVisualizer2 = FFTVisualizer()
     
     override init() {
+        
+        for c in TextFactory.Template.all {
+            textFactory.cacheCharacter(char: c)
+        }
+        
+        capturer.fftWindowType = .hamming
+        capturer.fftMinFreq = 16
+        capturer.fftMaxFreq = 30000
+        capturer.bandCalculationMethod = .linear(256)
+        capturer.fftNoiseExtractionMethod = .none
         capturer.start()
-        fftVisualizer.historyCount = 20
+        
+        capturer2.fftWindowType = .hamming
+        capturer2.fftMinFreq = 16
+        capturer2.fftMaxFreq = 30000
+        capturer2.bandCalculationMethod = .logarithmic(32)
+        capturer2.fftNoiseExtractionMethod = .none
+        capturer2.start()
+        
+        fftVisualizer.historyCount = 12
+        fftVisualizer.baseUpOffset = 50
+        
+        fftVisualizer2.historyCount = 12
+        fftVisualizer2.baseUpOffset = 40
     }
     
     override func update(camera: some MainCameraBase) {
         fftVisualizer.updateData(capturer)
+        fftVisualizer2.updateData(capturer2)
     }
     
     override func draw(encoder: SCEncoder) {
         
         color(1)
-        let width: Float = 3500
-        translate(-width/2, 0, 0)
-        for m in fftVisualizer.averageMags {
-            let boxWidth = width / Float(fftVisualizer.averageMags.count)
-            box(boxWidth / 5, max(0, m) * 30, 0.1)
-            translate(boxWidth, 0, 0)
+        push {
+            translate(1000, 1000, 0)
+            scale(10)
+            word(String(Int(frameRate)), factory: textFactory)
         }
+        
+        translate(0, 300, 0)
+        
+        color(1)
+        push {
+            let width: Float = 3500
+            translate(-width/2, 0, 0)
+            for m in fftVisualizer.averageMags {
+                let boxWidth = width / Float(fftVisualizer.averageMags.count)
+                rect(f3(boxWidth / 5, max(0, m) * 10, 0.1))
+                translate(boxWidth, 0, 0)
+            }
+        }
+        
+        translate(0, -600, 0)
+        
+        color(1, 0, 1, 1)
+        push {
+            let width: Float = 3500
+            translate(-width/2, 0, 0)
+            
+            for m in fftVisualizer2.averageMags {
+                let boxWidth = width / Float(fftVisualizer2.averageMags.count)
+                rect(f3(boxWidth / 5, max(0, m) * 10, 0.1))
+                translate(boxWidth, 0, 0)
+            }
+        }
+        
     }
 }
