@@ -105,6 +105,7 @@
 		56C53FC5294A645100962DD6 /* ExampleMacOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				56ED34262A55B0FA00F3E3E3 /* FFT */,
 				56C53FC6294A645100962DD6 /* ExampleMacOSApp.swift */,
 				56694B04298AB8100022C24D /* Sample1.swift */,
 				56694B06298AB8730022C24D /* Sample2.swift */,
@@ -114,8 +115,6 @@
 				56694B10298AB8EE0022C24D /* Sample6.swift */,
 				56F868AC2A53BB8100141C9B /* TouchSampleSketch.swift */,
 				56F868AE2A53BE9200141C9B /* TouchSampleSketch2D.swift */,
-				56694B12298AB9070022C24D /* FFTVisualizerSketch.swift */,
-				56F868B02A53D8EB00141C9B /* FFTVisualizerSketch2D.swift */,
 				569EBEAD2995583D0090F5AB /* Sample8.swift */,
 				569A83982999236000F62062 /* Sample9.swift */,
 				5643923029A14E2F0053C6E6 /* Sample10.swift */,
@@ -143,6 +142,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56ED34262A55B0FA00F3E3E3 /* FFT */ = {
+			isa = PBXGroup;
+			children = (
+				56694B12298AB9070022C24D /* FFTVisualizerSketch.swift */,
+				56F868B02A53D8EB00141C9B /* FFTVisualizerSketch2D.swift */,
+			);
+			path = FFT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

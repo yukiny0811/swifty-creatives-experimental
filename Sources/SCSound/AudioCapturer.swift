@@ -12,13 +12,16 @@ import Accelerate
 
 public class AudioCapturer: NSObject {
     
+    public enum SampleRateFormat {
+        case inherited
+        case adjusted(Double) //samplerate
+    }
+    
     private static let audioOutputSettings: [String: Any] = [
         AVFormatIDKey: kAudioFormatLinearPCM,
         AVLinearPCMIsFloatKey: true,
         AVLinearPCMBitDepthKey: 32,
-        AVNumberOfChannelsKey: 1,
-        AVLinearPCMIsBigEndianKey: false,
-        AVLinearPCMIsNonInterleaved: false
+        AVNumberOfChannelsKey: 1
     ]
     
     private let captureSession = AVCaptureSession()
@@ -30,6 +33,7 @@ public class AudioCapturer: NSObject {
     public var fftMinFreq: Float
     public var fftMaxFreq: Float
     public var bandCalculationMethod: FFTBandCalculationMethod = .linear(1024)
+    public var sampleRateFormat: SampleRateFormat = .inherited
     
     public convenience init(
         noiseExtractionMethod: FFTNoiseExtractionMethod = .none,
@@ -112,11 +116,20 @@ extension AudioCapturer: AVCaptureAudioDataOutputSampleBufferDelegate {
                 print("asbd is nil")
                 return nil
             }
-            guard let format = AVAudioFormat(standardFormatWithSampleRate: asbd.mSampleRate, channels: asbd.mChannelsPerFrame) else {
-                print("format is nil")
-                return nil
+            switch sampleRateFormat {
+            case .inherited:
+                guard let format = AVAudioFormat(standardFormatWithSampleRate: asbd.mSampleRate, channels: asbd.mChannelsPerFrame) else {
+                    print("format is nil")
+                    return nil
+                }
+                return AVAudioPCMBuffer(pcmFormat: format, bufferListNoCopy: audioBufferList.unsafePointer)
+            case .adjusted(let rate):
+                guard let format = AVAudioFormat(standardFormatWithSampleRate: rate, channels: asbd.mChannelsPerFrame) else {
+                    print("format is nil")
+                    return nil
+                }
+                return AVAudioPCMBuffer(pcmFormat: format, bufferListNoCopy: audioBufferList.unsafePointer)
             }
-            return AVAudioPCMBuffer(pcmFormat: format, bufferListNoCopy: audioBufferList.unsafePointer)
         }
         
         guard let pcmBuffer = pcmBuffer else {
@@ -125,6 +138,16 @@ extension AudioCapturer: AVCaptureAudioDataOutputSampleBufferDelegate {
         }
         
         var floatArray = Array(UnsafeBufferPointer(start: pcmBuffer.floatChannelData?.pointee, count: Int(pcmBuffer.frameLength)))
+        
+        floatArray = floatArray.map { f in
+            var result: Float = 0
+            if f < 0 || f.isNaN {
+                result = 0
+            } else {
+                result = f
+            }
+            return result
+        }
         
         switch fftNoiseExtractionMethod {
         case .none:

@@ -23,8 +23,10 @@ final class FFTVisualizerSketch2D: Sketch {
     
     let textFactory = VectorTextFactory()
     
-    let capturer = AudioCapturer(captureDeviceFindWithName: "BlackHole")
-    let capturer2 = AudioCapturer(captureDeviceFindWithName: "BlackHole")
+//    let capturer = AudioCapturer(captureDeviceFindWithName: "BlackHole")
+//    let capturer2 = AudioCapturer(captureDeviceFindWithName: "BlackHole")
+    let capturer = AudioCapturer()
+    let capturer2 = AudioCapturer()
     let fftVisualizer = FFTVisualizer()
     let fftVisualizer2 = FFTVisualizer()
     
@@ -35,21 +37,21 @@ final class FFTVisualizerSketch2D: Sketch {
         }
         
         capturer.fftWindowType = .hamming
-        capturer.fftMinFreq = 16
+        capturer.fftMinFreq = 8
         capturer.fftMaxFreq = 30000
-        capturer.bandCalculationMethod = .linear(256)
+        capturer.bandCalculationMethod = .linear(512)
         capturer.fftNoiseExtractionMethod = .none
         capturer.start()
         
         capturer2.fftWindowType = .hamming
-        capturer2.fftMinFreq = 16
+        capturer2.fftMinFreq = 8
         capturer2.fftMaxFreq = 30000
         capturer2.bandCalculationMethod = .logarithmic(32)
         capturer2.fftNoiseExtractionMethod = .none
         capturer2.start()
         
         fftVisualizer.historyCount = 12
-        fftVisualizer.baseUpOffset = 50
+        fftVisualizer.baseUpOffset = 40
         
         fftVisualizer2.historyCount = 12
         fftVisualizer2.baseUpOffset = 40
