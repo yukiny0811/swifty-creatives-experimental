@@ -18,6 +18,7 @@
 		56694B11298AB8EE0022C24D /* Sample6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56694B10298AB8EE0022C24D /* Sample6.swift */; };
 		56694B13298AB9070022C24D /* FFTVisualizerSketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56694B12298AB9070022C24D /* FFTVisualizerSketch.swift */; };
 		5675A0F8294B18A2005C25BD /* SwiftyCreatives in Frameworks */ = {isa = PBXBuildFile; productRef = 5675A0F7294B18A2005C25BD /* SwiftyCreatives */; };
+		568288AA2A55B53900F9714A /* FFTVisTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568288A92A55B53900F9714A /* FFTVisTemplate.swift */; };
 		569A83992999236000F62062 /* Sample9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A83982999236000F62062 /* Sample9.swift */; };
 		569EBEAE2995583D0090F5AB /* Sample8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569EBEAD2995583D0090F5AB /* Sample8.swift */; };
 		56C53FC7294A645100962DD6 /* ExampleMacOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C53FC6294A645100962DD6 /* ExampleMacOSApp.swift */; };
@@ -46,6 +47,7 @@
 		56694B10298AB8EE0022C24D /* Sample6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample6.swift; sourceTree = "<group>"; };
 		56694B12298AB9070022C24D /* FFTVisualizerSketch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTVisualizerSketch.swift; sourceTree = "<group>"; };
 		5675A0F6294B187D005C25BD /* swifty-creatives */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swifty-creatives"; path = ../..; sourceTree = "<group>"; };
+		568288A92A55B53900F9714A /* FFTVisTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTVisTemplate.swift; sourceTree = "<group>"; };
 		569A83982999236000F62062 /* Sample9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample9.swift; sourceTree = "<group>"; };
 		569EBEAD2995583D0090F5AB /* Sample8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample8.swift; sourceTree = "<group>"; };
 		56C53FC3294A645100962DD6 /* ExampleMacOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleMacOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 			children = (
 				56694B12298AB9070022C24D /* FFTVisualizerSketch.swift */,
 				56F868B02A53D8EB00141C9B /* FFTVisualizerSketch2D.swift */,
+				568288A92A55B53900F9714A /* FFTVisTemplate.swift */,
 			);
 			path = FFT;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				5643923329A187740053C6E6 /* Sample11.swift in Sources */,
 				56694B13298AB9070022C24D /* FFTVisualizerSketch.swift in Sources */,
 				569EBEAE2995583D0090F5AB /* Sample8.swift in Sources */,
+				568288AA2A55B53900F9714A /* FFTVisTemplate.swift in Sources */,
 				569A83992999236000F62062 /* Sample9.swift in Sources */,
 				5643923129A14E2F0053C6E6 /* Sample10.swift in Sources */,
 				56694B09298AB8840022C24D /* Sample3.swift in Sources */,
