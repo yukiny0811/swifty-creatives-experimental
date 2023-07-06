@@ -61,7 +61,7 @@ final class FFTVisualizerSketch: Sketch {
         }
     }
     
-    let capturer = AudioCapturer(captureDeviceFindWithName: "BlackHole")
+    let capturer = FastAudioCapturer(captureDeviceFindWithName: "BlackHole")
     let fftVisualizer = FFTVisualizer()
     
     override init() {

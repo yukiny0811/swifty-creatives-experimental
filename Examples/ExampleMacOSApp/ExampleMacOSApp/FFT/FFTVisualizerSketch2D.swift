@@ -25,8 +25,8 @@ final class FFTVisualizerSketch2D: Sketch {
     
 //    let capturer = AudioCapturer(captureDeviceFindWithName: "BlackHole")
 //    let capturer2 = AudioCapturer(captureDeviceFindWithName: "BlackHole")
-    let capturer = AudioCapturer()
-    let capturer2 = AudioCapturer()
+    let capturer = FastAudioCapturer()
+    let capturer2 = FastAudioCapturer()
     let fftVisualizer = FFTVisualizer()
     let fftVisualizer2 = FFTVisualizer()
     

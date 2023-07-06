@@ -15,4 +15,5 @@ public typealias NSSketchView = KitSketchView
 public typealias UISketchView = KitSketchView
 #endif
 
-public typealias AudioCapturer = SCSound.AudioCapturer
+public typealias FastAudioCapturer = SCSound.FastAudioCapturer
+public typealias DetailedAudioCapturer = SCSound.DetailedAudioCapturer
