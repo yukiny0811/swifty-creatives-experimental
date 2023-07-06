@@ -34,7 +34,9 @@ public class DetailedAudioCapturer: NSObject, AudioCapturer {
         self.fftMaxFreq = fftMaxFreq
         super.init()
         
-        let format = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: 44100, channels: 1, interleaved: true)
+        let format = engine.inputNode.inputFormat(forBus: 0)
+        print(format.sampleRate, format.commonFormat, format.settings)
+        print(engine.inputNode.presentationLatency)
         engine.inputNode.installTap(onBus: 0, bufferSize: 8192, format: format) { [self] pcmBuffer, time in
             
             var floatArray = Array(UnsafeBufferPointer(start: pcmBuffer.floatChannelData?.pointee, count: Int(pcmBuffer.frameLength)))
@@ -102,6 +104,7 @@ public class DetailedAudioCapturer: NSObject, AudioCapturer {
     }
     
     public func start() {
+        self.engine.prepare()
         engineQueue.async {
             try! self.engine.start()
         }

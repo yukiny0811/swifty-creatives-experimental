@@ -18,36 +18,36 @@ final class FFTVisTemplate: Sketch {
         let bandsPerOctave = 7
         var body: some View {
             VStack {
-//                SketchViewTemplate(FFTVisTemplate(
-//                    capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
-//                    fftMaxFreq: 1000000,
-//                    bandCalculationMethod: .linear(bandCount),
-//                    historyCount: 10
-//                ))
-//                SketchViewTemplate(FFTVisTemplate(
-//                    capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
-//                    heightSize: 5,
-//                    fftMinFreq: 1,
-//                    fftMaxFreq: 1000000,
-//                    bandCalculationMethod: .logarithmic(bandsPerOctave),
-//                    historyCount: 1,
-//                    baseUpOffset: 40
-//                ))
+                SketchViewTemplate(FFTVisTemplate(
+                    capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
+                    fftMaxFreq: 1000000,
+                    bandCalculationMethod: .linear(bandCount),
+                    historyCount: 10
+                ))
+                SketchViewTemplate(FFTVisTemplate(
+                    capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
+                    heightSize: 5,
+                    fftMinFreq: 1,
+                    fftMaxFreq: 1000000,
+                    bandCalculationMethod: .logarithmic(bandsPerOctave),
+                    historyCount: 5,
+                    baseUpOffset: 40
+                ))
 //                SketchViewTemplate(FFTVisTemplate(
 //                    capturer: DetailedAudioCapturer(),
 //                    fftMaxFreq: 1000000,
 //                    bandCalculationMethod: .linear(bandCount),
 //                    historyCount: 10
 //                ))
-                SketchViewTemplate(FFTVisTemplate(
-                    capturer: DetailedAudioCapturer(),
-                    heightSize: 5,
-                    fftMinFreq: 1,
-                    fftMaxFreq: 1000000,
-                    bandCalculationMethod: .logarithmic(bandsPerOctave),
-                    historyCount: 1,
-                    baseUpOffset: 40
-                ))
+//                SketchViewTemplate(FFTVisTemplate(
+//                    capturer: DetailedAudioCapturer(),
+//                    heightSize: 5,
+//                    fftMinFreq: 1,
+//                    fftMaxFreq: 1000000,
+//                    bandCalculationMethod: .logarithmic(bandsPerOctave),
+//                    historyCount: 3,
+//                    baseUpOffset: 40
+//                ))
             }
         }
     }
@@ -97,9 +97,10 @@ final class FFTVisTemplate: Sketch {
             translate(-width/2, 0, 0)
             for m in fftVisualizer.averageMags {
                 let boxWidth = width / Float(fftVisualizer.averageMags.count)
+                let height = max(0, m) * heightSize
                 rect(f3(
                     max(boxWidth / 5, 0.5),
-                    max(0, m) * heightSize,
+                    height,
                     1)
                 )
                 translate(boxWidth, 0, 0)
