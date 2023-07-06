@@ -18,30 +18,31 @@ final class FFTVisTemplate: Sketch {
         var body: some View {
             HStack {
                 VStack {
-//                    SketchViewTemplate(FFTVisTemplate(
-//                        fftMinFreq: 8,
-//                        fftMaxFreq: 1000,
-//                        bandCalculationMethod: .linear(bandCount)
-//                    ))
                     SketchViewTemplate(FFTVisTemplate(
-                        bandCalculationMethod: .linear(bandCount)
+                        fftMaxFreq: 1000000,
+                        bandCalculationMethod: .linear(bandCount),
+                        historyCount: 10
                     ))
-//                    SketchViewTemplate(FFTVisTemplate(
-//                        bandCalculationMethod: .logarithmic(4)
-//                    ))
+                    SketchViewTemplate(FFTVisTemplate(
+                        heightSize: 5,
+                        fftMinFreq: 1,
+                        fftMaxFreq: 1000000,
+                        bandCalculationMethod: .logarithmic(24),
+                        baseUpOffset: 40
+                    ))
                 }
             }
         }
     }
     
-    let capturer = AudioCapturer()
+    let capturer = AudioCapturer(captureDeviceFindWithName: "BlackHole")
     let fftVisualizer = FFTVisualizer()
     let width: Float
     let heightSize: Float
     
     init(
         width: Float = 4000,
-        heightSize: Float = 20,
+        heightSize: Float = 10,
         fftWindowType: TempiFFTWindowType = .hamming,
         fftMinFreq: Float = 8,
         fftMaxFreq: Float = 22000,

@@ -151,7 +151,7 @@ extension AudioCapturer: AVCaptureAudioDataOutputSampleBufferDelegate {
             floatArray = timeDomainArray
         }
         
-        let fft = TempiFFT(withSize: Int(pcmBuffer.frameLength), sampleRate: Float(pcmBuffer.format.sampleRate))
+        let fft = TempiFFT(withSize: floatArray.count, sampleRate: Float(pcmBuffer.format.sampleRate))
 
         // Setting a window type reduces errors
         fft.windowType = self.fftWindowType
