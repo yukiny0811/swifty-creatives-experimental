@@ -17,37 +17,51 @@ final class FFTVisTemplate: Sketch {
         let bandCount = 256
         let bandsPerOctave = 7
         var body: some View {
-            VStack {
+            HStack {
                 SketchViewTemplate(FFTVisTemplate(
                     capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
                     fftMaxFreq: 1000000,
                     bandCalculationMethod: .linear(bandCount),
-                    historyCount: 10
+                    historyCount: 1
                 ))
-                SketchViewTemplate(FFTVisTemplate(
-                    capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
-                    heightSize: 5,
-                    fftMinFreq: 1,
-                    fftMaxFreq: 1000000,
-                    bandCalculationMethod: .logarithmic(bandsPerOctave),
-                    historyCount: 5,
-                    baseUpOffset: 40
-                ))
-//                SketchViewTemplate(FFTVisTemplate(
-//                    capturer: DetailedAudioCapturer(),
-//                    fftMaxFreq: 1000000,
-//                    bandCalculationMethod: .linear(bandCount),
-//                    historyCount: 10
-//                ))
-//                SketchViewTemplate(FFTVisTemplate(
-//                    capturer: DetailedAudioCapturer(),
-//                    heightSize: 5,
-//                    fftMinFreq: 1,
-//                    fftMaxFreq: 1000000,
-//                    bandCalculationMethod: .logarithmic(bandsPerOctave),
-//                    historyCount: 3,
-//                    baseUpOffset: 40
-//                ))
+                VStack {
+                    SketchViewTemplate(FFTVisTemplate(
+                        capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
+                        fftMaxFreq: 1000000,
+                        bandCalculationMethod: .linear(bandCount),
+                        historyCount: 1
+                    ))
+                    SketchViewTemplate(FFTVisTemplate(
+                        capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
+                        fftMaxFreq: 1000000,
+                        bandCalculationMethod: .linear(bandCount),
+                        historyCount: 10
+                    ))
+                    SketchViewTemplate(FFTVisTemplate(
+                        capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
+                        heightSize: 5,
+                        fftMinFreq: 1,
+                        fftMaxFreq: 1000000,
+                        bandCalculationMethod: .logarithmic(bandsPerOctave),
+                        historyCount: 5,
+                        baseUpOffset: 40
+                    ))
+                    //                SketchViewTemplate(FFTVisTemplate(
+                    //                    capturer: DetailedAudioCapturer(),
+                    //                    fftMaxFreq: 1000000,
+                    //                    bandCalculationMethod: .linear(bandCount),
+                    //                    historyCount: 10
+                    //                ))
+                    //                SketchViewTemplate(FFTVisTemplate(
+                    //                    capturer: DetailedAudioCapturer(),
+                    //                    heightSize: 5,
+                    //                    fftMinFreq: 1,
+                    //                    fftMaxFreq: 1000000,
+                    //                    bandCalculationMethod: .logarithmic(bandsPerOctave),
+                    //                    historyCount: 3,
+                    //                    baseUpOffset: 40
+                    //                ))
+                }
             }
         }
     }
@@ -92,6 +106,10 @@ final class FFTVisTemplate: Sketch {
     }
     
     override func draw(encoder: SCEncoder) {
+        
+        color(1, 0, 0, 1)
+        rect(boxPos, 50)
+        
         color(1)
         push {
             translate(-width/2, 0, 0)
@@ -106,5 +124,12 @@ final class FFTVisTemplate: Sketch {
                 translate(boxWidth, 0, 0)
             }
         }
+    }
+    
+    var boxPos: f3 = .zero
+    override func mouseMoved(with event: NSEvent, camera: some MainCameraBase, viewFrame: CGRect) {
+        let mPos = mousePos(event: event, viewFrame: viewFrame, isPerspective: false)
+        boxPos = f3(mPos.x, mPos.y, 0)
+        
     }
 }

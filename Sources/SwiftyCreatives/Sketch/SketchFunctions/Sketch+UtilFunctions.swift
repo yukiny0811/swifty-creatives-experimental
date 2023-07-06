@@ -21,13 +21,15 @@ public extension Sketch {
         } else {
             let location = event.locationInWindow
             let contentRect = event.window!.contentRect(forFrameRect: event.window!.frame)
-            let contentSize: f2 = f2(
-                Float(contentRect.width) - Float(viewFrame.minX),
-                Float(contentRect.height) - Float(viewFrame.minY)
+            var adjustedLocation = f2(
+                Float(location.x),
+                Float(contentRect.height - location.y)
             )
+            adjustedLocation.x -= Float(viewFrame.minX)
+            adjustedLocation.y -= Float(viewFrame.minY)
             let normalizedLocation: f2 = f2(
-                Float(location.x) / contentSize.x,
-                Float(location.y) / contentSize.y
+                adjustedLocation.x / Float(viewFrame.width),
+                1 - (adjustedLocation.y / Float(viewFrame.height))
             )
             let signedNormalizedLocation = normalizedLocation * 2 - f2.one
             return f2(signedNormalizedLocation.x * metalDrawableSize.x / 2, signedNormalizedLocation.y * metalDrawableSize.y / 2)
