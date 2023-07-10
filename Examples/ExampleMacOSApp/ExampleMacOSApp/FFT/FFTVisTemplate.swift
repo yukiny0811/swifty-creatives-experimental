@@ -9,28 +9,17 @@ import AppKit
 import SwiftyCreatives
 import SCSound
 import SwiftUI
+import simd
 
 final class FFTVisTemplate: Sketch {
     
     struct VIEW: View {
         typealias SketchViewTemplate = ConfigurableSketchView<DefaultOrthoConfig, MainDrawConfig>
-        let bandCount = 256
-        let bandsPerOctave = 7
+        let bandCount = 64
+        let bandsPerOctave = 12
         var body: some View {
             HStack {
-                SketchViewTemplate(FFTVisTemplate(
-                    capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
-                    fftMaxFreq: 1000000,
-                    bandCalculationMethod: .linear(bandCount),
-                    historyCount: 1
-                ))
                 VStack {
-                    SketchViewTemplate(FFTVisTemplate(
-                        capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
-                        fftMaxFreq: 1000000,
-                        bandCalculationMethod: .linear(bandCount),
-                        historyCount: 1
-                    ))
                     SketchViewTemplate(FFTVisTemplate(
                         capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
                         fftMaxFreq: 1000000,
@@ -39,28 +28,13 @@ final class FFTVisTemplate: Sketch {
                     ))
                     SketchViewTemplate(FFTVisTemplate(
                         capturer: FastAudioCapturer(captureDeviceFindWithName: "BlackHole"),
-                        heightSize: 5,
+                        heightSize: 20,
                         fftMinFreq: 1,
                         fftMaxFreq: 1000000,
                         bandCalculationMethod: .logarithmic(bandsPerOctave),
-                        historyCount: 5,
-                        baseUpOffset: 40
+                        historyCount: 12,
+                        baseUpOffset: 20
                     ))
-                    //                SketchViewTemplate(FFTVisTemplate(
-                    //                    capturer: DetailedAudioCapturer(),
-                    //                    fftMaxFreq: 1000000,
-                    //                    bandCalculationMethod: .linear(bandCount),
-                    //                    historyCount: 10
-                    //                ))
-                    //                SketchViewTemplate(FFTVisTemplate(
-                    //                    capturer: DetailedAudioCapturer(),
-                    //                    heightSize: 5,
-                    //                    fftMinFreq: 1,
-                    //                    fftMaxFreq: 1000000,
-                    //                    bandCalculationMethod: .logarithmic(bandsPerOctave),
-                    //                    historyCount: 3,
-                    //                    baseUpOffset: 40
-                    //                ))
                 }
             }
         }
@@ -103,21 +77,38 @@ final class FFTVisTemplate: Sketch {
         if Float.random(in: 0...100) < 1 {
             print(frameRate)
         }
+        $flashIntensity.update(multiplier: 0.1)
+        flashIntensity = 0
     }
     
     override func draw(encoder: SCEncoder) {
         
+        color($flashIntensity.animationValue, 0.8)
+        rect(metalDrawableSize.x, metalDrawableSize.y)
+        
         color(1, 0, 0, 1)
-        rect(boxPos, 50)
+        rect(boxPos, 1)
+        
+        let boxWidth = width / Float(fftVisualizer.averageMags.count)
+        color(0, 1, 0, 1)
+        boldline(-metalDrawableSize.x, boxPos.y, 0, metalDrawableSize.x, boxPos.y, 0, width: 2)
+        color(0, 1, 0, 0.3)
+        rect(Float(Int(boxPos.x / boxWidth)) * boxWidth, boxPos.y, 0, boxWidth/2, 10000)
         
         color(1)
         push {
             translate(-width/2, 0, 0)
             for m in fftVisualizer.averageMags {
-                let boxWidth = width / Float(fftVisualizer.averageMags.count)
+                let xSize = max(boxWidth / 5, 0.5)
                 let height = max(0, m) * heightSize
+                
+                let thresholdPosf4 = getCustomMatrix() * f4(0, 0, 0, 1)
+                let thresholdPos = f2(thresholdPosf4.x, height)
+                if thresholdPos.x - boxWidth/2 < boxPos.x && boxPos.x < thresholdPos.x + boxWidth/2 && thresholdPos.y > abs(boxPos.y) {
+                    $flashIntensity.directSet(1)
+                }
                 rect(f3(
-                    max(boxWidth / 5, 0.5),
+                    xSize,
                     height,
                     1)
                 )
@@ -127,9 +118,9 @@ final class FFTVisTemplate: Sketch {
     }
     
     var boxPos: f3 = .zero
+    @SCAnimatable var flashIntensity: Float = 0
     override func mouseMoved(with event: NSEvent, camera: some MainCameraBase, viewFrame: CGRect) {
         let mPos = mousePos(event: event, viewFrame: viewFrame, isPerspective: false)
         boxPos = f3(mPos.x, mPos.y, 0)
-        
     }
 }
