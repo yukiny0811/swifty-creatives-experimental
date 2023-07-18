@@ -111,4 +111,36 @@ open class ModelObject: Primitive<ModelObjectInfo> {
             }
         }
     }
+    
+    public func draw(_ encoder: SCEncoder, primitiveType: MTLPrimitiveType) {
+        
+        guard let meshes = self.mesh as? [MTKMesh] else { return }
+        
+        encoder.setVertexBytes(_mScale, length: f3.memorySize, index: VertexBufferIndex.ModelScale.rawValue)
+        
+        for mesh in meshes {
+            
+            for b in 0..<mesh.vertexBuffers.count {
+                switch b {
+                case 0:
+                    encoder.setVertexBuffer(mesh.vertexBuffers[b].buffer, offset: 0, index: VertexBufferIndex.Position.rawValue)
+                case 1:
+                    encoder.setVertexBuffer(mesh.vertexBuffers[b].buffer, offset: 0, index: VertexBufferIndex.UV.rawValue)
+                case 2:
+                    encoder.setVertexBuffer(mesh.vertexBuffers[b].buffer, offset: 0, index: VertexBufferIndex.Normal.rawValue)
+                default:
+                    break
+                }
+            }
+            for s in mesh.submeshes {
+                if texture != nil {
+                    encoder.setFragmentBytes([true], length: Bool.memorySize, index: FragmentBufferIndex.HasTexture.rawValue)
+                    encoder.setFragmentTexture(texture, index: FragmentTextureIndex.MainTexture.rawValue)
+                } else {
+                    encoder.setFragmentBytes([false], length: Bool.memorySize, index: FragmentBufferIndex.HasTexture.rawValue)
+                }
+                encoder.drawIndexedPrimitives(type: primitiveType, indexCount: s.indexCount, indexType: s.indexType, indexBuffer: s.indexBuffer.buffer, indexBufferOffset: s.indexBuffer.offset)
+            }
+        }
+    }
 }

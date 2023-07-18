@@ -26,9 +26,7 @@ public protocol SketchBase: AnyObject {
     func preProcess(commandBuffer: MTLCommandBuffer)
     func postProcess(texture: MTLTexture, commandBuffer: MTLCommandBuffer)
     
-    #if canImport(XCTest)
-    func afterCommit()
-    #endif
+    func afterCommit(texture: MTLTexture?)
     
     #if os(macOS)
     func mouseMoved(with event: NSEvent, camera: some MainCameraBase, viewFrame: CGRect)

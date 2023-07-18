@@ -152,9 +152,7 @@ public class TransparentRenderer<
         commandBuffer.present(view.currentDrawable!)
         commandBuffer.commit()
         
-        #if canImport(XCTest)
         commandBuffer.waitUntilCompleted()
-        self.drawProcess.afterCommit()
-        #endif
+        self.drawProcess.afterCommit(texture: self.cachedTexture)
     }
 }
