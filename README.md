@@ -1,10 +1,5 @@
 # SwiftyCreatives
 
-[![Release](https://img.shields.io/github/v/release/yukiny0811/swifty-creatives-experimental)](https://github.com/yukiny0811/swifty-creatives-experimental/releases/latest)
-[![Swift Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fyukiny0811%2Fswifty-creatives-experimental%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/yukiny0811/swifty-creatives-experimental)
-[![Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fyukiny0811%2Fswifty-creatives-experimental%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/yukiny0811/swifty-creatives-experimental)
-[![License](https://img.shields.io/github/license/yukiny0811/swifty-creatives-experimental)](https://github.com/yukiny0811/swifty-creatives-experimental/blob/main/LICENSE)
-
 __Creative coding framework for Swift.__   
 Using Metal directly for rendering.
 
