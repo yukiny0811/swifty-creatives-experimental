@@ -1,0 +1,14 @@
+name: CI
+on:
+  workflow_dispatch:
+env:
+  DEVELOPER_DIR: /Applications/Xcode.app
+jobs:
+  test:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test macOS
+        run: xcodebuild -scheme SwiftyCreatives test -destination "platform=macOS,arch=x86_64"
+      - name: Test iOS
+        run: xcodebuild -scheme SwiftyCreatives test -destination "name=iPhone 14 Pro"
