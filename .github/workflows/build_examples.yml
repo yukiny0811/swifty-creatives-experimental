@@ -1,4 +1,4 @@
-name: CI
+name: BuildExamples
 on:
   workflow_dispatch:
 env:
