@@ -1,0 +1,14 @@
+name: CI
+on:
+  workflow_dispatch:
+env:
+  DEVELOPER_DIR: /Applications/Xcode.app
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build macOS
+        run: xcodebuild -scheme SwiftyCreatives build -destination "generic/platform=macOS"
+      - name: Build iOS
+        run: xcodebuild -scheme SwiftyCreatives build -destination "generic/platform=iOS"
