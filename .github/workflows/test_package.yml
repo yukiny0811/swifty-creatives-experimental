@@ -1,4 +1,4 @@
-name: CI
+name: TestPackage
 on:
   workflow_dispatch:
 env:
