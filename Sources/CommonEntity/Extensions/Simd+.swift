@@ -1,12 +1,11 @@
 //
-//  Simd+.swift
+//  File.swift
 //  
 //
-//  Created by Yuki Kuwashima on 2022/12/09.
+//  Created by Yuki Kuwashima on 2023/07/20.
 //
 
 import simd
-import CommonEntity
 
 public extension f4x4 {
     static var memorySize: Int {

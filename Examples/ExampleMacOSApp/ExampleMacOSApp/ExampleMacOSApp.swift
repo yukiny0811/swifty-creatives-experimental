@@ -15,10 +15,11 @@ struct ExampleMacOSApp: App {
         WindowGroup {
             ZStack {
 //                FFTVisualizerSketch.VIEW()
-                FFTVisTemplate.VIEW()
+//                FFTVisTemplate.VIEW()
 //                TouchSampleSketch.VIEW()
 //                TouchSampleSketch2D.VIEW()
 //                SketchView(Sample5())
+                SketchView(Sample1())
             }
             .background(.black)
         }
