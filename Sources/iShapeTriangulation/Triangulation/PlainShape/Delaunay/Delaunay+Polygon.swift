@@ -137,9 +137,6 @@ extension Delaunay {
                     continue
                 }
                 let next = self.triangles[edge.neighbor]
-                #if DEBUG
-                assert(!next.hasInnerVertex, "Inner points")
-                #endif
                 if polygon.add(edge: edge, triangle: next) {
                     visited[edge.neighbor] = true
                 }
@@ -152,11 +149,3 @@ extension Delaunay {
     }
 
 }
-
-#if DEBUG
-private extension Delaunay.Triangle {
-    var hasInnerVertex: Bool {
-        !(vertices.a.nature.isPath && vertices.b.nature.isPath && vertices.c.nature.isPath)
-    }
-}
-#endif

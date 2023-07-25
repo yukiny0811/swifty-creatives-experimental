@@ -15,7 +15,7 @@ struct IntTriangle {
         case line
     }
     
-    @inlinable
+    
     static func getOrientation(a: IntPoint, b: IntPoint, c: IntPoint) -> Orientation {
         let m0 = (c.y - a.y) * (b.x - a.x)
         let m1 = (b.y - a.y) * (c.x - a.x)
@@ -29,14 +29,14 @@ struct IntTriangle {
         }
     }
     
-    @inlinable
+    
     static func isNotLine(a: IntPoint, b: IntPoint, c: IntPoint) -> Bool {
         let m0 = (c.y - a.y) * (b.x - a.x)
         let m1 = (b.y - a.y) * (c.x - a.x)
         return m0 != m1
     }
     
-    @inlinable
+    
     static func isCCW(a: IntPoint, b: IntPoint, c: IntPoint) -> Bool {
         let m0 = (c.y - a.y) * (b.x - a.x)
         let m1 = (b.y - a.y) * (c.x - a.x)
@@ -44,7 +44,7 @@ struct IntTriangle {
         return m0 < m1
     }
     
-    @inlinable
+    
     static func isCCW_or_Line(a: IntPoint, b: IntPoint, c: IntPoint) -> Bool {
         let m0 = (c.y - a.y) * (b.x - a.x)
         let m1 = (b.y - a.y) * (c.x - a.x)

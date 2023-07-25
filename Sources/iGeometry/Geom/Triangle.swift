@@ -18,22 +18,21 @@ public struct Triangle {
         self.c = c
     }
  
-    @inline(__always)
     public var area: Float {
         0.5 * (a.x * (c.y - b.y) + b.x * (a.y - c.y) + c.x * (b.y - a.y))
     }
     
-    @inlinable
+    
     public var circumscribedСircle: Circle {
         Triangle.circumscribedСircle(a: a, b: b, c: c)
     }
     
-    @inlinable
+    
     public var inscribedСircle: Circle {
         Triangle.inscribedСircle(a: a, b: b, c: c)
     }
     
-    @inlinable
+    
     public static func circumscribedСircle(a: Point, b: Point, c: Point) -> Circle {
         let d = 2 * (a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y))
         let x = ((a.x * a.x + a.y * a.y) * (b.y - c.y) + (b.x * b.x + b.y * b.y) * (c.y - a.y) + (c.x * c.x + c.y * c.y) * (a.y - b.y)) / d
@@ -44,7 +43,7 @@ public struct Triangle {
         return Circle(center: Point(x: x, y: y), radius: r)
     }
     
-    @inlinable
+    
     public static func inscribedСircle(a: Point, b: Point, c: Point) -> Circle {
         let ABx = a.x - b.x
         let ABy = a.y - b.y

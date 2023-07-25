@@ -198,7 +198,6 @@ extension Delaunay {
 
 private extension Delaunay.Triangle {
     
-    @inline(__always)
     var center: IntPoint {
         let a = self.vertices.a.point
         let b = self.vertices.b.point
@@ -206,7 +205,6 @@ private extension Delaunay.Triangle {
         return IntPoint(x: (a.x &+ b.x &+ c.x) / 3, y: (a.y &+ b.y &+ c.y) / 3)
     }
     
-    @inline(__always)
     func middle(index: Int)  -> IntPoint {
         switch index {
         case 0:

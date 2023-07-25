@@ -17,7 +17,7 @@ public struct Vertex {
         case extraInner
         case extraTessellated
         
-        @inlinable
+        
         public var isPath: Bool {
             self == .origin || self == .extraPath
         }
@@ -29,7 +29,7 @@ public struct Vertex {
     public let point: IntPoint
     public let nature: Nature
 
-    @inlinable
+    
     public init(index: Index, nature: Nature, point: IntPoint) {
         self.index = index
         self.point = point

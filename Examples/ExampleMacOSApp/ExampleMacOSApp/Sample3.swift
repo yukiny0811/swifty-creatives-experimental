@@ -7,9 +7,28 @@
 
 import SwiftyCreatives
 import Collections
-import Algorithms
 import AppKit
 import CoreGraphics
+
+fileprivate extension [f3] {
+    func chunks(ofCount c: Int) -> [[f3]] {
+        var finalResult: [[f3]] = []
+        var index = 0
+        var temp: [f3] = []
+        for value in self {
+            temp.append(value)
+            index += 1
+            if index % c == 0 {
+                finalResult.append(temp)
+                temp = []
+            }
+        }
+        if temp.count > 0 {
+            finalResult.append(temp)
+        }
+        return finalResult
+    }
+}
 
 final class Sample3: Sketch {
     let factory = VectorTextFactoryRaw()
@@ -26,7 +45,7 @@ final class Sample3: Sketch {
             factory.cacheCharacter(char: c)
         }
         
-        chunked_a = factory.cached["桑"]!.vertices.chunks(ofCount: 3).map{$0.map{$0}}
+        chunked_a = factory.cached["桑"]!.vertices.chunks(ofCount: 3)
         colors_a = chunked_a.map{ _ in f4(1, 0.8, 1, 1) }
         offset_a = chunked_a.map{ _ in Float.random(in: 0.01...3) }
         

@@ -6,10 +6,6 @@
 //  Copyright © 2019 Nail Sharipov. All rights reserved.
 //
 
-#if DEBUG
-import Foundation
-#endif
-
 import iGeometry
 
 public struct Delaunay {
@@ -291,7 +287,6 @@ public struct Delaunay {
         }
     }
     
-//    @inline(__always)
     static func isDelaunay(p0: IntPoint, p1: IntPoint, p2: IntPoint, p3: IntPoint) -> Bool {
 
         let x01 = p0.x &- p1.x
@@ -340,65 +335,7 @@ public struct Delaunay {
 
         return sinAB < 0.001
     }
-    
-    #if DEBUG
-        // P, C, A, B
-        private static func debugDelaunay(p0: IntPoint, p1: IntPoint, p2: IntPoint, p3: IntPoint) {
-            let p = IntGeom.defGeom.float(point: p0)
-            let c = IntGeom.defGeom.float(point: p1)
-            let a = IntGeom.defGeom.float(point: p2)
-            let b = IntGeom.defGeom.float(point: p3)
-            
-            let A = (b - c).length
-            let B = (c - a).length
-            let C = (a - b).length
-            
-            let CP = (p - c).length
-            let BP = (p - b).length
-
-            // CPB
-            let cos_alpha = (BP * BP + CP * CP - A * A) / (2 * BP * CP)
-            
-            // CAB
-            let cos_beta = (B * B + C * C - A * A) / (2 * B * C)
-            
-            let toAngle = 180 / Float.pi
-            let alpha = acos(cos_alpha)*toAngle
-            let beta = acos(cos_beta)*toAngle
-            let al = String(format: "%.2f", alpha)
-            let be = String(format: "%.2f", beta)
-            let su = String(format: "%.2f", beta + alpha)
-            
-            debugPrint("alpha: \(al), beta: \(be), sum: \(su)")
-        }
-
-    #endif
 }
-#if DEBUG
-
-private extension Point {
-    
-    var length: Float {
-        return (x * x + y * y).squareRoot()
-    }
-}
-
-private func +(left: Point, right: Point) -> Point {
-    return Point(x: left.x + right.x, y: left.y + right.y)
-}
-
-private func -(left: Point, right: Point) -> Point {
-    return Point(x: left.x - right.x, y: left.y - right.y)
-}
-
-private func *(left: Float, right: Point) -> Point {
-    return Point(x: left * right.x, y: left * right.y)
-}
-
-private func /(left: Point, right: Float) -> Point {
-    return Point(x: left.x / right, y: left.y / right)
-}
-#endif
 
 private struct IntList {
     
@@ -406,7 +343,6 @@ private struct IntList {
     private var capacity: Int
     private (set) var count: Int
 
-    @inline(__always)
     subscript(index: Int) -> Int {
         buffer[index]
     }
@@ -424,7 +360,6 @@ private struct IntList {
         buffer.initialize(from: array, count: count)
     }
 
-    @inline(__always)
     mutating func append(_ value: Int) {
         if count == capacity {
             let newCapacity = 2 * (capacity + 1)
@@ -438,7 +373,6 @@ private struct IntList {
         count &+= 1
     }
     
-    @inline(__always)
     mutating func removeAll() {
         count = 0
     }

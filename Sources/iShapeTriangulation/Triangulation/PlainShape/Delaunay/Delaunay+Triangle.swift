@@ -53,7 +53,7 @@ extension Delaunay {
             assert(IntTriangle.isCCW_or_Line(a: a.point, b: b.point, c: c.point), "Triangle's points are not clock-wise ordered")
         }
         
-        @inline(__always)
+        
         func vertex(neighbor: Index) -> Vertex {
             if neighbors.a == neighbor {
                 return vertices.a
@@ -68,7 +68,7 @@ extension Delaunay {
             return Vertex.empty
         }
         
-        @inline(__always)
+        
         func opposite(neighbor: Index) -> Index {
             if neighbors.a == neighbor {
                 return 0
@@ -82,7 +82,7 @@ extension Delaunay {
             return null
         }
         
-        @inline(__always)
+        
         func adjacentNeighbor(vertex: Index, neighbor: Index) -> Index {
             if vertices.a.index != vertex && neighbors.a != neighbor {
                 return 0
@@ -96,7 +96,7 @@ extension Delaunay {
             return null
         }
         
-        @inline(__always)
+        
         func index(index: Index) -> Index {
             if vertices.a.index == index {
                 return 0
@@ -107,13 +107,13 @@ extension Delaunay {
             }
         }
         
-        @inline(__always)
+        
         mutating func updateOpposite(oldNeighbor: Index, newNeighbor: Index) {
             let index = self.opposite(neighbor: oldNeighbor)
             self.neighbors[index] = newNeighbor
         }
         
-        @inline(__always)
+        
         mutating func update(vertex: Vertex) {
             if vertices.a.index == vertex.index {
                 vertices.a = vertex
@@ -124,7 +124,7 @@ extension Delaunay {
             }
         }
         
-        @inline(__always)
+        
         func neighbor(vertex: Index) -> Index {
             if vertices.a.index == vertex {
                 return self.neighbors.a
@@ -165,7 +165,7 @@ extension Delaunay {
             self.c = c
         }
         
-        @inline(__always)
+        
         subscript(index: Int) -> T {
             get {
                 switch index {

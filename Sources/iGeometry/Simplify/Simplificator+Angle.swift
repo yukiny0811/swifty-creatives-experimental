@@ -13,7 +13,7 @@ extension Simplificator {
         case none
     }
     
-    @inlinable
+    
     func filterByAngle(path: inout PathList<IntPoint>) -> Bool {
         let count = path.count
         
@@ -60,7 +60,7 @@ extension Simplificator {
         return count != path.count
     }
     
-    @inlinable
+    
     func validate(v0 a: IntPoint, v1 b: IntPoint, center c: IntPoint) -> Direction {
         guard a != b else {
             return .abDot

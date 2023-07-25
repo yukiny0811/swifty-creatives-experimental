@@ -18,17 +18,17 @@ public struct PlainShape: Equatable {
         
         public let isClockWise: Bool
 
-        @inlinable
+        
         public var isHole: Bool {
             return !isClockWise
         }
         
-        @inlinable
+        
         var isEmpty: Bool {
             return begin == -1
         }
 
-        @inlinable
+        
         public init(begin: Int, length: Int, isClockWise: Bool) {
             self.begin = begin
             self.length = length
@@ -41,7 +41,7 @@ public struct PlainShape: Equatable {
     public var points: [IntPoint]
     public var layouts: [Layout]
     
-    @inlinable
+    
     public init(pointsCapacity: Int, layoutsCapacity: Int) {
         self.points = Array<IntPoint>()
         self.points.reserveCapacity(pointsCapacity)
@@ -49,19 +49,19 @@ public struct PlainShape: Equatable {
         self.layouts.reserveCapacity(layoutsCapacity)
     }
     
-    @inlinable
+    
     public init(points: [IntPoint], layouts: [Layout]) {
         self.points = points
         self.layouts = layouts
     }
     
-    @inlinable
+    
     public init(points: [IntPoint]) {
         self.points = points
         self.layouts = [Layout(begin: 0, length: points.count, isClockWise: true)]
     }
 
-    @inlinable
+    
     public init(iShape: IntShape) {
         var count = iShape.hull.count
         for hole in iShape.holes {
@@ -94,27 +94,27 @@ public struct PlainShape: Equatable {
         self.layouts = layouts
     }
     
-    @inlinable
+    
     public func get(index: Int) -> [IntPoint] {
         let layout = self.layouts[index]
         let path = Array(self.points[layout.begin...layout.end])
         return path
     }
     
-    @inlinable
+    
     public func get(layout: Layout) -> [IntPoint] {
         let slice = self.points[layout.begin...layout.end]
         return Array(slice)
     }
 
-    @inlinable
+    
     public mutating func add(hole: [IntPoint]) {
         let layout = Layout(begin: self.points.count, length: hole.count, isClockWise: false)
         self.points.append(contentsOf: hole)
         self.layouts.append(layout)
     }
     
-    @inlinable
+    
     public mutating func add(path: [IntPoint], isClockWise: Bool) {
         let begin = points.count
         let layout = Layout(
@@ -126,7 +126,7 @@ public struct PlainShape: Equatable {
         layouts.append(layout)
     }
     
-    @inlinable
+    
     public mutating func remove(index: Int) {
         let count = self.layouts.count
         guard !(index == 0 && count == 1)  else {
@@ -145,7 +145,7 @@ public struct PlainShape: Equatable {
         self.points.replaceSubrange(layout.begin..<layout.begin + length, with: slice)
     }
     
-    @inlinable
+    
     public mutating func replace(index: Int, path: [IntPoint]) {
         let oldLayout = self.layouts[index]
         let newLayout = Layout(

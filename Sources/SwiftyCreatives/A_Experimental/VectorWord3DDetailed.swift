@@ -9,7 +9,26 @@ import Metal
 import CoreText
 import CommonEntity
 import FontVertexBuilder
-import Algorithms
+
+fileprivate extension [f3] {
+    func chunks(ofCount c: Int) -> [[f3]] {
+        var finalResult: [[f3]] = []
+        var index = 0
+        var temp: [f3] = []
+        for value in self {
+            temp.append(value)
+            index += 1
+            if index % c == 0 {
+                finalResult.append(temp)
+                temp = []
+            }
+        }
+        if temp.count > 0 {
+            finalResult.append(temp)
+        }
+        return finalResult
+    }
+}
 
 open class VectorWord3DDetailed: VectorText {
     public var finalVertices: [f3] = []
@@ -19,7 +38,7 @@ open class VectorWord3DDetailed: VectorText {
     public var chunkedBlobs: [[f3]] = []
     
     func updateChunks() {
-        chunkedBlobs = finalVertices.chunks(ofCount: 24).map {$0.map{$0}}
+        chunkedBlobs = finalVertices.chunks(ofCount: 24)
     }
     
     public func extrude(_ value: Float) {
