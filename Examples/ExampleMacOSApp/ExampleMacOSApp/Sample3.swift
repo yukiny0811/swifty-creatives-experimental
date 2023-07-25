@@ -6,7 +6,6 @@
 //
 
 import SwiftyCreatives
-import Collections
 import AppKit
 import CoreGraphics
 
