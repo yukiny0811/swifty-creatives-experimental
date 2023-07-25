@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftyCreatives",
+    name: "SwiftyCreativesExperimental",
     platforms: [
         .iOS(.v15),
         .macOS(.v12)
     ],
     products: [
         .library(
-            name: "SwiftyCreatives",
+            name: "SwiftyCreativesExperimental",
             targets: ["SwiftyCreatives"]
         )
     ],
