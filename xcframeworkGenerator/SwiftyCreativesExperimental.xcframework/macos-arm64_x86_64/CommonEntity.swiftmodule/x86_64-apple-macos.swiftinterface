@@ -1,0 +1,65 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target x86_64-apple-macos13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CommonEntity
+import CoreGraphics
+import Metal
+import Swift
+import SwiftUI
+import _Concurrency
+import _StringProcessing
+import simd
+public typealias ViewRepresentable = SwiftUI.NSViewRepresentable
+public typealias f2 = simd.simd_float2
+public typealias f3 = simd.simd_float3
+public typealias f4 = simd.simd_float4
+public typealias f2x2 = simd.simd_float2x2
+public typealias f3x3 = simd.simd_float3x3
+public typealias f4x4 = simd.simd_float4x4
+public typealias SCEncoder = Metal.MTLRenderCommandEncoder
+public typealias SCCommandBuffer = Metal.MTLCommandBuffer
+public typealias FontAlias = AppKit.NSFont
+public typealias ColorAlias = AppKit.NSColor
+extension CoreFoundation.CGPoint {
+  public var f2Value: CommonEntity.f2 {
+    get
+  }
+}
+extension CoreFoundation.CGSize {
+  public var f2Value: CommonEntity.f2 {
+    get
+  }
+}
+extension simd.simd_float4x4 {
+  public static var memorySize: Swift.Int {
+    get
+  }
+}
+extension Swift.SIMD2 where Scalar == Swift.Float {
+  public static func randomPoint(_ range: Swift.ClosedRange<Swift.Float>) -> Swift.SIMD2<Scalar>
+  public static var memorySize: Swift.Int {
+    get
+  }
+}
+extension Swift.SIMD3 where Scalar == Swift.Float {
+  public static func randomPoint(_ range: Swift.ClosedRange<Swift.Float>) -> Swift.SIMD3<Scalar>
+  public static var memorySize: Swift.Int {
+    get
+  }
+}
+extension Swift.SIMD4 where Scalar == Swift.Float {
+  public static func randomPoint(_ range: Swift.ClosedRange<Swift.Float>) -> Swift.SIMD4<Scalar>
+  public static var memorySize: Swift.Int {
+    get
+  }
+}
+extension simd.simd_float4x4 {
+  public static func createTransform(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> CommonEntity.f4x4
+  public static func createRotation(angle: Swift.Float, axis: CommonEntity.f3) -> CommonEntity.f4x4
+  public static func createScale(_ x: Swift.Float, _ y: Swift.Float, _ z: Swift.Float) -> CommonEntity.f4x4
+  public static func createPerspective(fov: Swift.Float, aspect: Swift.Float, near: Swift.Float, far: Swift.Float) -> CommonEntity.f4x4
+  public static func createOrthographic(_ l: Swift.Float, _ r: Swift.Float, _ b: Swift.Float, _ t: Swift.Float, _ n: Swift.Float, _ f: Swift.Float) -> CommonEntity.f4x4
+  public static func createIdentity() -> CommonEntity.f4x4
+  public static func mock_createRotationX(angle: Swift.Float) -> CommonEntity.f4x4
+  public static func mock_createRotationY(angle: Swift.Float) -> CommonEntity.f4x4
+  public static func mock_createRotationZ(angle: Swift.Float) -> CommonEntity.f4x4
+}

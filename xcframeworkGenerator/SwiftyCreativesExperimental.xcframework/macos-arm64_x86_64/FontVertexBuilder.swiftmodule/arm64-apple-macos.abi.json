@@ -1,0 +1,4815 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonEntity",
+        "printedName": "CommonEntity",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LetterPath",
+        "printedName": "LetterPath",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "glyphs",
+            "printedName": "glyphs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.SIMD2<Swift.Float>]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.SIMD2<Swift.Float>]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SIMD2",
+                        "printedName": "Swift.SIMD2<Swift.Float>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          }
+                        ],
+                        "usr": "s:s5SIMD2V"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10LetterPathV6glyphsSaySays5SIMD2VySfGGGvp",
+            "mangledName": "$s17FontVertexBuilder10LetterPathV6glyphsSaySays5SIMD2VySfGGGvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[[Swift.SIMD2<Swift.Float>]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.SIMD2<Swift.Float>]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SIMD2",
+                            "printedName": "Swift.SIMD2<Swift.Float>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Float",
+                                "printedName": "Swift.Float",
+                                "usr": "s:Sf"
+                              }
+                            ],
+                            "usr": "s:s5SIMD2V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10LetterPathV6glyphsSaySays5SIMD2VySfGGGvg",
+                "mangledName": "$s17FontVertexBuilder10LetterPathV6glyphsSaySays5SIMD2VySfGGGvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[[Swift.SIMD2<Swift.Float>]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.SIMD2<Swift.Float>]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SIMD2",
+                            "printedName": "Swift.SIMD2<Swift.Float>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Float",
+                                "printedName": "Swift.Float",
+                                "usr": "s:Sf"
+                              }
+                            ],
+                            "usr": "s:s5SIMD2V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10LetterPathV6glyphsSaySays5SIMD2VySfGGGvs",
+                "mangledName": "$s17FontVertexBuilder10LetterPathV6glyphsSaySays5SIMD2VySfGGGvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10LetterPathV6glyphsSaySays5SIMD2VySfGGGvM",
+                "mangledName": "$s17FontVertexBuilder10LetterPathV6glyphsSaySays5SIMD2VySfGGGvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "offset",
+            "printedName": "offset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SIMD2",
+                "printedName": "Swift.SIMD2<Swift.Float>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:s5SIMD2V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10LetterPathV6offsets5SIMD2VySfGvp",
+            "mangledName": "$s17FontVertexBuilder10LetterPathV6offsets5SIMD2VySfGvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10LetterPathV6offsets5SIMD2VySfGvg",
+                "mangledName": "$s17FontVertexBuilder10LetterPathV6offsets5SIMD2VySfGvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10LetterPathV6offsets5SIMD2VySfGvs",
+                "mangledName": "$s17FontVertexBuilder10LetterPathV6offsets5SIMD2VySfGvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10LetterPathV6offsets5SIMD2VySfGvM",
+                "mangledName": "$s17FontVertexBuilder10LetterPathV6offsets5SIMD2VySfGvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17FontVertexBuilder10LetterPathV",
+        "mangledName": "$s17FontVertexBuilder10LetterPathV",
+        "moduleName": "FontVertexBuilder",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TriangulatedLetterPath",
+        "printedName": "TriangulatedLetterPath",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "glyphLines",
+            "printedName": "glyphLines",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.SIMD3<Swift.Float>]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.SIMD3<Swift.Float>]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SIMD3",
+                        "printedName": "Swift.SIMD3<Swift.Float>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          }
+                        ],
+                        "usr": "s:s5SIMD3V"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV10glyphLinesSaySays5SIMD3VySfGGGvp",
+            "mangledName": "$s17FontVertexBuilder22TriangulatedLetterPathV10glyphLinesSaySays5SIMD3VySfGGGvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[[Swift.SIMD3<Swift.Float>]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.SIMD3<Swift.Float>]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SIMD3",
+                            "printedName": "Swift.SIMD3<Swift.Float>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Float",
+                                "printedName": "Swift.Float",
+                                "usr": "s:Sf"
+                              }
+                            ],
+                            "usr": "s:s5SIMD3V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV10glyphLinesSaySays5SIMD3VySfGGGvg",
+                "mangledName": "$s17FontVertexBuilder22TriangulatedLetterPathV10glyphLinesSaySays5SIMD3VySfGGGvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[[Swift.SIMD3<Swift.Float>]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.SIMD3<Swift.Float>]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SIMD3",
+                            "printedName": "Swift.SIMD3<Swift.Float>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Float",
+                                "printedName": "Swift.Float",
+                                "usr": "s:Sf"
+                              }
+                            ],
+                            "usr": "s:s5SIMD3V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV10glyphLinesSaySays5SIMD3VySfGGGvs",
+                "mangledName": "$s17FontVertexBuilder22TriangulatedLetterPathV10glyphLinesSaySays5SIMD3VySfGGGvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV10glyphLinesSaySays5SIMD3VySfGGGvM",
+                "mangledName": "$s17FontVertexBuilder22TriangulatedLetterPathV10glyphLinesSaySays5SIMD3VySfGGGvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "offset",
+            "printedName": "offset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SIMD3",
+                "printedName": "Swift.SIMD3<Swift.Float>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:s5SIMD3V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV6offsets5SIMD3VySfGvp",
+            "mangledName": "$s17FontVertexBuilder22TriangulatedLetterPathV6offsets5SIMD3VySfGvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD3",
+                    "printedName": "Swift.SIMD3<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD3V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV6offsets5SIMD3VySfGvg",
+                "mangledName": "$s17FontVertexBuilder22TriangulatedLetterPathV6offsets5SIMD3VySfGvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD3",
+                    "printedName": "Swift.SIMD3<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD3V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV6offsets5SIMD3VySfGvs",
+                "mangledName": "$s17FontVertexBuilder22TriangulatedLetterPathV6offsets5SIMD3VySfGvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV6offsets5SIMD3VySfGvM",
+                "mangledName": "$s17FontVertexBuilder22TriangulatedLetterPathV6offsets5SIMD3VySfGvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV",
+        "mangledName": "$s17FontVertexBuilder22TriangulatedLetterPathV",
+        "moduleName": "FontVertexBuilder",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "iGeometry",
+        "printedName": "iGeometry",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonEntity",
+        "printedName": "CommonEntity",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonEntity",
+        "printedName": "CommonEntity",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "Import",
+        "name": "simd",
+        "printedName": "simd",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreText",
+        "printedName": "CoreText",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "Import",
+        "name": "iGeometry",
+        "printedName": "iGeometry",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "Import",
+        "name": "iShapeTriangulation",
+        "printedName": "iShapeTriangulation",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonEntity",
+        "printedName": "CommonEntity",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "Import",
+        "name": "simd",
+        "printedName": "simd",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GlyphUtil",
+        "printedName": "GlyphUtil",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "HelperFunctions",
+            "printedName": "HelperFunctions",
+            "declKind": "Enum",
+            "usr": "s:17FontVertexBuilder9GlyphUtilO15HelperFunctionsO",
+            "mangledName": "$s17FontVertexBuilder9GlyphUtilO15HelperFunctionsO",
+            "moduleName": "FontVertexBuilder",
+            "isFromExtension": true
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "MainFunctions",
+            "printedName": "MainFunctions",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "DEPTH",
+                "printedName": "DEPTH",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO5DEPTHSivpZ",
+                "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO5DEPTHSivpZ",
+                "moduleName": "FontVertexBuilder",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO5DEPTHSivgZ",
+                    "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO5DEPTHSivgZ",
+                    "moduleName": "FontVertexBuilder",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "adaptiveQubicBezierCurve2",
+                "printedName": "adaptiveQubicBezierCurve2(a:b:c:d:aVel:bVel:cVel:angleLimit:depth:line:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.SIMD2<Swift.Float>]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SIMD2",
+                        "printedName": "Swift.SIMD2<Swift.Float>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          }
+                        ],
+                        "usr": "s:s5SIMD2V"
+                      }
+                    ],
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO25adaptiveQubicBezierCurve21a1b1c1d4aVel01bL001cL010angleLimit5depth4lineys5SIMD2VySfG_A6SSfSiSayASGztFZ",
+                "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO25adaptiveQubicBezierCurve21a1b1c1d4aVel01bL001cL010angleLimit5depth4lineys5SIMD2VySfG_A6SSfSiSayASGztFZ",
+                "moduleName": "FontVertexBuilder",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "adaptiveQuadraticBezierCurve2",
+                "printedName": "adaptiveQuadraticBezierCurve2(a:b:c:aVel:bVel:cVel:angleLimit:depth:line:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.SIMD2<Swift.Float>]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SIMD2",
+                        "printedName": "Swift.SIMD2<Swift.Float>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          }
+                        ],
+                        "usr": "s:s5SIMD2V"
+                      }
+                    ],
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO29adaptiveQuadraticBezierCurve21a1b1c4aVel01bL001cL010angleLimit5depth4lineys5SIMD2VySfG_A5RSfSiSayARGztFZ",
+                "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO29adaptiveQuadraticBezierCurve21a1b1c4aVel01bL001cL010angleLimit5depth4lineys5SIMD2VySfG_A5RSfSiSayARGztFZ",
+                "moduleName": "FontVertexBuilder",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "getGlyphLines",
+                "printedName": "getGlyphLines(_:_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[[Swift.SIMD2<Swift.Float>]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.SIMD2<Swift.Float>]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SIMD2",
+                            "printedName": "Swift.SIMD2<Swift.Float>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Float",
+                                "printedName": "Swift.Float",
+                                "usr": "s:Sf"
+                              }
+                            ],
+                            "usr": "s:s5SIMD2V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGPath",
+                    "printedName": "CoreGraphics.CGPath",
+                    "usr": "c:@T@CGPathRef"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO03getD5LinesySaySays5SIMD2VySfGGGSo9CGPathRefa_S2ftFZ",
+                "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO03getD5LinesySaySays5SIMD2VySfGGGSo9CGPathRefa_S2ftFZ",
+                "moduleName": "FontVertexBuilder",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "TypeDecl",
+                "name": "TriangulateHelperData",
+                "printedName": "TriangulateHelperData",
+                "children": [
+                  {
+                    "kind": "Var",
+                    "name": "path",
+                    "printedName": "path",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[iGeometry.Point]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Point",
+                            "printedName": "iGeometry.Point",
+                            "usr": "s:9iGeometry5PointV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC4pathSay9iGeometry5PointVGvp",
+                    "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC4pathSay9iGeometry5PointVGvp",
+                    "moduleName": "FontVertexBuilder",
+                    "declAttributes": [
+                      "HasInitialValue",
+                      "HasStorage",
+                      "AccessControl"
+                    ],
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[iGeometry.Point]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Point",
+                                "printedName": "iGeometry.Point",
+                                "usr": "s:9iGeometry5PointV"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC4pathSay9iGeometry5PointVGvg",
+                        "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC4pathSay9iGeometry5PointVGvg",
+                        "moduleName": "FontVertexBuilder",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      },
+                      {
+                        "kind": "Accessor",
+                        "name": "Set",
+                        "printedName": "Set()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[iGeometry.Point]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Point",
+                                "printedName": "iGeometry.Point",
+                                "usr": "s:9iGeometry5PointV"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC4pathSay9iGeometry5PointVGvs",
+                        "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC4pathSay9iGeometry5PointVGvs",
+                        "moduleName": "FontVertexBuilder",
+                        "implicit": true,
+                        "accessorKind": "set"
+                      },
+                      {
+                        "kind": "Accessor",
+                        "name": "Modify",
+                        "printedName": "Modify()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC4pathSay9iGeometry5PointVGvM",
+                        "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC4pathSay9iGeometry5PointVGvM",
+                        "moduleName": "FontVertexBuilder",
+                        "implicit": true,
+                        "accessorKind": "_modify"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "holes",
+                    "printedName": "holes",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[[iGeometry.Point]]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[iGeometry.Point]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Point",
+                                "printedName": "iGeometry.Point",
+                                "usr": "s:9iGeometry5PointV"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC5holesSaySay9iGeometry5PointVGGvp",
+                    "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC5holesSaySay9iGeometry5PointVGGvp",
+                    "moduleName": "FontVertexBuilder",
+                    "declAttributes": [
+                      "HasInitialValue",
+                      "HasStorage",
+                      "AccessControl"
+                    ],
+                    "hasStorage": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[[iGeometry.Point]]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[iGeometry.Point]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Point",
+                                    "printedName": "iGeometry.Point",
+                                    "usr": "s:9iGeometry5PointV"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC5holesSaySay9iGeometry5PointVGGvg",
+                        "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC5holesSaySay9iGeometry5PointVGGvg",
+                        "moduleName": "FontVertexBuilder",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      },
+                      {
+                        "kind": "Accessor",
+                        "name": "Set",
+                        "printedName": "Set()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[[iGeometry.Point]]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[iGeometry.Point]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Point",
+                                    "printedName": "iGeometry.Point",
+                                    "usr": "s:9iGeometry5PointV"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC5holesSaySay9iGeometry5PointVGGvs",
+                        "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC5holesSaySay9iGeometry5PointVGGvs",
+                        "moduleName": "FontVertexBuilder",
+                        "implicit": true,
+                        "accessorKind": "set"
+                      },
+                      {
+                        "kind": "Accessor",
+                        "name": "Modify",
+                        "printedName": "Modify()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC5holesSaySay9iGeometry5PointVGGvM",
+                        "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC5holesSaySay9iGeometry5PointVGGvM",
+                        "moduleName": "FontVertexBuilder",
+                        "implicit": true,
+                        "accessorKind": "_modify"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Class",
+                "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC",
+                "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO21TriangulateHelperDataC",
+                "moduleName": "FontVertexBuilder",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "hasMissingDesignatedInitializers": true
+              },
+              {
+                "kind": "Var",
+                "name": "TRIANGULATOR",
+                "printedName": "TRIANGULATOR",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Triangulator",
+                    "printedName": "iShapeTriangulation.Triangulator",
+                    "usr": "s:19iShapeTriangulation12TriangulatorV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO12TRIANGULATOR19iShapeTriangulation12TriangulatorVvpZ",
+                "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO12TRIANGULATOR19iShapeTriangulation12TriangulatorVvpZ",
+                "moduleName": "FontVertexBuilder",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Triangulator",
+                        "printedName": "iShapeTriangulation.Triangulator",
+                        "usr": "s:19iShapeTriangulation12TriangulatorV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO12TRIANGULATOR19iShapeTriangulation12TriangulatorVvgZ",
+                    "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO12TRIANGULATOR19iShapeTriangulation12TriangulatorVvgZ",
+                    "moduleName": "FontVertexBuilder",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "triangulate",
+                "printedName": "triangulate(_:isClockwiseFont:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FontVertexBuilder.TriangulatedLetterPath]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TriangulatedLetterPath",
+                        "printedName": "FontVertexBuilder.TriangulatedLetterPath",
+                        "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FontVertexBuilder.LetterPath]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LetterPath",
+                        "printedName": "FontVertexBuilder.LetterPath",
+                        "usr": "s:17FontVertexBuilder10LetterPathV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO11triangulate_011isClockwiseA0SayAA22TriangulatedLetterPathVGSayAA0lM0VG_SbtFZ",
+                "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO11triangulate_011isClockwiseA0SayAA22TriangulatedLetterPathVGSayAA0lM0VG_SbtFZ",
+                "moduleName": "FontVertexBuilder",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "triangulateWithoutLetterOffset",
+                "printedName": "triangulateWithoutLetterOffset(_:isClockwiseFont:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(paths: [FontVertexBuilder.TriangulatedLetterPath], letterOffsets: [Swift.SIMD3<Swift.Float>])",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[FontVertexBuilder.TriangulatedLetterPath]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TriangulatedLetterPath",
+                            "printedName": "FontVertexBuilder.TriangulatedLetterPath",
+                            "usr": "s:17FontVertexBuilder22TriangulatedLetterPathV"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.SIMD3<Swift.Float>]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SIMD3",
+                            "printedName": "Swift.SIMD3<Swift.Float>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Float",
+                                "printedName": "Swift.Float",
+                                "usr": "s:Sf"
+                              }
+                            ],
+                            "usr": "s:s5SIMD3V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FontVertexBuilder.LetterPath]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LetterPath",
+                        "printedName": "FontVertexBuilder.LetterPath",
+                        "usr": "s:17FontVertexBuilder10LetterPathV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO30triangulateWithoutLetterOffset_011isClockwiseA0SayAA012TriangulatedJ4PathVG5paths_Says5SIMD3VySfGG13letterOffsetstSayAA0jO0VG_SbtFZ",
+                "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO30triangulateWithoutLetterOffset_011isClockwiseA0SayAA012TriangulatedJ4PathVG5paths_Says5SIMD3VySfGG13letterOffsetstSayAA0jO0VG_SbtFZ",
+                "moduleName": "FontVertexBuilder",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:17FontVertexBuilder9GlyphUtilO13MainFunctionsO",
+            "mangledName": "$s17FontVertexBuilder9GlyphUtilO13MainFunctionsO",
+            "moduleName": "FontVertexBuilder",
+            "isFromExtension": true
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17FontVertexBuilder9GlyphUtilO",
+        "mangledName": "$s17FontVertexBuilder9GlyphUtilO",
+        "moduleName": "FontVertexBuilder",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "simd",
+        "printedName": "simd",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreText",
+        "printedName": "CoreText",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonEntity",
+        "printedName": "CommonEntity",
+        "declKind": "Import",
+        "moduleName": "FontVertexBuilder"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VectorText",
+        "printedName": "VectorText",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "VerticalAlignment",
+            "printedName": "VerticalAlignment",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "top",
+                "printedName": "top",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(FontVertexBuilder.VectorText.VerticalAlignment.Type) -> FontVertexBuilder.VectorText.VerticalAlignment",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerticalAlignment",
+                        "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                        "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "FontVertexBuilder.VectorText.VerticalAlignment.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VerticalAlignment",
+                            "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                            "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO3topyA2EmF",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC17VerticalAlignmentO3topyA2EmF",
+                "moduleName": "FontVertexBuilder"
+              },
+              {
+                "kind": "Var",
+                "name": "center",
+                "printedName": "center",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(FontVertexBuilder.VectorText.VerticalAlignment.Type) -> FontVertexBuilder.VectorText.VerticalAlignment",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerticalAlignment",
+                        "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                        "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "FontVertexBuilder.VectorText.VerticalAlignment.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VerticalAlignment",
+                            "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                            "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO6centeryA2EmF",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC17VerticalAlignmentO6centeryA2EmF",
+                "moduleName": "FontVertexBuilder"
+              },
+              {
+                "kind": "Var",
+                "name": "bottom",
+                "printedName": "bottom",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(FontVertexBuilder.VectorText.VerticalAlignment.Type) -> FontVertexBuilder.VectorText.VerticalAlignment",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerticalAlignment",
+                        "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                        "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "FontVertexBuilder.VectorText.VerticalAlignment.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VerticalAlignment",
+                            "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                            "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO6bottomyA2EmF",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC17VerticalAlignmentO6bottomyA2EmF",
+                "moduleName": "FontVertexBuilder"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "FontVertexBuilder.VectorText.VerticalAlignment?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VerticalAlignment",
+                        "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                        "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO8rawValueAESgSi_tcfc",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC17VerticalAlignmentO8rawValueAESgSi_tcfc",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO8rawValueSivp",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC17VerticalAlignmentO8rawValueSivp",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO8rawValueSivg",
+                    "mangledName": "$s17FontVertexBuilder10VectorTextC17VerticalAlignmentO8rawValueSivg",
+                    "moduleName": "FontVertexBuilder",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC17VerticalAlignmentO",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "enumRawTypeName": "Int",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "verticalAlignment",
+            "printedName": "verticalAlignment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VerticalAlignment",
+                "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC17verticalAlignmentAC08VerticalG0Ovp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC17verticalAlignmentAC08VerticalG0Ovp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerticalAlignment",
+                    "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                    "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC17verticalAlignmentAC08VerticalG0Ovg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC17verticalAlignmentAC08VerticalG0Ovg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VerticalAlignment",
+                    "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                    "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC17verticalAlignmentAC08VerticalG0Ovs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC17verticalAlignmentAC08VerticalG0Ovs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC17verticalAlignmentAC08VerticalG0OvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC17verticalAlignmentAC08VerticalG0OvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "textAlignment",
+            "printedName": "textAlignment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CTTextAlignment",
+                "printedName": "CoreText.CTTextAlignment",
+                "usr": "c:@E@CTTextAlignment"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC13textAlignmentSo06CTTextG0Vvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC13textAlignmentSo06CTTextG0Vvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CTTextAlignment",
+                    "printedName": "CoreText.CTTextAlignment",
+                    "usr": "c:@E@CTTextAlignment"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC13textAlignmentSo06CTTextG0Vvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC13textAlignmentSo06CTTextG0Vvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CTTextAlignment",
+                    "printedName": "CoreText.CTTextAlignment",
+                    "usr": "c:@E@CTTextAlignment"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC13textAlignmentSo06CTTextG0Vvs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC13textAlignmentSo06CTTextG0Vvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC13textAlignmentSo06CTTextG0VvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC13textAlignmentSo06CTTextG0VvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "text",
+            "printedName": "text",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC4textSSvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC4textSSvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC4textSSvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC4textSSvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC4textSSvs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC4textSSvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC4textSSvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC4textSSvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pivot",
+            "printedName": "pivot",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SIMD2",
+                "printedName": "Swift.SIMD2<Swift.Float>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:s5SIMD2V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC5pivots5SIMD2VySfGvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC5pivots5SIMD2VySfGvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC5pivots5SIMD2VySfGvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC5pivots5SIMD2VySfGvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<Swift.Float>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC5pivots5SIMD2VySfGvs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC5pivots5SIMD2VySfGvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC5pivots5SIMD2VySfGvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC5pivots5SIMD2VySfGvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "textBounds",
+            "printedName": "textBounds",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC10textBoundsSo6CGSizeVvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC10textBoundsSo6CGSizeVvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC10textBoundsSo6CGSizeVvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC10textBoundsSo6CGSizeVvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC10textBoundsSo6CGSizeVvs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC10textBoundsSo6CGSizeVvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC10textBoundsSo6CGSizeVvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC10textBoundsSo6CGSizeVvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "kern",
+            "printedName": "kern",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC4kernSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC4kernSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC4kernSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC4kernSfvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC4kernSfvs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC4kernSfvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC4kernSfvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC4kernSfvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lineSpacing",
+            "printedName": "lineSpacing",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC11lineSpacingSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC11lineSpacingSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC11lineSpacingSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC11lineSpacingSfvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC11lineSpacingSfvs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC11lineSpacingSfvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC11lineSpacingSfvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC11lineSpacingSfvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fontSize",
+            "printedName": "fontSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC8fontSizeSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC8fontSizeSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC8fontSizeSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC8fontSizeSfvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC8fontSizeSfvs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC8fontSizeSfvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC8fontSizeSfvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC8fontSizeSfvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lineHeight",
+            "printedName": "lineHeight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC10lineHeightSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC10lineHeightSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC10lineHeightSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC10lineHeightSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ascent",
+            "printedName": "ascent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC6ascentSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC6ascentSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC6ascentSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC6ascentSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "descent",
+            "printedName": "descent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC7descentSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC7descentSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC7descentSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC7descentSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "leading",
+            "printedName": "leading",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC7leadingSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC7leadingSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC7leadingSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC7leadingSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unitsPerEm",
+            "printedName": "unitsPerEm",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC10unitsPerEmSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC10unitsPerEmSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC10unitsPerEmSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC10unitsPerEmSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "glyphCount",
+            "printedName": "glyphCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC10glyphCountSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC10glyphCountSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC10glyphCountSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC10glyphCountSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "underlinePosition",
+            "printedName": "underlinePosition",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC17underlinePositionSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC17underlinePositionSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC17underlinePositionSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC17underlinePositionSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "underlineThickness",
+            "printedName": "underlineThickness",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC18underlineThicknessSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC18underlineThicknessSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC18underlineThicknessSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC18underlineThicknessSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "slantAngle",
+            "printedName": "slantAngle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC10slantAngleSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC10slantAngleSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC10slantAngleSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC10slantAngleSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "capHeight",
+            "printedName": "capHeight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC9capHeightSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC9capHeightSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC9capHeightSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC9capHeightSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "xHeight",
+            "printedName": "xHeight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC7xHeightSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC7xHeightSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC7xHeightSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC7xHeightSfvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ctFont",
+            "printedName": "ctFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CTFont",
+                "printedName": "CoreText.CTFont",
+                "usr": "c:@T@CTFontRef"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC02ctA0So9CTFontRefavp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC02ctA0So9CTFontRefavp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CTFont",
+                    "printedName": "CoreText.CTFont",
+                    "usr": "c:@T@CTFontRef"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC02ctA0So9CTFontRefavg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC02ctA0So9CTFontRefavg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CTFont",
+                    "printedName": "CoreText.CTFont",
+                    "usr": "c:@T@CTFontRef"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC02ctA0So9CTFontRefavs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC02ctA0So9CTFontRefavs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC02ctA0So9CTFontRefavM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC02ctA0So9CTFontRefavM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "calculatedPaths",
+            "printedName": "calculatedPaths",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[FontVertexBuilder.LetterPath]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LetterPath",
+                    "printedName": "FontVertexBuilder.LetterPath",
+                    "usr": "s:17FontVertexBuilder10LetterPathV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC15calculatedPathsSayAA10LetterPathVGvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC15calculatedPathsSayAA10LetterPathVGvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FontVertexBuilder.LetterPath]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LetterPath",
+                        "printedName": "FontVertexBuilder.LetterPath",
+                        "usr": "s:17FontVertexBuilder10LetterPathV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC15calculatedPathsSayAA10LetterPathVGvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC15calculatedPathsSayAA10LetterPathVGvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FontVertexBuilder.LetterPath]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LetterPath",
+                        "printedName": "FontVertexBuilder.LetterPath",
+                        "usr": "s:17FontVertexBuilder10LetterPathV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC15calculatedPathsSayAA10LetterPathVGvs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC15calculatedPathsSayAA10LetterPathVGvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC15calculatedPathsSayAA10LetterPathVGvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC15calculatedPathsSayAA10LetterPathVGvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isClockwiseFont",
+            "printedName": "isClockwiseFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC011isClockwiseA0Sbvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC011isClockwiseA0Sbvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC011isClockwiseA0Sbvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC011isClockwiseA0Sbvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC011isClockwiseA0Sbvs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC011isClockwiseA0Sbvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC011isClockwiseA0SbvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC011isClockwiseA0SbvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "angleLimit",
+            "printedName": "angleLimit",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC10angleLimitSfvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC10angleLimitSfvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC10angleLimitSfvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC10angleLimitSfvg",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC10angleLimitSfvs",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC10angleLimitSfvs",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC10angleLimitSfvM",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC10angleLimitSfvM",
+                "moduleName": "FontVertexBuilder",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "suggestFrameSize",
+            "printedName": "suggestFrameSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreFoundation.CGSize?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17FontVertexBuilder10VectorTextC16suggestFrameSizeSo6CGSizeVSgvp",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC16suggestFrameSizeSo6CGSizeVSgvp",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreFoundation.CGSize?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGSize",
+                        "printedName": "CoreFoundation.CGSize",
+                        "usr": "c:@S@CGSize"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17FontVertexBuilder10VectorTextC16suggestFrameSizeSo6CGSizeVSgvg",
+                "mangledName": "$s17FontVertexBuilder10VectorTextC16suggestFrameSizeSo6CGSizeVSgvg",
+                "moduleName": "FontVertexBuilder",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(text:fontName:fontSize:bounds:pivot:textAlignment:verticalAlignment:kern:lineSpacing:isClockwiseFont:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VectorText",
+                "printedName": "FontVertexBuilder.VectorText",
+                "usr": "s:17FontVertexBuilder10VectorTextC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "hasDefaultArg": true,
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SIMD2",
+                "printedName": "Swift.SIMD2<Swift.Float>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:s5SIMD2V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CTTextAlignment",
+                "printedName": "CoreText.CTTextAlignment",
+                "hasDefaultArg": true,
+                "usr": "c:@E@CTTextAlignment"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VerticalAlignment",
+                "printedName": "FontVertexBuilder.VectorText.VerticalAlignment",
+                "hasDefaultArg": true,
+                "usr": "s:17FontVertexBuilder10VectorTextC17VerticalAlignmentO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17FontVertexBuilder10VectorTextC4text8fontName0G4Size6bounds5pivot0F9Alignment08verticalL04kern11lineSpacing011isClockwiseA0ACSS_SSSfSo6CGSizeVs5SIMD2VySfGSo06CTTextL0VAC08VerticalL0OS2fSbtcfc",
+            "mangledName": "$s17FontVertexBuilder10VectorTextC4text8fontName0G4Size6bounds5pivot0F9Alignment08verticalL04kern11lineSpacing011isClockwiseA0ACSS_SSSfSo6CGSizeVs5SIMD2VySfGSo06CTTextL0VAC08VerticalL0OS2fSbtcfc",
+            "moduleName": "FontVertexBuilder",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17FontVertexBuilder10VectorTextC",
+        "mangledName": "$s17FontVertexBuilder10VectorTextC",
+        "moduleName": "FontVertexBuilder",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SIMD2",
+        "printedName": "SIMD2",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shapePoint",
+            "printedName": "shapePoint",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Point",
+                "printedName": "iGeometry.Point",
+                "usr": "s:9iGeometry5PointV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:s5SIMD2V17FontVertexBuilderSfRszrlE10shapePoint9iGeometry0F0Vvp",
+            "mangledName": "$ss5SIMD2V17FontVertexBuilderSfRszrlE10shapePoint9iGeometry0F0Vvp",
+            "moduleName": "FontVertexBuilder",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Point",
+                    "printedName": "iGeometry.Point",
+                    "usr": "s:9iGeometry5PointV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:s5SIMD2V17FontVertexBuilderSfRszrlE10shapePoint9iGeometry0F0Vvg",
+                "mangledName": "$ss5SIMD2V17FontVertexBuilderSfRszrlE10shapePoint9iGeometry0F0Vvg",
+                "moduleName": "FontVertexBuilder",
+                "genericSig": "<τ_0_0 where τ_0_0 == Swift.Float>",
+                "sugared_genericSig": "<Scalar where Scalar == Swift.Float>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:s5SIMD2V",
+        "mangledName": "$ss5SIMD2V",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0 where τ_0_0 : Swift.SIMDScalar>",
+        "sugared_genericSig": "<Scalar where Scalar : Swift.SIMDScalar>",
+        "declAttributes": [
+          "Frozen"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SIMD",
+            "printedName": "SIMD",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "MaskStorage",
+                "printedName": "MaskStorage",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SIMD2",
+                    "printedName": "Swift.SIMD2<τ_0_0.SIMDMaskScalar>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DependentMember",
+                        "printedName": "τ_0_0.SIMDMaskScalar"
+                      }
+                    ],
+                    "usr": "s:s5SIMD2V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s4SIMDP",
+            "mangledName": "$ss4SIMDP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByArrayLiteral",
+            "printedName": "ExpressibleByArrayLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ArrayLiteralElement",
+                "printedName": "ArrayLiteralElement",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s25ExpressibleByArrayLiteralP",
+            "mangledName": "$ss25ExpressibleByArrayLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SIMDStorage",
+            "printedName": "SIMDStorage",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Scalar",
+                "printedName": "Scalar",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s11SIMDStorageP",
+            "mangledName": "$ss11SIMDStorageP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 1520,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 1603,
+      "length": 3,
+      "value": "3.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 1654,
+      "length": 3,
+      "value": "6.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 1708,
+      "length": 3,
+      "value": "3.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 1908,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1935,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1959,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2129,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2152,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2224,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2397,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2401,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+HelperFunctions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2409,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1506,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1828,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 2074,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 2111,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 2148,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 2190,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 2232,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 2277,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 2378,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2534,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 2681,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2837,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3240,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 3486,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 3523,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 3565,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 3664,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3810,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 3954,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4100,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 4925,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5053,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 5091,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5114,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 5161,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 5166,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5204,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 5361,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 5367,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5713,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 5973,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 6091,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 6209,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 6261,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6466,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6741,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6879,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 7118,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 7237,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 7356,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 7408,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7617,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 8045,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8173,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 8211,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8234,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 8281,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 8286,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8324,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 8481,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 8487,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 9098,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 9140,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "FloatLiteral",
+      "offset": 9218,
+      "length": 6,
+      "value": "0.0001"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 9413,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 9536,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9585,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 9653,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9935,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10082,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10285,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10439,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 10686,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 10747,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11179,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11356,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11454,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11496,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 11863,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 11904,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 12027,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12076,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 12144,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12426,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12573,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12776,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12930,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 13177,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "Array",
+      "offset": 13238,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13670,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13847,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13945,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/GlyphUtils\/GlyphUtil+MainFunctions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14057,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1442,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1466,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1490,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1442,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1466,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1490,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1442,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1466,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1490,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "StringLiteral",
+      "offset": 1639,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 1668,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 1673,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1720,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1732,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 1765,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 1805,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1842,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "Array",
+      "offset": 2707,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2749,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 2790,
+      "length": 3,
+      "value": "7.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 2807,
+      "length": 5,
+      "value": "180.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2975,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3072,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3229,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3495,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3571,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 3649,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3726,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 3977,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 3983,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4034,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4145,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 4645,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 4653,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 4685,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 4763,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4918,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "Array",
+      "offset": 5028,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5147,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "Array",
+      "offset": 5182,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5317,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5320,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5655,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5726,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5729,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5819,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5863,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5983,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6099,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6555,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "StringLiteral",
+      "offset": 6758,
+      "length": 23,
+      "value": "\"AppleSDGothicNeo-Bold\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 6947,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "FloatLiteral",
+      "offset": 6973,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7002,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7455,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7860,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7863,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8021,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8024,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8070,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8312,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/FontVertexBuilder\/VectorText.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8805,
+      "length": 2,
+      "value": "10"
+    }
+  ]
+}

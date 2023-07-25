@@ -1,0 +1,4612 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AudioCapturer",
+        "printedName": "AudioCapturer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fftResult",
+            "printedName": "fftResult",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SCSound.FFTResultComponent]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTResultComponent",
+                    "printedName": "SCSound.FFTResultComponent",
+                    "usr": "s:7SCSound18FFTResultComponentV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound13AudioCapturerP9fftResultSayAA18FFTResultComponentVGvp",
+            "mangledName": "$s7SCSound13AudioCapturerP9fftResultSayAA18FFTResultComponentVGvp",
+            "moduleName": "SCSound",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SCSound.FFTResultComponent]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTResultComponent",
+                        "printedName": "SCSound.FFTResultComponent",
+                        "usr": "s:7SCSound18FFTResultComponentV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP9fftResultSayAA18FFTResultComponentVGvg",
+                "mangledName": "$s7SCSound13AudioCapturerP9fftResultSayAA18FFTResultComponentVGvg",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SCSound.FFTResultComponent]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTResultComponent",
+                        "printedName": "SCSound.FFTResultComponent",
+                        "usr": "s:7SCSound18FFTResultComponentV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP9fftResultSayAA18FFTResultComponentVGvs",
+                "mangledName": "$s7SCSound13AudioCapturerP9fftResultSayAA18FFTResultComponentVGvs",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP9fftResultSayAA18FFTResultComponentVGvM",
+                "mangledName": "$s7SCSound13AudioCapturerP9fftResultSayAA18FFTResultComponentVGvM",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftNoiseExtractionMethod",
+            "printedName": "fftNoiseExtractionMethod",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FFTNoiseExtractionMethod",
+                "printedName": "SCSound.FFTNoiseExtractionMethod",
+                "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound13AudioCapturerP24fftNoiseExtractionMethodAA08FFTNoisefG0Ovp",
+            "mangledName": "$s7SCSound13AudioCapturerP24fftNoiseExtractionMethodAA08FFTNoisefG0Ovp",
+            "moduleName": "SCSound",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTNoiseExtractionMethod",
+                    "printedName": "SCSound.FFTNoiseExtractionMethod",
+                    "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP24fftNoiseExtractionMethodAA08FFTNoisefG0Ovg",
+                "mangledName": "$s7SCSound13AudioCapturerP24fftNoiseExtractionMethodAA08FFTNoisefG0Ovg",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTNoiseExtractionMethod",
+                    "printedName": "SCSound.FFTNoiseExtractionMethod",
+                    "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP24fftNoiseExtractionMethodAA08FFTNoisefG0Ovs",
+                "mangledName": "$s7SCSound13AudioCapturerP24fftNoiseExtractionMethodAA08FFTNoisefG0Ovs",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP24fftNoiseExtractionMethodAA08FFTNoisefG0OvM",
+                "mangledName": "$s7SCSound13AudioCapturerP24fftNoiseExtractionMethodAA08FFTNoisefG0OvM",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftWindowType",
+            "printedName": "fftWindowType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TempiFFTWindowType",
+                "printedName": "SCSound.TempiFFTWindowType",
+                "usr": "s:7SCSound18TempiFFTWindowTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound13AudioCapturerP13fftWindowTypeAA014TempiFFTWindowF0Ovp",
+            "mangledName": "$s7SCSound13AudioCapturerP13fftWindowTypeAA014TempiFFTWindowF0Ovp",
+            "moduleName": "SCSound",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TempiFFTWindowType",
+                    "printedName": "SCSound.TempiFFTWindowType",
+                    "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP13fftWindowTypeAA014TempiFFTWindowF0Ovg",
+                "mangledName": "$s7SCSound13AudioCapturerP13fftWindowTypeAA014TempiFFTWindowF0Ovg",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TempiFFTWindowType",
+                    "printedName": "SCSound.TempiFFTWindowType",
+                    "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP13fftWindowTypeAA014TempiFFTWindowF0Ovs",
+                "mangledName": "$s7SCSound13AudioCapturerP13fftWindowTypeAA014TempiFFTWindowF0Ovs",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP13fftWindowTypeAA014TempiFFTWindowF0OvM",
+                "mangledName": "$s7SCSound13AudioCapturerP13fftWindowTypeAA014TempiFFTWindowF0OvM",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftMinFreq",
+            "printedName": "fftMinFreq",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound13AudioCapturerP10fftMinFreqSfvp",
+            "mangledName": "$s7SCSound13AudioCapturerP10fftMinFreqSfvp",
+            "moduleName": "SCSound",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP10fftMinFreqSfvg",
+                "mangledName": "$s7SCSound13AudioCapturerP10fftMinFreqSfvg",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP10fftMinFreqSfvs",
+                "mangledName": "$s7SCSound13AudioCapturerP10fftMinFreqSfvs",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP10fftMinFreqSfvM",
+                "mangledName": "$s7SCSound13AudioCapturerP10fftMinFreqSfvM",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftMaxFreq",
+            "printedName": "fftMaxFreq",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound13AudioCapturerP10fftMaxFreqSfvp",
+            "mangledName": "$s7SCSound13AudioCapturerP10fftMaxFreqSfvp",
+            "moduleName": "SCSound",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP10fftMaxFreqSfvg",
+                "mangledName": "$s7SCSound13AudioCapturerP10fftMaxFreqSfvg",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP10fftMaxFreqSfvs",
+                "mangledName": "$s7SCSound13AudioCapturerP10fftMaxFreqSfvs",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP10fftMaxFreqSfvM",
+                "mangledName": "$s7SCSound13AudioCapturerP10fftMaxFreqSfvM",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bandCalculationMethod",
+            "printedName": "bandCalculationMethod",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FFTBandCalculationMethod",
+                "printedName": "SCSound.FFTBandCalculationMethod",
+                "usr": "s:7SCSound24FFTBandCalculationMethodO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound13AudioCapturerP21bandCalculationMethodAA07FFTBandeF0Ovp",
+            "mangledName": "$s7SCSound13AudioCapturerP21bandCalculationMethodAA07FFTBandeF0Ovp",
+            "moduleName": "SCSound",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTBandCalculationMethod",
+                    "printedName": "SCSound.FFTBandCalculationMethod",
+                    "usr": "s:7SCSound24FFTBandCalculationMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP21bandCalculationMethodAA07FFTBandeF0Ovg",
+                "mangledName": "$s7SCSound13AudioCapturerP21bandCalculationMethodAA07FFTBandeF0Ovg",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTBandCalculationMethod",
+                    "printedName": "SCSound.FFTBandCalculationMethod",
+                    "usr": "s:7SCSound24FFTBandCalculationMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP21bandCalculationMethodAA07FFTBandeF0Ovs",
+                "mangledName": "$s7SCSound13AudioCapturerP21bandCalculationMethodAA07FFTBandeF0Ovs",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13AudioCapturerP21bandCalculationMethodAA07FFTBandeF0OvM",
+                "mangledName": "$s7SCSound13AudioCapturerP21bandCalculationMethodAA07FFTBandeF0OvM",
+                "moduleName": "SCSound",
+                "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+                "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SCSound13AudioCapturerP5startyyF",
+            "mangledName": "$s7SCSound13AudioCapturerP5startyyF",
+            "moduleName": "SCSound",
+            "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+            "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SCSound13AudioCapturerP4stopyyF",
+            "mangledName": "$s7SCSound13AudioCapturerP4stopyyF",
+            "moduleName": "SCSound",
+            "genericSig": "<τ_0_0 where τ_0_0 : SCSound.AudioCapturer>",
+            "sugared_genericSig": "<Self where Self : SCSound.AudioCapturer>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:7SCSound13AudioCapturerP",
+        "mangledName": "$s7SCSound13AudioCapturerP",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SCSound"
+      },
+      {
+        "kind": "Import",
+        "name": "Accelerate",
+        "printedName": "Accelerate",
+        "declKind": "Import",
+        "moduleName": "SCSound"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DetailedAudioCapturer",
+        "printedName": "DetailedAudioCapturer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fftResult",
+            "printedName": "fftResult",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SCSound.FFTResultComponent]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTResultComponent",
+                    "printedName": "SCSound.FFTResultComponent",
+                    "usr": "s:7SCSound18FFTResultComponentV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound21DetailedAudioCapturerC9fftResultSayAA18FFTResultComponentVGvp",
+            "mangledName": "$s7SCSound21DetailedAudioCapturerC9fftResultSayAA18FFTResultComponentVGvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SCSound.FFTResultComponent]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTResultComponent",
+                        "printedName": "SCSound.FFTResultComponent",
+                        "usr": "s:7SCSound18FFTResultComponentV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC9fftResultSayAA18FFTResultComponentVGvg",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC9fftResultSayAA18FFTResultComponentVGvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SCSound.FFTResultComponent]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTResultComponent",
+                        "printedName": "SCSound.FFTResultComponent",
+                        "usr": "s:7SCSound18FFTResultComponentV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC9fftResultSayAA18FFTResultComponentVGvs",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC9fftResultSayAA18FFTResultComponentVGvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC9fftResultSayAA18FFTResultComponentVGvM",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC9fftResultSayAA18FFTResultComponentVGvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftNoiseExtractionMethod",
+            "printedName": "fftNoiseExtractionMethod",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FFTNoiseExtractionMethod",
+                "printedName": "SCSound.FFTNoiseExtractionMethod",
+                "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound21DetailedAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovp",
+            "mangledName": "$s7SCSound21DetailedAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTNoiseExtractionMethod",
+                    "printedName": "SCSound.FFTNoiseExtractionMethod",
+                    "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovg",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTNoiseExtractionMethod",
+                    "printedName": "SCSound.FFTNoiseExtractionMethod",
+                    "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovs",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0OvM",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0OvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftWindowType",
+            "printedName": "fftWindowType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TempiFFTWindowType",
+                "printedName": "SCSound.TempiFFTWindowType",
+                "usr": "s:7SCSound18TempiFFTWindowTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound21DetailedAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovp",
+            "mangledName": "$s7SCSound21DetailedAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TempiFFTWindowType",
+                    "printedName": "SCSound.TempiFFTWindowType",
+                    "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovg",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TempiFFTWindowType",
+                    "printedName": "SCSound.TempiFFTWindowType",
+                    "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovs",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0OvM",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0OvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftMinFreq",
+            "printedName": "fftMinFreq",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound21DetailedAudioCapturerC10fftMinFreqSfvp",
+            "mangledName": "$s7SCSound21DetailedAudioCapturerC10fftMinFreqSfvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC10fftMinFreqSfvg",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC10fftMinFreqSfvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC10fftMinFreqSfvs",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC10fftMinFreqSfvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC10fftMinFreqSfvM",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC10fftMinFreqSfvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftMaxFreq",
+            "printedName": "fftMaxFreq",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound21DetailedAudioCapturerC10fftMaxFreqSfvp",
+            "mangledName": "$s7SCSound21DetailedAudioCapturerC10fftMaxFreqSfvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC10fftMaxFreqSfvg",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC10fftMaxFreqSfvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC10fftMaxFreqSfvs",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC10fftMaxFreqSfvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC10fftMaxFreqSfvM",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC10fftMaxFreqSfvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bandCalculationMethod",
+            "printedName": "bandCalculationMethod",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FFTBandCalculationMethod",
+                "printedName": "SCSound.FFTBandCalculationMethod",
+                "usr": "s:7SCSound24FFTBandCalculationMethodO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound21DetailedAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovp",
+            "mangledName": "$s7SCSound21DetailedAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTBandCalculationMethod",
+                    "printedName": "SCSound.FFTBandCalculationMethod",
+                    "usr": "s:7SCSound24FFTBandCalculationMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovg",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTBandCalculationMethod",
+                    "printedName": "SCSound.FFTBandCalculationMethod",
+                    "usr": "s:7SCSound24FFTBandCalculationMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovs",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound21DetailedAudioCapturerC21bandCalculationMethodAA07FFTBandfG0OvM",
+                "mangledName": "$s7SCSound21DetailedAudioCapturerC21bandCalculationMethodAA07FFTBandfG0OvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(noiseExtractionMethod:fftWindowType:fftMinFreq:fftMaxFreq:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DetailedAudioCapturer",
+                "printedName": "SCSound.DetailedAudioCapturer",
+                "usr": "c:@M@SCSound@objc(cs)DetailedAudioCapturer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FFTNoiseExtractionMethod",
+                "printedName": "SCSound.FFTNoiseExtractionMethod",
+                "hasDefaultArg": true,
+                "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TempiFFTWindowType",
+                "printedName": "SCSound.TempiFFTWindowType",
+                "hasDefaultArg": true,
+                "usr": "s:7SCSound18TempiFFTWindowTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7SCSound21DetailedAudioCapturerC21noiseExtractionMethod13fftWindowType0H7MinFreq0h3MaxL0AcA08FFTNoisefG0O_AA014TempiFFTWindowJ0OS2ftcfc",
+            "mangledName": "$s7SCSound21DetailedAudioCapturerC21noiseExtractionMethod13fftWindowType0H7MinFreq0h3MaxL0AcA08FFTNoisefG0O_AA014TempiFFTWindowJ0OS2ftcfc",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SCSound21DetailedAudioCapturerC5startyyF",
+            "mangledName": "$s7SCSound21DetailedAudioCapturerC5startyyF",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SCSound21DetailedAudioCapturerC4stopyyF",
+            "mangledName": "$s7SCSound21DetailedAudioCapturerC4stopyyF",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DetailedAudioCapturer",
+                "printedName": "SCSound.DetailedAudioCapturer",
+                "usr": "c:@M@SCSound@objc(cs)DetailedAudioCapturer"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SCSound@objc(cs)DetailedAudioCapturer(im)init",
+            "mangledName": "$s7SCSound21DetailedAudioCapturerCACycfc",
+            "moduleName": "SCSound",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SCSound@objc(cs)DetailedAudioCapturer",
+        "mangledName": "$s7SCSound21DetailedAudioCapturerC",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AudioCapturer",
+            "printedName": "AudioCapturer",
+            "usr": "s:7SCSound13AudioCapturerP",
+            "mangledName": "$s7SCSound13AudioCapturerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FFTBandCalculationMethod",
+        "printedName": "FFTBandCalculationMethod",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "linear",
+            "printedName": "linear",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SCSound.FFTBandCalculationMethod.Type) -> (Swift.Int) -> SCSound.FFTBandCalculationMethod",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> SCSound.FFTBandCalculationMethod",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTBandCalculationMethod",
+                        "printedName": "SCSound.FFTBandCalculationMethod",
+                        "usr": "s:7SCSound24FFTBandCalculationMethodO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SCSound.FFTBandCalculationMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTBandCalculationMethod",
+                        "printedName": "SCSound.FFTBandCalculationMethod",
+                        "usr": "s:7SCSound24FFTBandCalculationMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7SCSound24FFTBandCalculationMethodO6linearyACSicACmF",
+            "mangledName": "$s7SCSound24FFTBandCalculationMethodO6linearyACSicACmF",
+            "moduleName": "SCSound"
+          },
+          {
+            "kind": "Var",
+            "name": "logarithmic",
+            "printedName": "logarithmic",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SCSound.FFTBandCalculationMethod.Type) -> (Swift.Int) -> SCSound.FFTBandCalculationMethod",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> SCSound.FFTBandCalculationMethod",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTBandCalculationMethod",
+                        "printedName": "SCSound.FFTBandCalculationMethod",
+                        "usr": "s:7SCSound24FFTBandCalculationMethodO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SCSound.FFTBandCalculationMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTBandCalculationMethod",
+                        "printedName": "SCSound.FFTBandCalculationMethod",
+                        "usr": "s:7SCSound24FFTBandCalculationMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7SCSound24FFTBandCalculationMethodO11logarithmicyACSicACmF",
+            "mangledName": "$s7SCSound24FFTBandCalculationMethodO11logarithmicyACSicACmF",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:7SCSound24FFTBandCalculationMethodO",
+        "mangledName": "$s7SCSound24FFTBandCalculationMethodO",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FFTNoiseExtractionMethod",
+        "printedName": "FFTNoiseExtractionMethod",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SCSound.FFTNoiseExtractionMethod.Type) -> SCSound.FFTNoiseExtractionMethod",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTNoiseExtractionMethod",
+                    "printedName": "SCSound.FFTNoiseExtractionMethod",
+                    "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SCSound.FFTNoiseExtractionMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTNoiseExtractionMethod",
+                        "printedName": "SCSound.FFTNoiseExtractionMethod",
+                        "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7SCSound24FFTNoiseExtractionMethodO4noneyA2CmF",
+            "mangledName": "$s7SCSound24FFTNoiseExtractionMethodO4noneyA2CmF",
+            "moduleName": "SCSound"
+          },
+          {
+            "kind": "Var",
+            "name": "freqDomain",
+            "printedName": "freqDomain",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SCSound.FFTNoiseExtractionMethod.Type) -> (Swift.Double) -> SCSound.FFTNoiseExtractionMethod",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> SCSound.FFTNoiseExtractionMethod",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTNoiseExtractionMethod",
+                        "printedName": "SCSound.FFTNoiseExtractionMethod",
+                        "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SCSound.FFTNoiseExtractionMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTNoiseExtractionMethod",
+                        "printedName": "SCSound.FFTNoiseExtractionMethod",
+                        "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7SCSound24FFTNoiseExtractionMethodO10freqDomainyACSdcACmF",
+            "mangledName": "$s7SCSound24FFTNoiseExtractionMethodO10freqDomainyACSdcACmF",
+            "moduleName": "SCSound"
+          },
+          {
+            "kind": "Var",
+            "name": "timeDomain",
+            "printedName": "timeDomain",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SCSound.FFTNoiseExtractionMethod.Type) -> (Swift.Double) -> SCSound.FFTNoiseExtractionMethod",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> SCSound.FFTNoiseExtractionMethod",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTNoiseExtractionMethod",
+                        "printedName": "SCSound.FFTNoiseExtractionMethod",
+                        "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SCSound.FFTNoiseExtractionMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTNoiseExtractionMethod",
+                        "printedName": "SCSound.FFTNoiseExtractionMethod",
+                        "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7SCSound24FFTNoiseExtractionMethodO10timeDomainyACSdcACmF",
+            "mangledName": "$s7SCSound24FFTNoiseExtractionMethodO10timeDomainyACSdcACmF",
+            "moduleName": "SCSound"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:7SCSound24FFTNoiseExtractionMethodO",
+        "mangledName": "$s7SCSound24FFTNoiseExtractionMethodO",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FFTResultComponent",
+        "printedName": "FFTResultComponent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "frequency",
+            "printedName": "frequency",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound18FFTResultComponentV9frequencySfvp",
+            "mangledName": "$s7SCSound18FFTResultComponentV9frequencySfvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound18FFTResultComponentV9frequencySfvg",
+                "mangledName": "$s7SCSound18FFTResultComponentV9frequencySfvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound18FFTResultComponentV9frequencySfvs",
+                "mangledName": "$s7SCSound18FFTResultComponentV9frequencySfvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound18FFTResultComponentV9frequencySfvM",
+                "mangledName": "$s7SCSound18FFTResultComponentV9frequencySfvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "magnitude",
+            "printedName": "magnitude",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound18FFTResultComponentV9magnitudeSfvp",
+            "mangledName": "$s7SCSound18FFTResultComponentV9magnitudeSfvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound18FFTResultComponentV9magnitudeSfvg",
+                "mangledName": "$s7SCSound18FFTResultComponentV9magnitudeSfvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound18FFTResultComponentV9magnitudeSfvs",
+                "mangledName": "$s7SCSound18FFTResultComponentV9magnitudeSfvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound18FFTResultComponentV9magnitudeSfvM",
+                "mangledName": "$s7SCSound18FFTResultComponentV9magnitudeSfvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7SCSound18FFTResultComponentV",
+        "mangledName": "$s7SCSound18FFTResultComponentV",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Accelerate",
+        "printedName": "Accelerate",
+        "declKind": "Import",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TempiFFT",
+        "printedName": "TempiFFT",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "bandMagnitudes",
+            "printedName": "bandMagnitudes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "[Swift.Float]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound8TempiFFTC14bandMagnitudesSaySfGSgvp",
+            "mangledName": "$s7SCSound8TempiFFTC14bandMagnitudesSaySfGSgvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SetterAccess",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "[Swift.Float]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.Float]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound8TempiFFTC14bandMagnitudesSaySfGSgvg",
+                "mangledName": "$s7SCSound8TempiFFTC14bandMagnitudesSaySfGSgvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bandFrequencies",
+            "printedName": "bandFrequencies",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "[Swift.Float]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound8TempiFFTC15bandFrequenciesSaySfGSgvp",
+            "mangledName": "$s7SCSound8TempiFFTC15bandFrequenciesSaySfGSgvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SetterAccess",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "[Swift.Float]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.Float]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound8TempiFFTC15bandFrequenciesSaySfGSgvg",
+                "mangledName": "$s7SCSound8TempiFFTC15bandFrequenciesSaySfGSgvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "numberOfBands",
+            "printedName": "numberOfBands",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound8TempiFFTC13numberOfBandsSivp",
+            "mangledName": "$s7SCSound8TempiFFTC13numberOfBandsSivp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SetterAccess",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound8TempiFFTC13numberOfBandsSivg",
+                "mangledName": "$s7SCSound8TempiFFTC13numberOfBandsSivg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "magnitudeAtBand",
+            "printedName": "magnitudeAtBand(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SCSound8TempiFFTC15magnitudeAtBandySfSiF",
+            "mangledName": "$s7SCSound8TempiFFTC15magnitudeAtBandySfSiF",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "frequencyAtBand",
+            "printedName": "frequencyAtBand(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SCSound8TempiFFTC15frequencyAtBandySfSiF",
+            "mangledName": "$s7SCSound8TempiFFTC15frequencyAtBandySfSiF",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "toDB",
+            "printedName": "toDB(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SCSound8TempiFFTC4toDByS2fFZ",
+            "mangledName": "$s7SCSound8TempiFFTC4toDByS2fFZ",
+            "moduleName": "SCSound",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TempiFFT",
+                "printedName": "SCSound.TempiFFT",
+                "usr": "c:@M@SCSound@objc(cs)TempiFFT"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SCSound@objc(cs)TempiFFT(im)init",
+            "mangledName": "$s7SCSound8TempiFFTCACycfc",
+            "moduleName": "SCSound",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SCSound@objc(cs)TempiFFT",
+        "mangledName": "$s7SCSound8TempiFFTC",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TempiFFTWindowType",
+        "printedName": "TempiFFTWindowType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SCSound.TempiFFTWindowType.Type) -> SCSound.TempiFFTWindowType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TempiFFTWindowType",
+                    "printedName": "SCSound.TempiFFTWindowType",
+                    "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SCSound.TempiFFTWindowType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TempiFFTWindowType",
+                        "printedName": "SCSound.TempiFFTWindowType",
+                        "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7SCSound18TempiFFTWindowTypeO4noneyA2CmF",
+            "mangledName": "$s7SCSound18TempiFFTWindowTypeO4noneyA2CmF",
+            "moduleName": "SCSound"
+          },
+          {
+            "kind": "Var",
+            "name": "hanning",
+            "printedName": "hanning",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SCSound.TempiFFTWindowType.Type) -> SCSound.TempiFFTWindowType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TempiFFTWindowType",
+                    "printedName": "SCSound.TempiFFTWindowType",
+                    "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SCSound.TempiFFTWindowType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TempiFFTWindowType",
+                        "printedName": "SCSound.TempiFFTWindowType",
+                        "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7SCSound18TempiFFTWindowTypeO7hanningyA2CmF",
+            "mangledName": "$s7SCSound18TempiFFTWindowTypeO7hanningyA2CmF",
+            "moduleName": "SCSound"
+          },
+          {
+            "kind": "Var",
+            "name": "hamming",
+            "printedName": "hamming",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SCSound.TempiFFTWindowType.Type) -> SCSound.TempiFFTWindowType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TempiFFTWindowType",
+                    "printedName": "SCSound.TempiFFTWindowType",
+                    "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SCSound.TempiFFTWindowType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TempiFFTWindowType",
+                        "printedName": "SCSound.TempiFFTWindowType",
+                        "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7SCSound18TempiFFTWindowTypeO7hammingyA2CmF",
+            "mangledName": "$s7SCSound18TempiFFTWindowTypeO7hammingyA2CmF",
+            "moduleName": "SCSound"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SCSound.TempiFFTWindowType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TempiFFTWindowType",
+                    "printedName": "SCSound.TempiFFTWindowType",
+                    "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7SCSound18TempiFFTWindowTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s7SCSound18TempiFFTWindowTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "SCSound",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound18TempiFFTWindowTypeO8rawValueSivp",
+            "mangledName": "$s7SCSound18TempiFFTWindowTypeO8rawValueSivp",
+            "moduleName": "SCSound",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound18TempiFFTWindowTypeO8rawValueSivg",
+                "mangledName": "$s7SCSound18TempiFFTWindowTypeO8rawValueSivg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:7SCSound18TempiFFTWindowTypeO",
+        "mangledName": "$s7SCSound18TempiFFTWindowTypeO",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FFTVisualizer",
+        "printedName": "FFTVisualizer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "baseUpOffset",
+            "printedName": "baseUpOffset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound13FFTVisualizerC12baseUpOffsetSfvp",
+            "mangledName": "$s7SCSound13FFTVisualizerC12baseUpOffsetSfvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC12baseUpOffsetSfvg",
+                "mangledName": "$s7SCSound13FFTVisualizerC12baseUpOffsetSfvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC12baseUpOffsetSfvs",
+                "mangledName": "$s7SCSound13FFTVisualizerC12baseUpOffsetSfvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC12baseUpOffsetSfvM",
+                "mangledName": "$s7SCSound13FFTVisualizerC12baseUpOffsetSfvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "historyCount",
+            "printedName": "historyCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound13FFTVisualizerC12historyCountSivp",
+            "mangledName": "$s7SCSound13FFTVisualizerC12historyCountSivp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC12historyCountSivg",
+                "mangledName": "$s7SCSound13FFTVisualizerC12historyCountSivg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC12historyCountSivs",
+                "mangledName": "$s7SCSound13FFTVisualizerC12historyCountSivs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC12historyCountSivM",
+                "mangledName": "$s7SCSound13FFTVisualizerC12historyCountSivM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "averageMags",
+            "printedName": "averageMags",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Float]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound13FFTVisualizerC11averageMagsSaySfGvp",
+            "mangledName": "$s7SCSound13FFTVisualizerC11averageMagsSaySfGvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC11averageMagsSaySfGvg",
+                "mangledName": "$s7SCSound13FFTVisualizerC11averageMagsSaySfGvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC11averageMagsSaySfGvs",
+                "mangledName": "$s7SCSound13FFTVisualizerC11averageMagsSaySfGvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC11averageMagsSaySfGvM",
+                "mangledName": "$s7SCSound13FFTVisualizerC11averageMagsSaySfGvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "freqArray",
+            "printedName": "freqArray",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Float]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound13FFTVisualizerC9freqArraySaySfGvp",
+            "mangledName": "$s7SCSound13FFTVisualizerC9freqArraySaySfGvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC9freqArraySaySfGvg",
+                "mangledName": "$s7SCSound13FFTVisualizerC9freqArraySaySfGvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC9freqArraySaySfGvs",
+                "mangledName": "$s7SCSound13FFTVisualizerC9freqArraySaySfGvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound13FFTVisualizerC9freqArraySaySfGvM",
+                "mangledName": "$s7SCSound13FFTVisualizerC9freqArraySaySfGvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FFTVisualizer",
+                "printedName": "SCSound.FFTVisualizer",
+                "usr": "s:7SCSound13FFTVisualizerC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7SCSound13FFTVisualizerCACycfc",
+            "mangledName": "$s7SCSound13FFTVisualizerCACycfc",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "updateData",
+            "printedName": "updateData(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AudioCapturer",
+                "printedName": "SCSound.AudioCapturer",
+                "usr": "s:7SCSound13AudioCapturerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SCSound13FFTVisualizerC10updateDatayyAA13AudioCapturer_pF",
+            "mangledName": "$s7SCSound13FFTVisualizerC10updateDatayyAA13AudioCapturer_pF",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7SCSound13FFTVisualizerC",
+        "mangledName": "$s7SCSound13FFTVisualizerC",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SCSound"
+      },
+      {
+        "kind": "Import",
+        "name": "Accelerate",
+        "printedName": "Accelerate",
+        "declKind": "Import",
+        "moduleName": "SCSound"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FastAudioCapturer",
+        "printedName": "FastAudioCapturer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fftResult",
+            "printedName": "fftResult",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SCSound.FFTResultComponent]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTResultComponent",
+                    "printedName": "SCSound.FFTResultComponent",
+                    "usr": "s:7SCSound18FFTResultComponentV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound17FastAudioCapturerC9fftResultSayAA18FFTResultComponentVGvp",
+            "mangledName": "$s7SCSound17FastAudioCapturerC9fftResultSayAA18FFTResultComponentVGvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SCSound.FFTResultComponent]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTResultComponent",
+                        "printedName": "SCSound.FFTResultComponent",
+                        "usr": "s:7SCSound18FFTResultComponentV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC9fftResultSayAA18FFTResultComponentVGvg",
+                "mangledName": "$s7SCSound17FastAudioCapturerC9fftResultSayAA18FFTResultComponentVGvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SCSound.FFTResultComponent]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFTResultComponent",
+                        "printedName": "SCSound.FFTResultComponent",
+                        "usr": "s:7SCSound18FFTResultComponentV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC9fftResultSayAA18FFTResultComponentVGvs",
+                "mangledName": "$s7SCSound17FastAudioCapturerC9fftResultSayAA18FFTResultComponentVGvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC9fftResultSayAA18FFTResultComponentVGvM",
+                "mangledName": "$s7SCSound17FastAudioCapturerC9fftResultSayAA18FFTResultComponentVGvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftNoiseExtractionMethod",
+            "printedName": "fftNoiseExtractionMethod",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FFTNoiseExtractionMethod",
+                "printedName": "SCSound.FFTNoiseExtractionMethod",
+                "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound17FastAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovp",
+            "mangledName": "$s7SCSound17FastAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTNoiseExtractionMethod",
+                    "printedName": "SCSound.FFTNoiseExtractionMethod",
+                    "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovg",
+                "mangledName": "$s7SCSound17FastAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTNoiseExtractionMethod",
+                    "printedName": "SCSound.FFTNoiseExtractionMethod",
+                    "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovs",
+                "mangledName": "$s7SCSound17FastAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0Ovs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0OvM",
+                "mangledName": "$s7SCSound17FastAudioCapturerC24fftNoiseExtractionMethodAA08FFTNoisegH0OvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftWindowType",
+            "printedName": "fftWindowType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TempiFFTWindowType",
+                "printedName": "SCSound.TempiFFTWindowType",
+                "usr": "s:7SCSound18TempiFFTWindowTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound17FastAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovp",
+            "mangledName": "$s7SCSound17FastAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TempiFFTWindowType",
+                    "printedName": "SCSound.TempiFFTWindowType",
+                    "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovg",
+                "mangledName": "$s7SCSound17FastAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TempiFFTWindowType",
+                    "printedName": "SCSound.TempiFFTWindowType",
+                    "usr": "s:7SCSound18TempiFFTWindowTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovs",
+                "mangledName": "$s7SCSound17FastAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0Ovs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0OvM",
+                "mangledName": "$s7SCSound17FastAudioCapturerC13fftWindowTypeAA014TempiFFTWindowG0OvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftMinFreq",
+            "printedName": "fftMinFreq",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound17FastAudioCapturerC10fftMinFreqSfvp",
+            "mangledName": "$s7SCSound17FastAudioCapturerC10fftMinFreqSfvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC10fftMinFreqSfvg",
+                "mangledName": "$s7SCSound17FastAudioCapturerC10fftMinFreqSfvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC10fftMinFreqSfvs",
+                "mangledName": "$s7SCSound17FastAudioCapturerC10fftMinFreqSfvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC10fftMinFreqSfvM",
+                "mangledName": "$s7SCSound17FastAudioCapturerC10fftMinFreqSfvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fftMaxFreq",
+            "printedName": "fftMaxFreq",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound17FastAudioCapturerC10fftMaxFreqSfvp",
+            "mangledName": "$s7SCSound17FastAudioCapturerC10fftMaxFreqSfvp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC10fftMaxFreqSfvg",
+                "mangledName": "$s7SCSound17FastAudioCapturerC10fftMaxFreqSfvg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC10fftMaxFreqSfvs",
+                "mangledName": "$s7SCSound17FastAudioCapturerC10fftMaxFreqSfvs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC10fftMaxFreqSfvM",
+                "mangledName": "$s7SCSound17FastAudioCapturerC10fftMaxFreqSfvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bandCalculationMethod",
+            "printedName": "bandCalculationMethod",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FFTBandCalculationMethod",
+                "printedName": "SCSound.FFTBandCalculationMethod",
+                "usr": "s:7SCSound24FFTBandCalculationMethodO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SCSound17FastAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovp",
+            "mangledName": "$s7SCSound17FastAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovp",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTBandCalculationMethod",
+                    "printedName": "SCSound.FFTBandCalculationMethod",
+                    "usr": "s:7SCSound24FFTBandCalculationMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovg",
+                "mangledName": "$s7SCSound17FastAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovg",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFTBandCalculationMethod",
+                    "printedName": "SCSound.FFTBandCalculationMethod",
+                    "usr": "s:7SCSound24FFTBandCalculationMethodO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovs",
+                "mangledName": "$s7SCSound17FastAudioCapturerC21bandCalculationMethodAA07FFTBandfG0Ovs",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SCSound17FastAudioCapturerC21bandCalculationMethodAA07FFTBandfG0OvM",
+                "mangledName": "$s7SCSound17FastAudioCapturerC21bandCalculationMethodAA07FFTBandfG0OvM",
+                "moduleName": "SCSound",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(noiseExtractionMethod:fftWindowType:captureDeviceFindWithName:fftMinFreq:fftMaxFreq:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FastAudioCapturer",
+                "printedName": "SCSound.FastAudioCapturer",
+                "usr": "c:@M@SCSound@objc(cs)FastAudioCapturer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FFTNoiseExtractionMethod",
+                "printedName": "SCSound.FFTNoiseExtractionMethod",
+                "hasDefaultArg": true,
+                "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TempiFFTWindowType",
+                "printedName": "SCSound.TempiFFTWindowType",
+                "hasDefaultArg": true,
+                "usr": "s:7SCSound18TempiFFTWindowTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7SCSound17FastAudioCapturerC21noiseExtractionMethod13fftWindowType25captureDeviceFindWithName0H7MinFreq0h3MaxQ0AcA08FFTNoisefG0O_AA014TempiFFTWindowJ0OSSS2ftcfc",
+            "mangledName": "$s7SCSound17FastAudioCapturerC21noiseExtractionMethod13fftWindowType25captureDeviceFindWithName0H7MinFreq0h3MaxQ0AcA08FFTNoisefG0O_AA014TempiFFTWindowJ0OSSS2ftcfc",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(noiseExtractionMethod:fftWindowType:captureDevice:fftMinFreq:fftMaxFreq:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FastAudioCapturer",
+                "printedName": "SCSound.FastAudioCapturer",
+                "usr": "c:@M@SCSound@objc(cs)FastAudioCapturer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FFTNoiseExtractionMethod",
+                "printedName": "SCSound.FFTNoiseExtractionMethod",
+                "hasDefaultArg": true,
+                "usr": "s:7SCSound24FFTNoiseExtractionMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TempiFFTWindowType",
+                "printedName": "SCSound.TempiFFTWindowType",
+                "hasDefaultArg": true,
+                "usr": "s:7SCSound18TempiFFTWindowTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFoundation.AVCaptureDevice?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVCaptureDevice",
+                    "printedName": "AVFoundation.AVCaptureDevice",
+                    "usr": "c:objc(cs)AVCaptureDevice"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7SCSound17FastAudioCapturerC21noiseExtractionMethod13fftWindowType13captureDevice0H7MinFreq0h3MaxN0AcA08FFTNoisefG0O_AA014TempiFFTWindowJ0OSo09AVCaptureL0CSgS2ftcfc",
+            "mangledName": "$s7SCSound17FastAudioCapturerC21noiseExtractionMethod13fftWindowType13captureDevice0H7MinFreq0h3MaxN0AcA08FFTNoisefG0O_AA014TempiFFTWindowJ0OSo09AVCaptureL0CSgS2ftcfc",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SCSound17FastAudioCapturerC5startyyF",
+            "mangledName": "$s7SCSound17FastAudioCapturerC5startyyF",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SCSound17FastAudioCapturerC4stopyyF",
+            "mangledName": "$s7SCSound17FastAudioCapturerC4stopyyF",
+            "moduleName": "SCSound",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FastAudioCapturer",
+                "printedName": "SCSound.FastAudioCapturer",
+                "usr": "c:@M@SCSound@objc(cs)FastAudioCapturer"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SCSound@objc(cs)FastAudioCapturer(im)init",
+            "mangledName": "$s7SCSound17FastAudioCapturerCACycfc",
+            "moduleName": "SCSound",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "captureOutput",
+            "printedName": "captureOutput(_:didOutput:from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVCaptureOutput",
+                "printedName": "AVFoundation.AVCaptureOutput",
+                "usr": "c:objc(cs)AVCaptureOutput"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMSampleBuffer",
+                "printedName": "CoreMedia.CMSampleBuffer",
+                "usr": "c:@T@CMSampleBufferRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVCaptureConnection",
+                "printedName": "AVFoundation.AVCaptureConnection",
+                "usr": "c:objc(cs)AVCaptureConnection"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@SCSound@objc(cs)FastAudioCapturer(im)captureOutput:didOutputSampleBuffer:fromConnection:",
+            "mangledName": "$s7SCSound17FastAudioCapturerC13captureOutput_03didF04fromySo09AVCaptureF0C_So17CMSampleBufferRefaSo0I10ConnectionCtF",
+            "moduleName": "SCSound",
+            "objc_name": "captureOutput:didOutputSampleBuffer:fromConnection:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SCSound@objc(cs)FastAudioCapturer",
+        "mangledName": "$s7SCSound17FastAudioCapturerC",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AudioCapturer",
+            "printedName": "AudioCapturer",
+            "usr": "s:7SCSound13AudioCapturerP",
+            "mangledName": "$s7SCSound13AudioCapturerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Accelerate",
+        "printedName": "Accelerate",
+        "declKind": "Import",
+        "moduleName": "SCSound",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "Array",
+      "offset": 245,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 502,
+      "length": 3,
+      "value": "256"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 604,
+      "length": 20,
+      "value": "\"SCAudioEngineQueue\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 815,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 848,
+      "length": 5,
+      "value": "30000"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1129,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1298,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1313,
+      "length": 4,
+      "value": "8192"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "Array",
+      "offset": 3688,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3772,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3925,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/DetailedAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 142,
+      "length": 21,
+      "value": "\"SCSound.DetailedAudioCapturer\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "FloatLiteral",
+      "offset": 534,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "Array",
+      "offset": 687,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1425,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "Array",
+      "offset": 1958,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2035,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "FloatLiteral",
+      "offset": 2661,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2675,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 2678,
+      "length": 92,
+      "value": "\"size \""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 2696,
+      "length": 4,
+      "value": "\" must be a power of 2. exInfo: sampleRate:\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 2753,
+      "length": 1,
+      "value": "\", size:\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 2769,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2841,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "FloatLiteral",
+      "offset": 3091,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "FloatLiteral",
+      "offset": 3161,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "FloatLiteral",
+      "offset": 4078,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4248,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4532,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4548,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4568,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5366,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5371,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6538,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "FloatLiteral",
+      "offset": 6763,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6834,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6855,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6919,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 7177,
+      "length": 28,
+      "value": "\"*** Perform the FFT first.\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "FloatLiteral",
+      "offset": 7391,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "FloatLiteral",
+      "offset": 7468,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7739,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7896,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8474,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 9012,
+      "length": 28,
+      "value": "\"*** Perform the FFT first.\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9299,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9696,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10020,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10052,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10157,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10471,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10595,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10601,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10663,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10889,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11392,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11838,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11921,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12352,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12665,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 12901,
+      "length": 28,
+      "value": "\"*** Perform the FFT first.\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 12969,
+      "length": 70,
+      "value": "\"*** Call calculateLinearBands() or calculateLogarithmicBands() first\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 13407,
+      "length": 28,
+      "value": "\"*** Perform the FFT first.\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 13818,
+      "length": 28,
+      "value": "\"*** Perform the FFT first.\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 13886,
+      "length": 70,
+      "value": "\"*** Call calculateLinearBands() or calculateLogarithmicBands() first\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14254,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14281,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14429,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14722,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14863,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "FloatLiteral",
+      "offset": 15299,
+      "length": 14,
+      "value": "0.000000000001"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15330,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFT.swift",
+      "kind": "StringLiteral",
+      "offset": 186,
+      "length": 8,
+      "value": "\"SCSound.TempiFFT\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFTWindowType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 215,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFTWindowType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 232,
+      "length": 7,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFTWindowType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 215,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFTWindowType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 232,
+      "length": 7,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFTWindowType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 215,
+      "length": 7,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFT\/TempiFFTWindowType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 232,
+      "length": 7,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 165,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 203,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "Array",
+      "offset": 243,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "Array",
+      "offset": 282,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "Array",
+      "offset": 323,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 562,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "Array",
+      "offset": 796,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 974,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1027,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1102,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FFTVisualizer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1209,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 389,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 427,
+      "length": 2,
+      "value": "32"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 462,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 579,
+      "length": 14,
+      "value": "\"SCAudioQueue\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "Array",
+      "offset": 669,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 926,
+      "length": 3,
+      "value": "256"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1166,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1199,
+      "length": 5,
+      "value": "30000"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 1845,
+      "length": 46,
+      "value": "\"Audio Capture Device \""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 1880,
+      "length": 3,
+      "value": "\" not found\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2304,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2337,
+      "length": 5,
+      "value": "30000"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 2720,
+      "length": 29,
+      "value": "\"audio input creation failed\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 200,
+      "length": 17,
+      "value": "\"SCSound.FastAudioCapturer\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3653,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 3680,
+      "length": 29,
+      "value": "\"audio channel not available\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 3817,
+      "length": 24,
+      "value": "\"sampleBuffer not ready\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 4108,
+      "length": 13,
+      "value": "\"asbd is nil\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 4320,
+      "length": 15,
+      "value": "\"format is nil\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "StringLiteral",
+      "offset": 4558,
+      "length": 18,
+      "value": "\"pcmBuffer is nil\""
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "Array",
+      "offset": 6718,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6778,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/FastAudioCapturer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6919,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/yukimini\/Desktop\/swifty-creatives-experimental\/Sources\/SCSound\/Utils\/NoiseExtractor.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2343,
+      "length": 1,
+      "value": "2"
+    }
+  ]
+}
