@@ -1,0 +1,55 @@
+name: Release
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+env:
+  DEVELOPER_DIR: /Applications/Xcode.app
+jobs:
+  release:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: build xcframework
+        run: make xcframework
+      - name: make xcframework zip
+        run: cd xcframeworkGenerator && zip SwiftyCreativesExperimental -r SwiftyCreativesExperimental.xcframework
+      - name: make bundle zip
+        run: cd xcframeworkGenerator && zip SwiftyCreativesExperimental_SwiftyCreatives -r SwiftyCreativesExperimental_SwiftyCreatives.bundle
+      - name: push new tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          default_bump: "patch"
+      - name: create release
+        id: create_release
+        uses: actions/create-release@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag_version.outputs.new_tag }}
+          release_name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+          draft: false
+          prerelease: false
+      - name: upload xcframework
+        id: upload-xcframework
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./xcframeworkGenerator/SwiftyCreativesExperimental.zip
+          asset_name: SwiftyCreativesExperimental.xcframework.zip
+          asset_content_type: application/zip
+      - name: upload bundle
+        id: upload-xcframework
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./xcframeworkGenerator/SwiftyCreativesExperimental_SwiftyCreatives.zip
+          asset_name: SwiftyCreativesExperimental_SwiftyCreatives.bundle.zip
+          asset_content_type: application/zip

@@ -42,9 +42,9 @@ bundle-library:
 	./xcframeworkGenerator/bundle-library.sh
 	cp ./LICENSE ./xcframeworkGenerator/${XCF_LIBRARY_NAME}.xcframework/LICENSE
 	cp ./LICENSE_THIRDPARTY ./xcframeworkGenerator/${XCF_LIBRARY_NAME}.xcframework/LICENSE_THIRDPARTY
-	mv ./.tmpbuild/Build/Products/Release/SwiftyCreativesExperimental_SwiftyCreatives.bundle ./xcframeworkGenerator/SwiftyCreativesExperimental_SwiftyCreatives.bundle
-
+	
 clean-xcframework:
+	find ./xcframeworkGenerator/${XCF_LIBRARY_NAME}.xcframework -name '*.swiftsourceinfo' -type f | xargs rm
 	rm -rf ./.tmpbuild
 	rm -rf ./.tmparchives
 	rm -rf ./generatedXCFrameworks

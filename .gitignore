@@ -9,3 +9,6 @@ DerivedData/
 .netrc
 /.tmparchives/
 /.tmpbuild/
+/xcframeworkGenerator/*.xcframework
+/.tmpbuild
+/.tmparchive
