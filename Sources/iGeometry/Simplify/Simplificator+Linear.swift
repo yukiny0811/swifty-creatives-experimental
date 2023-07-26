@@ -7,7 +7,7 @@
 
 extension Simplificator {
     
-    @inlinable
+    
     func linear(points: [IntPoint], isClockWise: Bool) -> Result {
         guard points.count > 2 else {
             return .init(isModified: true, points: [])
@@ -58,7 +58,7 @@ extension Simplificator {
         }
     }
     
-    @inlinable
+    
     func filterLinearByDistance(path: inout PathList<IntPoint>) -> Bool {
         let count = path.count
         

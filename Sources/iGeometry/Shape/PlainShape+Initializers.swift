@@ -8,7 +8,7 @@
 
 public extension PlainShape {
     
-    @inlinable
+    
     /// Data to represent complex shape
     /// - Parameters:
     ///   - precision: The minimum required precision. It's a minimum linear distance after which points will be recognized as the same.
@@ -19,7 +19,7 @@ public extension PlainShape {
         self.init(iGeom: IntGeom(scale: Float(1 / precision)), points: points, hull: hull, holes: holes)
     }
 
-    @inlinable
+    
     /// Data to represent complex shape
     /// - Parameters:
     ///   - iGeom: Int <-> Float converter
@@ -44,7 +44,7 @@ public extension PlainShape {
         self.init(points: intPoints, layouts: layouts)
     }
     
-    @inlinable
+    
     /// Data to represent complex shape
     /// - Parameters:
     ///   - precision: The minimum required precision. It's a minimum linear distance after which points will be recognized as the same.
@@ -54,7 +54,7 @@ public extension PlainShape {
         self.init(iGeom: IntGeom(scale: Float(1 / precision)), hull: hull, holes: holes)
     }
     
-    @inlinable
+    
     /// Data to represent complex shape
     /// - Parameters:
     ///   - iGeom: Int <-> Float converter

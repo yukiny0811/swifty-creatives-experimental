@@ -13,13 +13,13 @@ public struct IntShape {
     public var hull: [IntPoint]
     public var holes: [[IntPoint]]
     
-    @inlinable
+    
     public init(shape: Shape, iGeom: IntGeom = .defGeom) {
         self.hull = iGeom.int(points: shape.hull)
         self.holes = iGeom.int(paths: shape.holes)
     }
     
-    @inlinable
+    
     public init(plainShape: PlainShape) {
         let hullLayout = plainShape.layouts[0]
         self.hull = Array(plainShape.points[0...hullLayout.end])
@@ -37,7 +37,7 @@ public struct IntShape {
         self.holes = holes
     }
     
-    @inlinable
+    
     public init(hull: [IntPoint], holes: [[IntPoint]]) {
         self.hull = hull
         self.holes = holes

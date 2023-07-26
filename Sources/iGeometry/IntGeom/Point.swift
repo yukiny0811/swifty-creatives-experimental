@@ -18,7 +18,7 @@ public struct Point: Equatable {
         self.y = y
     }
     
-    @inlinable
+    
     public func sqrDistance(point: Point) -> Float {
         let dx = point.x - self.x
         let dy = point.y - self.y
@@ -26,7 +26,7 @@ public struct Point: Equatable {
         return dx * dx + dy * dy
     }
     
-    @inlinable
+    
     public var normal: Point {
         let l = (x * x + y * y).squareRoot()
         let k = 1 / l
@@ -36,27 +36,27 @@ public struct Point: Equatable {
         return Point(x: x, y: y)
     }
     
-    @inlinable
+    
     public func dotProduct(_ vector: Point) -> Float { // cos
         self.x * vector.x + vector.y * self.y
     }
     
-    @inlinable
+    
     public func crossProduct(_ vector: Point) -> Float {
         self.x * vector.y - self.y * vector.x
     }
 
-    @inlinable
+    
     static func +(left: Point, right: Point) -> Point {
         Point(x: left.x + right.x, y: left.y + right.y)
     }
 
-    @inlinable
+    
     static func -(left: Point, right: Point) -> Point {
         Point(x: left.x - right.x, y: left.y - right.y)
     }
     
-    @inlinable
+    
     public static func == (lhs: Point, rhs: Point) -> Bool {
         lhs.x == rhs.x && lhs.y == rhs.y
     }

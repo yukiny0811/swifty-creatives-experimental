@@ -8,7 +8,6 @@
 
 public extension Array where Element == IntPoint {
 
-    @inlinable
     var area: Int64 {
         guard var p1 = self.last else {
             return 0
@@ -26,7 +25,6 @@ public extension Array where Element == IntPoint {
         return sum >> 1
     }
     
-    @inlinable
     mutating func invert() {
         let n = self.count
         let m = n >> 1

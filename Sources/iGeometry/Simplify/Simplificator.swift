@@ -15,7 +15,7 @@ public struct Simplificator {
         public let isModified: Bool
         public let points: [IntPoint]
         
-        @inlinable
+        
         public init(isModified: Bool, points: [IntPoint]) {
             self.isModified = isModified
             self.points = points
@@ -32,7 +32,7 @@ public struct Simplificator {
     public let minArea: Int64
     public let maxCos: Float
 
-    @inlinable
+    
     public init(strategy: Strategy, minDistance: Int64, minArea: Int64, minAngle grad: Float) {
         self.strategy = strategy
         self.minDistance = minDistance
@@ -40,7 +40,7 @@ public struct Simplificator {
         self.maxCos = cos(grad * .pi / 180)
     }
 
-    @inlinable
+    
     public init(strategy: Strategy = .linear, minDistance: Int64 = 10, minAngle grad: Float = 0.1) {
         self.strategy = strategy
         self.minDistance = minDistance
@@ -48,7 +48,7 @@ public struct Simplificator {
         self.maxCos = cos(grad * .pi / 180)
     }
 
-    @inlinable
+    
     public func simplify(points: [IntPoint], isClockWise: Bool) -> Result {
         switch self.strategy {
             case .linear:

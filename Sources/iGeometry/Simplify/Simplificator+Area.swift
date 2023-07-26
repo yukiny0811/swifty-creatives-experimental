@@ -7,7 +7,7 @@
 
 extension Simplificator {
     
-    @inlinable
+    
     func isSmallArea(points: [IntPoint], isClockWise: Bool) -> Bool {
         let s = points.area
         let area = isClockWise ? s : -s

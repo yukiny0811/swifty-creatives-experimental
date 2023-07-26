@@ -6,8 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SwiftyCreativesExperimental",
     platforms: [
-        .iOS(.v15),
-        .macOS(.v12)
+        .macOS(.v13)
     ],
     products: [
         .library(
@@ -15,18 +14,14 @@ let package = Package(
             targets: ["SwiftyCreatives"]
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", exact: "1.11.0"),
-        .package(url: "https://github.com/apple/swift-algorithms", exact: "1.0.0")
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "SwiftyCreatives",
             dependencies: [
                 "FontVertexBuilder",
                 "CommonEntity",
-                "SCSound",
-                .product(name: "Algorithms", package: "swift-algorithms")
+                "SCSound"
             ],
             resources: [.process("Resources")]
         ),
@@ -51,13 +46,6 @@ let package = Package(
         ),
         .target(
             name: "SCSound"
-        ),
-        .testTarget(
-            name: "SwiftyCreativesTests",
-            dependencies: [
-                "SwiftyCreatives",
-                .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
-            ]
         )
     ]
 )

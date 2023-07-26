@@ -8,27 +8,27 @@
 
 public extension IntPoint {
     
-    @inlinable
+    
     static func +(left: IntPoint, right: IntPoint) -> IntPoint {
         IntPoint(x: left.x + right.x, y: left.y + right.y)
     }
 
-    @inlinable
+    
     static func -(left: IntPoint, right: IntPoint) -> IntPoint {
         IntPoint(x: left.x - right.x, y: left.y - right.y)
     }
     
-    @inlinable
+    
     func scalarMultiply(point: IntPoint) -> Int64 { // dot product (cos)
         self.x * point.x + point.y * self.y
     }
     
-    @inlinable
+    
     func crossProduct(point: IntPoint) -> Int64 { // cross product
         self.x * point.y - self.y * point.x
     }
     
-    @inlinable
+    
     func normal(iGeom: IntGeom) -> IntPoint {
         let p = iGeom.float(point: self)
         let l = (p.x * p.x + p.y * p.y).squareRoot()
@@ -39,7 +39,7 @@ public extension IntPoint {
         return iGeom.int(point: Point(x: x, y: y))
     }
     
-    @inlinable
+    
     func sqrDistance(point: IntPoint) -> Int64 {
         let dx = point.x - self.x
         let dy = point.y - self.y
@@ -47,7 +47,7 @@ public extension IntPoint {
         return dx * dx + dy * dy
     }
     
-    @inlinable
+    
     static func isSameLine(a: IntPoint, b: IntPoint, c: IntPoint) -> Bool {
         let dxBA = b.x - a.x
         let dxCA = c.x - a.x

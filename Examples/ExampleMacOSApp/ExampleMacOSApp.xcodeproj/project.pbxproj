@@ -17,22 +17,18 @@
 		56694B0F298AB8D70022C24D /* Sample5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56694B0E298AB8D70022C24D /* Sample5.swift */; };
 		56694B11298AB8EE0022C24D /* Sample6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56694B10298AB8EE0022C24D /* Sample6.swift */; };
 		56694B13298AB9070022C24D /* FFTVisualizerSketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56694B12298AB9070022C24D /* FFTVisualizerSketch.swift */; };
-		5675A0F8294B18A2005C25BD /* SwiftyCreatives in Frameworks */ = {isa = PBXBuildFile; productRef = 5675A0F7294B18A2005C25BD /* SwiftyCreatives */; };
 		568288AA2A55B53900F9714A /* FFTVisTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568288A92A55B53900F9714A /* FFTVisTemplate.swift */; };
 		569A83992999236000F62062 /* Sample9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A83982999236000F62062 /* Sample9.swift */; };
 		569EBEAE2995583D0090F5AB /* Sample8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569EBEAD2995583D0090F5AB /* Sample8.swift */; };
 		56C53FC7294A645100962DD6 /* ExampleMacOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C53FC6294A645100962DD6 /* ExampleMacOSApp.swift */; };
 		56C53FCB294A645200962DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C53FCA294A645200962DD6 /* Assets.xcassets */; };
 		56C53FCE294A645200962DD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C53FCD294A645200962DD6 /* Preview Assets.xcassets */; };
-		56DC9BA82A4D427E000B12B7 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 56DC9BA72A4D427E000B12B7 /* Collections */; };
-		56DC9BAA2A4D427E000B12B7 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 56DC9BA92A4D427E000B12B7 /* DequeModule */; };
-		56DC9BAC2A4D427E000B12B7 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 56DC9BAB2A4D427E000B12B7 /* OrderedCollections */; };
-		56DC9BAF2A4D42A5000B12B7 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 56DC9BAE2A4D42A5000B12B7 /* Algorithms */; };
 		56DC9BB22A4D5171000B12B7 /* sphere.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 56DC9BB02A4D5171000B12B7 /* sphere.mtl */; };
 		56DC9BB32A4D5171000B12B7 /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 56DC9BB12A4D5171000B12B7 /* sphere.obj */; };
 		56F868AD2A53BB8100141C9B /* TouchSampleSketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F868AC2A53BB8100141C9B /* TouchSampleSketch.swift */; };
 		56F868AF2A53BE9200141C9B /* TouchSampleSketch2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F868AE2A53BE9200141C9B /* TouchSampleSketch2D.swift */; };
 		56F868B12A53D8EB00141C9B /* FFTVisualizerSketch2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F868B02A53D8EB00141C9B /* FFTVisualizerSketch2D.swift */; };
+		650132DF2A6FD6D600AB3E1A /* SwiftyCreativesExperimental in Frameworks */ = {isa = PBXBuildFile; productRef = 650132DE2A6FD6D600AB3E1A /* SwiftyCreativesExperimental */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,11 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56DC9BA82A4D427E000B12B7 /* Collections in Frameworks */,
-				5675A0F8294B18A2005C25BD /* SwiftyCreatives in Frameworks */,
-				56DC9BAC2A4D427E000B12B7 /* OrderedCollections in Frameworks */,
-				56DC9BAF2A4D42A5000B12B7 /* Algorithms in Frameworks */,
-				56DC9BAA2A4D427E000B12B7 /* DequeModule in Frameworks */,
+				650132DF2A6FD6D600AB3E1A /* SwiftyCreativesExperimental in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,11 +165,7 @@
 			);
 			name = ExampleMacOSApp;
 			packageProductDependencies = (
-				5675A0F7294B18A2005C25BD /* SwiftyCreatives */,
-				56DC9BA72A4D427E000B12B7 /* Collections */,
-				56DC9BA92A4D427E000B12B7 /* DequeModule */,
-				56DC9BAB2A4D427E000B12B7 /* OrderedCollections */,
-				56DC9BAE2A4D42A5000B12B7 /* Algorithms */,
+				650132DE2A6FD6D600AB3E1A /* SwiftyCreativesExperimental */,
 			);
 			productName = ExampleMacOSApp;
 			productReference = 56C53FC3294A645100962DD6 /* ExampleMacOSApp.app */;
@@ -208,8 +196,6 @@
 			);
 			mainGroup = 56C53FBA294A645100962DD6;
 			packageReferences = (
-				56DC9BA62A4D427E000B12B7 /* XCRemoteSwiftPackageReference "swift-collections" */,
-				56DC9BAD2A4D42A5000B12B7 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = 56C53FC4294A645100962DD6 /* Products */;
 			projectDirPath = "";
@@ -462,49 +448,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		56DC9BA62A4D427E000B12B7 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-collections.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.4;
-			};
-		};
-		56DC9BAD2A4D42A5000B12B7 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-algorithms.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		5675A0F7294B18A2005C25BD /* SwiftyCreatives */ = {
+		650132DE2A6FD6D600AB3E1A /* SwiftyCreativesExperimental */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = SwiftyCreatives;
-		};
-		56DC9BA72A4D427E000B12B7 /* Collections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 56DC9BA62A4D427E000B12B7 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = Collections;
-		};
-		56DC9BA92A4D427E000B12B7 /* DequeModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 56DC9BA62A4D427E000B12B7 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = DequeModule;
-		};
-		56DC9BAB2A4D427E000B12B7 /* OrderedCollections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 56DC9BA62A4D427E000B12B7 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = OrderedCollections;
-		};
-		56DC9BAE2A4D42A5000B12B7 /* Algorithms */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 56DC9BAD2A4D42A5000B12B7 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
-			productName = Algorithms;
+			productName = SwiftyCreativesExperimental;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

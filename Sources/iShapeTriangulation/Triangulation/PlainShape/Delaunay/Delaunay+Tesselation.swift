@@ -29,7 +29,6 @@ extension Delaunay {
             }
         }
 
-        @inline(__always)
         func testRegular(triangle: Triangle) -> Int {
             let a = iGeom.float(point: triangle.vertices.a.point)
             let b = iGeom.float(point: triangle.vertices.b.point)
@@ -81,7 +80,7 @@ extension Delaunay {
             return -1
         }
         
-        @inline(__always)
+        
         static func sqrCos(a: IntPoint, b: IntPoint, c: IntPoint) -> Float {
             let ab = a.sqrDistance(point: b)
             let ca = c.sqrDistance(point: a)
@@ -221,7 +220,7 @@ extension Delaunay {
 
 private extension Delaunay.Triangle {
     
-    @inline(__always)
+    
     var circumscribedCenter: IntPoint {
         let a = self.vertices.a.point
         let b = self.vertices.b.point
@@ -243,7 +242,7 @@ private extension Delaunay.Triangle {
         return IntPoint(x: Int64(x.rounded(.toNearestOrAwayFromZero)), y: Int64(y.rounded(.toNearestOrAwayFromZero)))
     }
 
-    @inline(__always)
+    
     func isContain(p: IntPoint) -> Bool {
         let a = self.vertices.a.point
         let b = self.vertices.b.point
@@ -259,7 +258,7 @@ private extension Delaunay.Triangle {
         return !(has_neg && has_pos)
     }
     
-    @inline(__always)
+    
     private static func sign(a: IntPoint, b: IntPoint, c: IntPoint) -> Int64 {
         (a.x &- c.x) &* (b.y &- c.y) &- (b.x &- c.x) &* (a.y &- c.y)
     }

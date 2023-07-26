@@ -30,12 +30,12 @@ struct IndexBuffer {
         self.array[count - 1].next = -1
     }
 
-    @inline(__always)
+    
     var hasNext: Bool {
         return first >= 0
     }
 
-    @inline(__always)
+    
     mutating func next() -> Int {
         let index = first
         first = array[index].next
@@ -45,7 +45,7 @@ struct IndexBuffer {
         return index
     }
 
-    @inline(__always)
+    
     mutating func add(index: Int) {
         let isOverflow = index >= self.array.count
         if isOverflow || self.array[index].empty {

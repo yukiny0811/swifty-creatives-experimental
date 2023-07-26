@@ -7,43 +7,42 @@
 
 public struct RingSet {
     
-    @usableFromInline
     struct Node {
         
-        @usableFromInline
+        
         static let empty = Node(prev: .empty, next: .empty)
         
-        @usableFromInline
+        
         var prev: Int
         
-        @usableFromInline
+        
         var next: Int
         
-        @inlinable
+        
         init(prev: Int, next: Int) {
             self.prev = prev
             self.next = next
         }
     }
 
-    @usableFromInline
+    
     var buffer: [Node]
     
-    @usableFromInline
+    
     var firstIndex: Int
     
-    @usableFromInline
+    
     var count: Int
     
-    @inlinable
+    
     public var isEmpty: Bool { count == 0 }
     
-    @inlinable
+    
     public var first: Int {
         firstIndex
     }
 
-    @inlinable
+    
     public var sequence: [Int] {
         var result = [Int]()
         result.reserveCapacity(count)
@@ -57,7 +56,7 @@ public struct RingSet {
         return result
     }
 
-    @inlinable
+    
     public init(size: Int) {
         buffer = [Node](repeating: .empty, count: size)
         count = size
@@ -75,21 +74,21 @@ public struct RingSet {
         }
     }
     
-    @inlinable
+    
     public func next(_ element: Int) -> Int {
         assert(element < buffer.count)
         let node = buffer[element]
         return node.next
     }
     
-    @inlinable
+    
     public func prev(_ element: Int) -> Int {
         assert(element < buffer.count)
         let node = buffer[element]
         return node.prev
     }
     
-    @inlinable
+    
     public func contains(_ element: Int) -> Bool {
         assert(element < buffer.count)
         let node = buffer[element]
@@ -97,7 +96,7 @@ public struct RingSet {
         return isExist
     }
 
-    @inlinable
+    
     public mutating func remove(_ element: Int) {
         assert(element < buffer.count)
         let node = buffer[element]
@@ -116,7 +115,7 @@ public struct RingSet {
         }
     }
 
-    @inlinable
+    
     public func forEach(_ body: (Int) -> ()) {
         var index = firstIndex
         var i = 0
@@ -127,7 +126,7 @@ public struct RingSet {
         }
     }
 
-    @inlinable
+    
     public mutating func removeAll() {
         var index = firstIndex
         var i = 0
