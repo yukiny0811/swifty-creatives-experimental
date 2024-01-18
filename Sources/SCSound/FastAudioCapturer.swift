@@ -5,13 +5,12 @@
 //  Created by Yuki Kuwashima on 2023/07/06.
 //
 
-#if os(macOS)
-
 import AVFoundation
 import Accelerate
 
 // probably 512 sample count
 // read from any audio input
+@available(macOS 14.0, *)
 public class FastAudioCapturer: NSObject, AudioCapturer {
     
     private static let audioOutputSettings: [String: Any] = [
@@ -187,5 +186,3 @@ extension FastAudioCapturer: AVCaptureAudioDataOutputSampleBufferDelegate {
         }
     }
 }
-
-#endif

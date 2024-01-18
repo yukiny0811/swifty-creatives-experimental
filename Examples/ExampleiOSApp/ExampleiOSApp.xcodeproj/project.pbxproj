@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,9 +11,9 @@
 		563B3483295A86E500AD9EEF /* SketchSample2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B3482295A86E500AD9EEF /* SketchSample2.swift */; };
 		563B3485295A878D00AD9EEF /* SketchSample1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B3484295A878D00AD9EEF /* SketchSample1.swift */; };
 		564E7D1A2A52FD0100AB1200 /* Sample3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E7D192A52FD0100AB1200 /* Sample3.swift */; };
+		56532CD42B58AA92008757D2 /* SwiftyCreativesExperimental in Frameworks */ = {isa = PBXBuildFile; productRef = 56532CD32B58AA92008757D2 /* SwiftyCreativesExperimental */; };
 		56C53FEB294A689500962DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C53FEA294A689500962DD6 /* Assets.xcassets */; };
 		56C53FEE294A689500962DD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C53FED294A689500962DD6 /* Preview Assets.xcassets */; };
-		56C53FF8294A68AA00962DD6 /* SwiftyCreatives in Frameworks */ = {isa = PBXBuildFile; productRef = 56C53FF7294A68AA00962DD6 /* SwiftyCreatives */; };
 		56C53FFA294A695300962DD6 /* ExampleiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C53FF9294A695300962DD6 /* ExampleiOSApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56C53FF8294A68AA00962DD6 /* SwiftyCreatives in Frameworks */,
+				56532CD42B58AA92008757D2 /* SwiftyCreativesExperimental in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +115,7 @@
 			);
 			name = ExampleiOSApp;
 			packageProductDependencies = (
-				56C53FF7294A68AA00962DD6 /* SwiftyCreatives */,
+				56532CD32B58AA92008757D2 /* SwiftyCreativesExperimental */,
 			);
 			productName = ExampleiOSApp;
 			productReference = 56C53FE3294A689400962DD6 /* ExampleiOSApp.app */;
@@ -147,6 +147,7 @@
 			);
 			mainGroup = 56C53FDA294A689400962DD6;
 			packageReferences = (
+				56532CD22B58AA92008757D2 /* XCLocalSwiftPackageReference "../.." */,
 			);
 			productRefGroup = 56C53FE4294A689400962DD6 /* Products */;
 			projectDirPath = "";
@@ -235,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -289,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -318,6 +319,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,6 +356,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,10 +396,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		56532CD22B58AA92008757D2 /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		56C53FF7294A68AA00962DD6 /* SwiftyCreatives */ = {
+		56532CD32B58AA92008757D2 /* SwiftyCreativesExperimental */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = SwiftyCreatives;
+			productName = SwiftyCreativesExperimental;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
