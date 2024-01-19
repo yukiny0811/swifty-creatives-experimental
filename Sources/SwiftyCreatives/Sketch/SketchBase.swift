@@ -18,8 +18,12 @@ public protocol SketchBase: AnyObject {
     var metalDrawableSize: f2 { get set }
     
     // MARK: functions
+    #if os(visionOS)
+    func update()
+    #else
     func setupCamera(camera: some MainCameraBase)
     func update(camera: some MainCameraBase)
+    #endif
     func draw(encoder: SCEncoder)
     func updateAndDrawLight(encoder: SCEncoder)
     func beforeDraw(encoder: SCEncoder)

@@ -8,6 +8,8 @@
 import MetalKit
 import CommonEntity
 
+#if !os(visionOS)
+
 public class AddRenderer<
     CameraConfig: CameraConfigBase,
     DrawConfig: DrawConfigBase
@@ -109,3 +111,5 @@ public class AddRenderer<
         self.drawProcess.afterCommit(texture: self.cachedTexture)
     }
 }
+
+#endif

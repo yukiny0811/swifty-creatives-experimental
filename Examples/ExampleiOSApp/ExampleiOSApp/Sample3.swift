@@ -9,33 +9,7 @@ import SwiftyCreatives
 import SCSound
 
 final class Sample7: Sketch {
-    
-    let capturer = AudioCapturer()
-    
-    override func draw(encoder: SCEncoder) {
-        color(1)
-        
-        let baseUpOffset: Float = 20
-        
-        let mags = capturer.fftResult.map {
-            var db = TempiFFT.toDB($0.magnitude)
-            if db.isNaN {
-                db = 0
-            }
-            return db + baseUpOffset
-        }
-        
-        let width: Float = 50
-        
-        translate(-width/2, 0, 0)
-        
-        for m in mags {
-//            print(m)
-            let boxWidth = width / Float(mags.count)
-            box(boxWidth / 5, max(0, m * 0.1), 0.1)
-            translate(boxWidth, 0, 0)
-        }
-    }
+//    
 //
 //    var colors: [f4] = []
 //    var scales: [f3] = []

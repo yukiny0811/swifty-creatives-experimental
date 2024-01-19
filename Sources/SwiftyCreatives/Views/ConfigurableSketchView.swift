@@ -15,6 +15,7 @@ import AppKit
 import UIKit
 #endif
 
+#if !os(visionOS)
 public struct ConfigurableSketchView<
     CameraConfig: CameraConfigBase,
     DrawConfig: DrawConfigBase
@@ -42,3 +43,4 @@ public struct ConfigurableSketchView<
     public func updateUIView(_ uiView: MTKView, context: Context) {}
     #endif
 }
+#endif

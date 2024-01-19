@@ -16,6 +16,7 @@ import UIKit
 
 import CommonEntity
 
+#if !os(visionOS)
 public struct SketchView: ViewRepresentable {
     typealias CameraConfig = MainCameraConfig
     typealias DrawConfig = MainDrawConfig
@@ -42,3 +43,4 @@ public struct SketchView: ViewRepresentable {
     public func updateUIView(_ uiView: MTKView, context: Context) {}
     #endif
 }
+#endif

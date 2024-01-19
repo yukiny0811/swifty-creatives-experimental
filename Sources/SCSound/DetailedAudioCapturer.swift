@@ -5,11 +5,10 @@
 //  Created by Yuki Kuwashima on 2023/07/03.
 //
 
-#if os(macOS)
-
 import AVFoundation
 import Accelerate
 
+@available(macOS 14.0, *)
 public class DetailedAudioCapturer: NSObject, AudioCapturer {
     
     public var fftResult: [FFTResultComponent] = []
@@ -114,5 +113,3 @@ public class DetailedAudioCapturer: NSObject, AudioCapturer {
         self.engine.stop()
     }
 }
-
-#endif

@@ -7,6 +7,7 @@
 
 import MetalKit
 
+#if !os(visionOS)
 extension TouchableMTKView {
     func deinitView() {
         #if os(iOS)
@@ -18,3 +19,4 @@ extension TouchableMTKView {
         #endif
     }
 }
+#endif

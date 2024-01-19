@@ -15,6 +15,7 @@
 import MetalKit
 import CommonEntity
     
+#if !os(visionOS)
 public class TransparentRenderer<
     CameraConfig: CameraConfigBase,
     DrawConfig: DrawConfigBase
@@ -156,3 +157,4 @@ public class TransparentRenderer<
         self.drawProcess.afterCommit(texture: self.cachedTexture)
     }
 }
+#endif

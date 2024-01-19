@@ -6,6 +6,8 @@
 //
 
 import CoreGraphics
+@_exported import MetalKit
+@_exported import simd
 
 public extension CGPoint {
     var f2Value: f2 {

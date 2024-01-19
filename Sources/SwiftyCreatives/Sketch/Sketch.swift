@@ -13,6 +13,7 @@ import UIKit
 
 import simd
 import CommonEntity
+import MetalKit
 
 open class Sketch: SketchBase, FunctionBase {
     public var metalDrawableSize: f2 = .zero
@@ -31,8 +32,12 @@ open class Sketch: SketchBase, FunctionBase {
                                   diffuseIntensity: 1,
                                   specularIntensity: 50)]
     public init() {}
+    #if os(visionOS)
+    open func update() {}
+    #else
     open func setupCamera(camera: some MainCameraBase) {}
     open func update(camera: some MainCameraBase) {}
+    #endif
     open func draw(encoder: SCEncoder) {}
     
     open func afterCommit(texture: MTLTexture?) {}

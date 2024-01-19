@@ -8,6 +8,7 @@
 import MetalKit
 import CommonEntity
 
+#if !os(visionOS)
 public class NormalBlendRenderer<
     CameraConfig: CameraConfigBase,
     DrawConfig: DrawConfigBase
@@ -119,3 +120,4 @@ public class NormalBlendRenderer<
         
     }
 }
+#endif

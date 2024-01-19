@@ -7,6 +7,7 @@
 
 import MetalKit
 
+#if !os(visionOS)
 extension TouchableMTKView {
     func checkIfExceedsPolarSpacing(rad: Float, polarSpacing: Float) -> Bool {
         let mockedMainMatrix = renderer.camera.mock_rotateAroundVisibleX(rad)
@@ -17,3 +18,4 @@ extension TouchableMTKView {
         return false
     }
 }
+#endif

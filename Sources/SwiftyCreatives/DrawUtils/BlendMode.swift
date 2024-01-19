@@ -10,6 +10,9 @@ public enum BlendMode {
     case add
     case alphaBlend
     
+    #if os(visionOS)
+    
+    #else
     func getRenderer<
         C: CameraConfigBase,
         D: DrawConfigBase
@@ -31,4 +34,5 @@ public enum BlendMode {
             }
         }
     }
+    #endif
 }

@@ -13,6 +13,7 @@ import AppKit
 import UIKit
 #endif
 
+#if !os(visionOS)
 public class KitSketchView<
     DrawProcess: SketchBase,
     CameraConfig: CameraConfigBase,
@@ -26,3 +27,4 @@ public class KitSketchView<
         super.init(renderer: thisRenderer)
     }
 }
+#endif
