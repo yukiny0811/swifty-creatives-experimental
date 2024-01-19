@@ -6,8 +6,8 @@ import PackageDescription
 let package = Package(
     name: "SwiftyCreativesExperimental",
     platforms: [
-        .macOS(.v14),
-        .iOS(.v17),
+        .macOS(.v13),
+        .iOS(.v16),
         .visionOS(.v1)
     ],
     products: [
