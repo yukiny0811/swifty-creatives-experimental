@@ -5,6 +5,8 @@
 import SwiftUI
 import CompositorServices
 import SwiftyCreatives
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 struct ContentStageConfiguration: CompositorLayerConfiguration {
     func makeConfiguration(capabilities: LayerRenderer.Capabilities, configuration: inout LayerRenderer.Configuration) {
@@ -39,6 +41,30 @@ final class Sample9: Sketch {
     }
 }
 
+struct PostData: Codable, Hashable {
+    @DocumentID var id: String?
+    let originalImageUrl: URL
+    let replacedBackgroundImageUrl: URL?
+    let editedImageUrl: URL
+    let userId: String
+    let isPrivate: Bool
+    let createdAt: Timestamp
+    var reportedUsers: [String] = []
+}
+
+class FirebaseManager {
+    static func getLatestPost(completion: @escaping (URL) -> Void) {
+        let docs = Firestore.firestore().collection("posts").order(by: "createdAt", descending: true).limit(to: 30).documents
+            
+//            .addSnapshotListener { snapshot, _ in
+//            guard let decoded = snapshot?.documents.map({ try $0.data(as: PostData.self) }).first else {
+//                return
+//            }
+//            completion(decoded.editedImageUrl)
+//        }
+    }
+}
+
 final class Sample8: Sketch {
     let obj = Img().load(name: "image", bundle: .main).adjustScale(with: .basedOnWidth).multiplyScale(1.7)
     let date = Date()
@@ -69,7 +95,7 @@ struct TestingApp: App {
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             CompositorLayer(configuration: ContentStageConfiguration()) { layerRenderer in
-                let renderer = TransparentRendererVision(sketch: Sample9(), layerRenderer: layerRenderer)
+                let renderer = NormalBlendRendererVision(sketch: Sample8(), layerRenderer: layerRenderer)
                 renderer.startRenderLoop()
             }
         }
