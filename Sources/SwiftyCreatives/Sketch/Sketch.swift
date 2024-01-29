@@ -15,6 +15,7 @@ import simd
 import CommonEntity
 import MetalKit
 
+@MainActor
 open class Sketch: SketchBase, FunctionBase {
     public var metalDrawableSize: f2 = .zero
     public let textPostProcessor: TextPostProcessor = TextPostProcessor()
