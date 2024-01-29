@@ -5,8 +5,6 @@
 //  Created by Yuki Kuwashima on 2023/07/20.
 //
 
-import simd
-
 public extension f4x4 {
     static var memorySize: Int {
         return MemoryLayout<Self>.stride

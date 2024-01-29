@@ -5,10 +5,6 @@
 //  Created by Yuki Kuwashima on 2023/07/04.
 //
 
-import CoreGraphics
-@_exported import MetalKit
-@_exported import simd
-
 public extension CGPoint {
     var f2Value: f2 {
         f2(Float(self.x), Float(self.y))

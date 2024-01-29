@@ -6,7 +6,6 @@
 //
 
 // MARK: - SwiftUI
-import SwiftUI
 
 #if os(macOS)
 public typealias ViewRepresentable = NSViewRepresentable
