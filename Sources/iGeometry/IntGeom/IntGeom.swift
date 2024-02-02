@@ -6,6 +6,8 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
+import SimpleSimdSwift
+
 public struct IntGeom {
     
     public static let defGeom = IntGeom()
@@ -33,12 +35,12 @@ public struct IntGeom {
     }
     
     
-    public func int(point: Point) -> IntPoint {
+    public func int(point: f2) -> IntPoint {
         IntPoint(x: Int64((point.x * scale).rounded(.toNearestOrAwayFromZero)), y: Int64((point.y * scale).rounded(.toNearestOrAwayFromZero)))
     }
     
     
-    public func int(points: [Point]) -> [IntPoint] {
+    public func int(points: [f2]) -> [IntPoint] {
         let n = points.count
         var array = Array<IntPoint>(repeating: .zero, count: n)
         var i = 0
@@ -51,7 +53,7 @@ public struct IntGeom {
     }
     
     
-    public func int(paths: [[Point]]) -> [[IntPoint]] {
+    public func int(paths: [[f2]]) -> [[IntPoint]] {
         let n = paths.count
         var array = [[IntPoint]]()
         array.reserveCapacity(n)
@@ -74,27 +76,27 @@ public struct IntGeom {
     }
     
     
-    public func float(point: IntPoint) -> Point {
-        Point(x: Float(point.x) * invertScale, y: Float(point.y) * invertScale)
+    public func float(point: IntPoint) -> f2 {
+        f2(x: Float(point.x) * invertScale, y: Float(point.y) * invertScale)
     }
     
     
-    public func float(points: [IntPoint]) -> [Point] {
+    public func float(points: [IntPoint]) -> [f2] {
         let n = points.count
-        var array = Array<Point>(repeating: .zero, count: n)
+        var array = Array<f2>(repeating: .zero, count: n)
         var i = 0
         while i < n {
             let point = points[i]
-            array[i] = Point(x: Float(point.x) * invertScale, y: Float(point.y) * invertScale)
+            array[i] = f2(x: Float(point.x) * invertScale, y: Float(point.y) * invertScale)
             i &+= 1
         }
         return array
     }
     
     
-    public func float(paths: [[IntPoint]]) -> [[Point]] {
+    public func float(paths: [[IntPoint]]) -> [[f2]] {
         let n = paths.count
-        var array = [[Point]]()
+        var array = [[f2]]()
         array.reserveCapacity(n)
         var i = 0
         while i < n {

@@ -183,9 +183,9 @@ public extension GlyphUtil {
             }
             return myGlyphPaths
         }
-        public typealias Hole = [Point]
+        public typealias Hole = [f2]
         public class TriangulateHelperData {
-            public var path: [Point] = []
+            public var path: [f2] = []
             public var holes: [Hole] = []
         }
         public static let TRIANGULATOR = Triangulator(precision: 0.0001)
@@ -198,21 +198,21 @@ public extension GlyphUtil {
                     if tempHelperDatas.isEmpty {
                         tempHelperDatas.append(TriangulateHelperData())
                         if isClockwiseFont {
-                            tempHelperDatas[tempHelperDatas.count-1].path = portion.map{$0.shapePoint}.reversed()
+                            tempHelperDatas[tempHelperDatas.count-1].path = portion.map{$0}.reversed()
                         } else {
-                            tempHelperDatas[tempHelperDatas.count-1].path = portion.map{$0.shapePoint}
+                            tempHelperDatas[tempHelperDatas.count-1].path = portion.map{$0}
                         }
                     } else {
                         if isClockwiseFont {
-                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.map{$0.shapePoint}.reversed())
+                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.map{$0}.reversed())
                         } else {
-                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.map{$0.shapePoint})
+                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.map{$0})
                         }
                     }
                 }
                 for helperData in tempHelperDatas {
-                    let allPath: [Point] = helperData.path + helperData.holes.reduce([], +)
-                    var slices: [ArraySlice<Point>] = []
+                    let allPath: [f2] = helperData.path + helperData.holes.reduce([], +)
+                    var slices: [ArraySlice<f2>] = []
                     var currentIndex = helperData.path.count
                     for hole in helperData.holes {
                         slices.append(allPath[currentIndex..<currentIndex+hole.count])
@@ -241,21 +241,21 @@ public extension GlyphUtil {
                     if tempHelperDatas.isEmpty {
                         tempHelperDatas.append(TriangulateHelperData())
                         if isClockwiseFont {
-                            tempHelperDatas[tempHelperDatas.count-1].path = portion.map{$0.shapePoint}.reversed()
+                            tempHelperDatas[tempHelperDatas.count-1].path = portion.reversed()
                         } else {
-                            tempHelperDatas[tempHelperDatas.count-1].path = portion.map{$0.shapePoint}
+                            tempHelperDatas[tempHelperDatas.count-1].path = portion
                         }
                     } else {
                         if isClockwiseFont {
-                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.map{$0.shapePoint}.reversed())
+                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.reversed())
                         } else {
-                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion.map{$0.shapePoint})
+                            tempHelperDatas[tempHelperDatas.count-1].holes.append(portion)
                         }
                     }
                 }
                 for helperData in tempHelperDatas {
-                    let allPath: [Point] = helperData.path + helperData.holes.reduce([], +)
-                    var slices: [ArraySlice<Point>] = []
+                    let allPath: [f2] = helperData.path + helperData.holes.reduce([], +)
+                    var slices: [ArraySlice<f2>] = []
                     var currentIndex = helperData.path.count
                     for hole in helperData.holes {
                         slices.append(allPath[currentIndex..<currentIndex+hole.count])

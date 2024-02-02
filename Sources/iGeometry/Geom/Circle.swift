@@ -6,12 +6,14 @@
 //  Copyright © 2020 iShape. All rights reserved.
 //
 
+import SimpleSimdSwift
+
 public struct Circle {
     
-    public let center: Point
+    public let center: f2
     public let radius: Float
     
-    public init(center: Point, radius: Float) {
+    public init(center: f2, radius: Float) {
         self.center = center
         self.radius = radius
     }

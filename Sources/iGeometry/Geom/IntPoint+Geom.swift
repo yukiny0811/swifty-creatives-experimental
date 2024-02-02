@@ -6,6 +6,8 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
+@_exported import SimpleSimdSwift
+
 public extension IntPoint {
     
     
@@ -36,7 +38,7 @@ public extension IntPoint {
         let x = k * p.x
         let y = k * p.y
         
-        return iGeom.int(point: Point(x: x, y: y))
+        return iGeom.int(point: f2(x: x, y: y))
     }
     
     

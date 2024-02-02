@@ -6,6 +6,8 @@
 //  Copyright © 2020 iShape. All rights reserved.
 //
 
+import SimpleSimdSwift
+
 public extension PlainShape {
     
     
@@ -15,7 +17,7 @@ public extension PlainShape {
     ///   - points: Linear array of all your polygon vertices. All hull's vertices must be list in clockwise order. All holes vertices must be listed in counterclockwise order.
     ///   - hull: range of the hull vertices in points array
     ///   - holes: array of ranges for all holes
-    init(precision: Float = 0.0001, points: [Point], hull: ArraySlice<Point>, holes: [ArraySlice<Point>]? = nil) {
+    init(precision: Float = 0.0001, points: [f2], hull: ArraySlice<f2>, holes: [ArraySlice<f2>]? = nil) {
         self.init(iGeom: IntGeom(scale: Float(1 / precision)), points: points, hull: hull, holes: holes)
     }
 
@@ -26,7 +28,7 @@ public extension PlainShape {
     ///   - points: Linear array of all your polygon vertices. All hull's vertices must be list in clockwise order. All holes vertices must be listed in counterclockwise order.
     ///   - hull: range of the hull vertices in points array
     ///   - holes: array of ranges for all holes
-    init(iGeom: IntGeom, points: [Point], hull: ArraySlice<Point>, holes: [ArraySlice<Point>]? = nil) {
+    init(iGeom: IntGeom, points: [f2], hull: ArraySlice<f2>, holes: [ArraySlice<f2>]? = nil) {
         let intPoints = iGeom.int(points: points)
 
         var layouts = [PlainShape.Layout]()
@@ -50,7 +52,7 @@ public extension PlainShape {
     ///   - precision: The minimum required precision. It's a minimum linear distance after which points will be recognized as the same.
     ///   - hull: the hull vertices
     ///   - holes: list of all holes
-    init(precision: Float = 0.0001, hull: [Point], holes: [[Point]]? = nil) {
+    init(precision: Float = 0.0001, hull: [f2], holes: [[f2]]? = nil) {
         self.init(iGeom: IntGeom(scale: Float(1 / precision)), hull: hull, holes: holes)
     }
     
@@ -60,7 +62,7 @@ public extension PlainShape {
     ///   - iGeom: Int <-> Float converter
     ///   - hull: points of the hull vertices
     ///   - holes: array of points for all holes
-    init(iGeom: IntGeom, hull: [Point], holes: [[Point]]? = nil) {
+    init(iGeom: IntGeom, hull: [f2], holes: [[f2]]? = nil) {
         let intPoints = iGeom.int(points: hull)
         var shape = PlainShape(points: intPoints)
         if let holes = holes {

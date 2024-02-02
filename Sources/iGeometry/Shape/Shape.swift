@@ -6,12 +6,14 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
+import SimpleSimdSwift
+
 public struct Shape {
     
     public static let empty = Shape(hull: [], holes: [])
     
-    public var hull: [Point]
-    public var holes: [[Point]]
+    public var hull: [f2]
+    public var holes: [[f2]]
     
     
     public init(shape: IntShape, iGeom: IntGeom = .defGeom) {
@@ -20,7 +22,7 @@ public struct Shape {
     }
     
     
-    public init(hull: [Point], holes: [[Point]]) {
+    public init(hull: [f2], holes: [[f2]]) {
         self.hull = hull
         self.holes = holes
     }
