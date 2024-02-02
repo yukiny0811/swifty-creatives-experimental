@@ -23,22 +23,6 @@ public struct IntGeom {
         self.invertScale = 1 / scale
         self.sqrInvertScale = 1 / scale / scale
     }
-
-    
-    public func int(float: Float) -> Int64 {
-        Int64((float * scale).rounded(.toNearestOrAwayFromZero))
-    }
-    
-    
-    public func sqrInt(float: Float) -> Int64 {
-        Int64((float * scale * scale).rounded(.toNearestOrAwayFromZero))
-    }
-    
-    
-    public func int(point: f2) -> IntPoint {
-        IntPoint(x: Int64((point.x * scale).rounded(.toNearestOrAwayFromZero)), y: Int64((point.y * scale).rounded(.toNearestOrAwayFromZero)))
-    }
-    
     
     public func int(points: [f2]) -> [IntPoint] {
         let n = points.count

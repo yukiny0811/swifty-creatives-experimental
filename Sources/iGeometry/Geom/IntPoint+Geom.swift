@@ -10,7 +10,6 @@
 
 public extension IntPoint {
     
-    
     static func +(left: IntPoint, right: IntPoint) -> IntPoint {
         IntPoint(x: left.x + right.x, y: left.y + right.y)
     }
@@ -29,18 +28,6 @@ public extension IntPoint {
     func crossProduct(point: IntPoint) -> Int64 { // cross product
         self.x * point.y - self.y * point.x
     }
-    
-    
-    func normal(iGeom: IntGeom) -> IntPoint {
-        let p = iGeom.float(point: self)
-        let l = (p.x * p.x + p.y * p.y).squareRoot()
-        let k = 1 / l
-        let x = k * p.x
-        let y = k * p.y
-        
-        return iGeom.int(point: f2(x: x, y: y))
-    }
-    
     
     func sqrDistance(point: IntPoint) -> Int64 {
         let dx = point.x - self.x

@@ -16,7 +16,7 @@ public struct IntPoint {
     
     
     public var bitPack: Int64 {
-        (x << IntGeom.maxBits) + y
+        return (x << IntGeom.maxBits) + y
     }
     
     
