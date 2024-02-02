@@ -6,7 +6,7 @@
 //
 
 import simd
-import CommonEntity
+import SimpleSimdSwift
 
 open class RectanglePlanePrimitive<Info: PrimitiveInfo>: HitTestablePrimitive<Info> {
     override init() { super.init() }

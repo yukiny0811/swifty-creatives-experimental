@@ -6,7 +6,7 @@
 //
 
 import Metal
-import CommonEntity
+import SimpleSimdSwift
 
 public protocol FunctionBase: AnyObject {
     var privateEncoder: SCEncoder? { get set }

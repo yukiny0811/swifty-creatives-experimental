@@ -5,7 +5,7 @@
 //  Created by Yuki Kuwashima on 2023/03/27.
 //
 
-import CommonEntity
+import SimpleSimdSwift
 
 public extension FunctionBase {
     func text(_ textObj: TextObject) {

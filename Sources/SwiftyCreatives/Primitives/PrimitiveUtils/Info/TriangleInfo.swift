@@ -6,7 +6,7 @@
 //
 
 import Metal
-import CommonEntity
+import SimpleSimdSwift
 
 public struct TriangleInfo: PrimitiveInfo {
     public final class VertexPoint {

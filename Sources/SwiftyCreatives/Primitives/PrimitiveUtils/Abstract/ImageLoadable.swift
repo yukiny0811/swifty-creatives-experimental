@@ -7,7 +7,7 @@
 
 import Metal
 import CoreGraphics
-import CommonEntity
+import SimpleSimdSwift
 
 public protocol ImageLoadable: AnyObject, ScaleSettable {
     var texture: MTLTexture? { get set }

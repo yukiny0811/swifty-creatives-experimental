@@ -12,7 +12,7 @@ import UIKit
 #endif
 
 import simd
-import CommonEntity
+import SimpleSimdSwift
 import MetalKit
 
 open class Sketch: SketchBase, FunctionBase {

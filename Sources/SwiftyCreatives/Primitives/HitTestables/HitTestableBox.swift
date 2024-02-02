@@ -6,7 +6,7 @@
 //
 
 import simd
-import CommonEntity
+import SimpleSimdSwift
 
 open class HitTestableBox: ScaleSettable {
     

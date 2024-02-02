@@ -6,7 +6,7 @@
 //
 
 import Metal
-import CommonEntity
+import SimpleSimdSwift
 
 public class TextPostProcessor: PostProcessorBase {
     

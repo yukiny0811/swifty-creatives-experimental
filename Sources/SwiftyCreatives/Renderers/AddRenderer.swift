@@ -6,7 +6,7 @@
 //
 
 import MetalKit
-import CommonEntity
+import SimpleSimdSwift
 
 #if !os(visionOS)
 

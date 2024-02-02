@@ -5,7 +5,7 @@
 //  Created by Yuki Kuwashima on 2023/03/03.
 //
 
-import CommonEntity
+import SimpleSimdSwift
 
 public struct ImageAdjuster {
     public static func adjustedScale(width: Float, height: Float, with option: ImageAdjustOption) -> f3 {

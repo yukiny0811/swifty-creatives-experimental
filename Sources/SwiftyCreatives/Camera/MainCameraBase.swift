@@ -5,7 +5,7 @@
 //  Created by Yuki Kuwashima on 2022/12/15.
 //
 
-import CommonEntity
+import SimpleSimdSwift
 
 public protocol MainCameraBase {
     var mainMatrix: [f4x4] { get set }

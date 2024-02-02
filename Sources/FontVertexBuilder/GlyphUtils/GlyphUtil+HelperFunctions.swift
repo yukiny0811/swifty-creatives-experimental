@@ -28,7 +28,7 @@
 //SOFTWARE.
 
 import Foundation
-import CommonEntity
+import SimpleSimdSwift
 
 public extension GlyphUtil {
     enum HelperFunctions {

@@ -6,7 +6,7 @@
 //
 
 import Metal
-import CommonEntity
+import SimpleSimdSwift
 
 public struct BoxInfo: PrimitiveInfo {
     public final class VertexPoint {

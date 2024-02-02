@@ -6,7 +6,7 @@
 //
 
 import Metal
-import CommonEntity
+import SimpleSimdSwift
 
 public struct CircleInfo: PrimitiveInfo {
     private static let edgeCount: Int = 30

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import CommonEntity
+import SimpleSimdSwift
 
 public typealias GlyphLine = [f2]
 public typealias GlyphLineF3 = [f3]

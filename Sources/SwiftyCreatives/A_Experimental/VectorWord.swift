@@ -7,7 +7,7 @@
 
 import Metal
 import CoreText
-import CommonEntity
+import SimpleSimdSwift
 import FontVertexBuilder
 
 open class VectorWord: VectorText {

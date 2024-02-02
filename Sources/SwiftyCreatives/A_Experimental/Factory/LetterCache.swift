@@ -7,7 +7,7 @@
 
 import Foundation
 import Metal
-import CommonEntity
+import SimpleSimdSwift
 
 public struct LetterCache {
     public var buffer: MTLBuffer

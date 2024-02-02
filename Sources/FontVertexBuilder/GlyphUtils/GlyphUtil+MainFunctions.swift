@@ -32,7 +32,7 @@ import CoreGraphics
 import CoreText
 import iGeometry
 import iShapeTriangulation
-import CommonEntity
+import SimpleSimdSwift
 
 public extension GlyphUtil {
     enum MainFunctions {

@@ -8,7 +8,7 @@
 #if os(visionOS)
 
 import MetalKit
-import CommonEntity
+import SimpleSimdSwift
 import Spatial
 import CompositorServices
 

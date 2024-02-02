@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SwiftyCreativesExperimental",
     platforms: [
-        .macOS(.v13),
+        .macOS(.v14),
         .iOS(.v16),
         .visionOS(.v1)
     ],
@@ -16,13 +16,16 @@ let package = Package(
             targets: ["SwiftyCreatives"]
         )
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/yukiny0811/SwiftyCoreText", exact: "1.0.0"),
+        .package(url: "https://github.com/yukiny0811/SimpleSimdSwift", exact: "1.0.1"),
+    ],
     targets: [
         .target(
             name: "SwiftyCreatives",
             dependencies: [
                 "FontVertexBuilder",
-                "CommonEntity",
+                "SimpleSimdSwift",
                 "SCSound"
             ],
             resources: [.process("Resources")]
@@ -40,11 +43,9 @@ let package = Package(
             name: "FontVertexBuilder",
             dependencies: [
                 "iShapeTriangulation",
-                "CommonEntity"
+                "SimpleSimdSwift",
+                "SwiftyCoreText"
             ]
-        ),
-        .target(
-            name: "CommonEntity"
         ),
         .target(
             name: "SCSound"

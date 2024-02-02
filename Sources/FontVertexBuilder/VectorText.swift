@@ -31,7 +31,14 @@ import Foundation
 import simd
 import CoreGraphics
 import CoreText
-import CommonEntity
+import SimpleSimdSwift
+import SwiftyCoreText
+
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
 
 open class VectorText {
     public enum VerticalAlignment: Int, Codable {
@@ -48,17 +55,17 @@ open class VectorText {
     public var lineSpacing: Float = 0.0
     public var fontSize: Float = 1
     public var lineHeight: Float { ascent + descent + leading }
-    public var ascent: Float { Float(CTFontGetAscent(ctFont)) }
-    public var descent: Float { Float(CTFontGetDescent(ctFont)) }
-    public var leading: Float { Float(CTFontGetLeading(ctFont)) }
-    public var unitsPerEm: Float { Float(CTFontGetUnitsPerEm(ctFont)) }
-    public var glyphCount: Float { Float(CTFontGetGlyphCount(ctFont)) }
-    public var underlinePosition: Float { Float(CTFontGetUnderlinePosition(ctFont)) }
-    public var underlineThickness: Float { Float(CTFontGetUnderlineThickness(ctFont)) }
-    public var slantAngle: Float { Float(CTFontGetSlantAngle(ctFont)) }
-    public var capHeight: Float { Float(CTFontGetCapHeight(ctFont)) }
-    public var xHeight: Float { Float(CTFontGetXHeight(ctFont)) }
-    public var ctFont: CTFont
+    public var ascent: Float { Float(ctFont.getAscent()) }
+    public var descent: Float { Float(ctFont.getDescent()) }
+    public var leading: Float { Float(ctFont.getLeading()) }
+    public var unitsPerEm: Float { Float(ctFont.getUnitsPerEm()) }
+    public var glyphCount: Float { Float(ctFont.getGlyphCount()) }
+    public var underlinePosition: Float { Float(ctFont.getUnderlinePosition()) }
+    public var underlineThickness: Float { Float(ctFont.getUnderlineThickness()) }
+    public var slantAngle: Float { Float(ctFont.getSlantAngle()) }
+    public var capHeight: Float { Float(ctFont.getCapHeight()) }
+    public var xHeight: Float { Float(ctFont.getXHeight()) }
+    public var ctFont: SwiftyCTFont
     public var calculatedPaths: [LetterPath] = []
     public var isClockwiseFont: Bool = false
     public var angleLimit: Float = 7.5 * Float.pi / 180.0
@@ -117,7 +124,7 @@ open class VectorText {
     var attributedText: CFAttributedString? {
         // Text Attributes
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: ctFont,
+            .font: ctFont.ctFont,
             .kern: NSNumber(value: kern),
         ]
         let attributedText = CFAttributedStringCreateMutable(kCFAllocatorDefault, 0)
@@ -148,7 +155,7 @@ open class VectorText {
         self.kern = kern
         self.lineSpacing = lineSpacing
         self.isClockwiseFont = isClockwiseFont
-        ctFont = CTFontCreateWithName(fontName as CFString, CGFloat(fontSize), nil)
+        ctFont = SwiftyCTFont(name: fontName, size: CGFloat(fontSize), matrix: nil, options: nil)
         setupData()
     }
 
@@ -176,7 +183,7 @@ open class VectorText {
     }
     func addGlyphGeometryData(_ glyph: CGGlyph, _ glyphPosition: CGPoint, _ origin: CGPoint) {
         guard let framePivot = framePivot, let verticalOffset = verticalOffset else { return }
-        if let glyphPath = CTFontCreatePathForGlyph(ctFont, glyph, nil) {
+        if let glyphPath = ctFont.createPathForGlyph(glyph: glyph, matrix: nil) {
             let glyphPaths = GlyphUtil.MainFunctions.getGlyphLines(glyphPath, angleLimit, fontSize*10)
             let glyphOffset = f2(Float(glyphPosition.x + origin.x - framePivot.x), Float(glyphPosition.y + origin.y - framePivot.y - verticalOffset))
             calculatedPaths.append(LetterPath(glyphs: glyphPaths, offset: glyphOffset))

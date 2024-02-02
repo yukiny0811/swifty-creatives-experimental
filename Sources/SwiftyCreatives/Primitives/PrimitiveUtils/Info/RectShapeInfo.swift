@@ -6,7 +6,7 @@
 //
 
 import Metal
-import CommonEntity
+import SimpleSimdSwift
 
 public struct RectShapeInfo: PrimitiveInfo {
     public static var vertices: [f3] = [

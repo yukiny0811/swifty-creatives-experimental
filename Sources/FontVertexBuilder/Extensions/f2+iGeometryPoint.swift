@@ -6,7 +6,7 @@
 //
 
 import iGeometry
-import CommonEntity
+import SimpleSimdSwift
 
 public extension f2 {
     var shapePoint: iGeometry.Point {

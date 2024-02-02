@@ -5,8 +5,7 @@
 //  Created by Yuki Kuwashima on 2022/12/09.
 //
 
-import simd
-import CommonEntity
+import SimpleSimdSwift
 
 public class MainCamera<
     Config: CameraConfigBase

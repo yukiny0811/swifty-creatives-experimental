@@ -5,7 +5,7 @@
 //  Created by Yuki Kuwashima on 2023/02/28.
 //
 
-@_exported import CommonEntity
+import SimpleSimdSwift
 
 public class SCPacket: FunctionBase {
     public var privateEncoder: SCEncoder?

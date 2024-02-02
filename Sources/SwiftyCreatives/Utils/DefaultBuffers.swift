@@ -6,7 +6,7 @@
 //
 
 import Metal
-import CommonEntity
+import SimpleSimdSwift
 
 enum DefaultBuffers {
     static let default_false = ShaderCore.device.makeBuffer(bytes: [false], length: Bool.memorySize)

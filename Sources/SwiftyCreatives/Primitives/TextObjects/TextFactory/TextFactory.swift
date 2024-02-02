@@ -6,7 +6,7 @@
 //
 
 import CoreImage
-import CommonEntity
+import SimpleSimdSwift
 
 public class TextFactory {
     

@@ -6,7 +6,7 @@
 //
 
 import simd
-import CommonEntity
+import SimpleSimdSwift
 
 open class HitTestablePrimitive<Info: PrimitiveInfo>: Primitive<Info> {
     override init() { super.init() }

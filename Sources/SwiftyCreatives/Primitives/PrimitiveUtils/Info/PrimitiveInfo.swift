@@ -6,7 +6,7 @@
 //
 
 import Metal
-import CommonEntity
+import SimpleSimdSwift
 
 public protocol PrimitiveInfo {
     static var primitiveType: MTLPrimitiveType { get }

@@ -6,7 +6,7 @@
 //
 
 import MetalKit
-import simd
+import SimpleSimdSwift
 
 #if os(visionOS)
 public class RendererBase {

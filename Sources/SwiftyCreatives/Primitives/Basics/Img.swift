@@ -6,7 +6,7 @@
 //
 
 import MetalKit
-import CommonEntity
+import SimpleSimdSwift
 
 open class Img: Primitive<RectShapeInfo>, ImageLoadable {
     public override init() { super.init() }

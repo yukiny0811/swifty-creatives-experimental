@@ -7,7 +7,7 @@
 
 #if os(macOS)
 import AppKit
-import CommonEntity
+import SimpleSimdSwift
 
 public extension Sketch {
     func mousePos(event: NSEvent, viewFrame: NSRect, isPerspective: Bool = true) -> f2 {

@@ -9,7 +9,7 @@ import Foundation
 import CoreText
 import CoreGraphics
 import Metal
-import CommonEntity
+import SimpleSimdSwift
 import FontVertexBuilder
 
 public class VectorTextFactory {

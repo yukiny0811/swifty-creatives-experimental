@@ -5,7 +5,7 @@
 //  Created by Yuki Kuwashima on 2023/06/29.
 //
 
-import CommonEntity
+import SimpleSimdSwift
 import Metal
 
 public extension FunctionBase {

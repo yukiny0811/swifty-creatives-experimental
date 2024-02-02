@@ -11,7 +11,8 @@ import AppKit
 import UIKit
 #endif
 
-@_exported import CommonEntity
+import SimpleSimdSwift
+import MetalKit
 
 public protocol SketchBase: AnyObject {
     var deltaTime: Float { get set }

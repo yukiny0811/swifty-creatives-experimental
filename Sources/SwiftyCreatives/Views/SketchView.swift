@@ -14,7 +14,7 @@ import AppKit
 import UIKit
 #endif
 
-import CommonEntity
+import SimpleSimdSwift
 
 #if !os(visionOS)
 public struct SketchView: ViewRepresentable {

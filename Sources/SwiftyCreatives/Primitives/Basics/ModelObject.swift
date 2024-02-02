@@ -7,7 +7,7 @@
 
 import MetalKit
 import ModelIO
-import CommonEntity
+import SimpleSimdSwift
 
 open class ModelObject: Primitive<ModelObjectInfo> {
     

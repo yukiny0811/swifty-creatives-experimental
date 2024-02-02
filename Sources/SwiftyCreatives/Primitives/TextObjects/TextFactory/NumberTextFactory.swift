@@ -7,7 +7,7 @@
 
 import MetalKit
 import CoreGraphics
-import CommonEntity
+import SimpleSimdSwift
 
 public class NumberTextFactory: TextFactory {
     public init(font: FontAlias, color: ColorAlias) {

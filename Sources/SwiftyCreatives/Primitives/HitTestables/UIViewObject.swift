@@ -9,6 +9,7 @@
 
 import MetalKit
 import UIKit
+import SimpleSimdSwift
 
 open class UIViewObject: RectanglePlanePrimitive<RectShapeInfo> {
     private(set) public var texture: MTLTexture?

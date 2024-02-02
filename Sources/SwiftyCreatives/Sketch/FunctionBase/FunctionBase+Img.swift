@@ -7,7 +7,7 @@
 
 import Metal
 import simd
-import CommonEntity
+import SimpleSimdSwift
 
 public extension FunctionBase {
     func img(texture: MTLTexture, with option: ImageAdjustOption) {
