@@ -19,14 +19,6 @@ public struct Point: Equatable {
     }
     
     
-    public func sqrDistance(point: Point) -> Float {
-        let dx = point.x - self.x
-        let dy = point.y - self.y
-
-        return dx * dx + dy * dy
-    }
-    
-    
     public var normal: Point {
         let l = (x * x + y * y).squareRoot()
         let k = 1 / l

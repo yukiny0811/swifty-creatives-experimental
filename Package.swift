@@ -37,7 +37,10 @@ let package = Package(
             ]
         ),
         .target(
-            name: "iGeometry"
+            name: "iGeometry",
+            dependencies: [
+                "SimpleSimdSwift",
+            ]
         ),
         .target(
             name: "FontVertexBuilder",

@@ -10,6 +10,8 @@ import SCSound
 
 import SwiftUI
 
+@_exported import SimpleSimdSwift
+
 #if os(macOS)
 public typealias ViewRepresentable = NSViewRepresentable
 #elseif os(iOS)
