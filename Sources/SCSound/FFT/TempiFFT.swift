@@ -8,7 +8,7 @@
 
 import Accelerate
 
-public class TempiFFT : NSObject {
+class TempiFFT : NSObject {
     
     /// The length of the sample buffer we'll be analyzing.
     private(set) var size: Int
@@ -329,7 +329,7 @@ public class TempiFFT : NSObject {
     }
     
     /// A convenience function that converts a linear magnitude (like those stored in ```magnitudes```) to db (which is log 10).
-    public class func toDB(_ inMagnitude: Float) -> Float {
+    class func toDB(_ inMagnitude: Float) -> Float {
         // ceil to 128db in order to avoid log10'ing 0
         let magnitude = max(inMagnitude, 0.000000000001)
         return 10 * log10f(magnitude)

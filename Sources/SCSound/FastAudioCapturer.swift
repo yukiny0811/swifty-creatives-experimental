@@ -30,16 +30,21 @@ public class FastAudioCapturer: NSObject, AudioCapturer {
     public var fftWindowType: TempiFFTWindowType
     public var fftMinFreq: Float
     public var fftMaxFreq: Float
-    public var bandCalculationMethod: FFTBandCalculationMethod = .linear(256)
+    public var bandCalculationMethod: FFTBandCalculationMethod
     
     public convenience init(
         noiseExtractionMethod: FFTNoiseExtractionMethod = .none,
         fftWindowType: TempiFFTWindowType = .hanning,
         captureDeviceFindWithName deviceName: String,
         fftMinFreq: Float = 100,
-        fftMaxFreq: Float = 30000
+        fftMaxFreq: Float = 30000,
+        bandCalculationMethod: FFTBandCalculationMethod = .linear(256)
     ) {
-        let captureDeviceDiscovery = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInMicrophone], mediaType: .audio, position: .unspecified)
+        let captureDeviceDiscovery = AVCaptureDevice.DiscoverySession(
+            deviceTypes: [AVCaptureDevice.DeviceType.microphone],
+            mediaType: .audio,
+            position: .unspecified
+        )
         var searchedDevice: AVCaptureDevice?
         for device in captureDeviceDiscovery.devices {
             if device.localizedName.contains(deviceName) {
@@ -47,10 +52,10 @@ public class FastAudioCapturer: NSObject, AudioCapturer {
             }
         }
         if let searchedDevice = searchedDevice {
-            self.init(noiseExtractionMethod: noiseExtractionMethod, fftWindowType: fftWindowType, captureDevice: searchedDevice, fftMinFreq: fftMinFreq, fftMaxFreq: fftMaxFreq)
+            self.init(noiseExtractionMethod: noiseExtractionMethod, fftWindowType: fftWindowType, captureDevice: searchedDevice, fftMinFreq: fftMinFreq, fftMaxFreq: fftMaxFreq, bandCalculationMethod: bandCalculationMethod)
         } else {
             print("Audio Capture Device \(deviceName) not found")
-            self.init(noiseExtractionMethod: noiseExtractionMethod, fftWindowType: fftWindowType, fftMinFreq: fftMinFreq, fftMaxFreq: fftMaxFreq)
+            self.init(noiseExtractionMethod: noiseExtractionMethod, fftWindowType: fftWindowType, fftMinFreq: fftMinFreq, fftMaxFreq: fftMaxFreq, bandCalculationMethod: bandCalculationMethod)
         }
     }
     
@@ -59,12 +64,14 @@ public class FastAudioCapturer: NSObject, AudioCapturer {
         fftWindowType: TempiFFTWindowType = .hanning,
         captureDevice: AVCaptureDevice? = AVCaptureDevice.default(for: .audio),
         fftMinFreq: Float = 100,
-        fftMaxFreq: Float = 30000
+        fftMaxFreq: Float = 30000,
+        bandCalculationMethod: FFTBandCalculationMethod = .linear(256)
     ) {
         self.fftNoiseExtractionMethod = noiseExtractionMethod
         self.fftWindowType = fftWindowType
         self.fftMinFreq = fftMinFreq
         self.fftMaxFreq = fftMaxFreq
+        self.bandCalculationMethod = bandCalculationMethod
         super.init()
         guard let captureDevice = captureDevice else { return }
         guard let audioInput = try? AVCaptureDeviceInput(device: captureDevice) else {
@@ -73,9 +80,7 @@ public class FastAudioCapturer: NSObject, AudioCapturer {
         }
         let audioOutput = AVCaptureAudioDataOutput()
         audioOutput.setSampleBufferDelegate(self, queue: captureQueue)
-        #if os(macOS)
         audioOutput.audioSettings = Self.audioOutputSettings
-        #endif
         
         captureSession.beginConfiguration()
         captureSession.addInput(audioInput)
