@@ -7,7 +7,7 @@ let package = Package(
     name: "SwiftyCreativesExperimental",
     platforms: [
         .macOS(.v14),
-        .iOS(.v16),
+        .iOS(.v17),
         .visionOS(.v1)
     ],
     products: [
@@ -17,8 +17,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/yukiny0811/SwiftyCoreText", exact: "1.0.0"),
         .package(url: "https://github.com/yukiny0811/SimpleSimdSwift", exact: "1.0.1"),
+        .package(url: "https://github.com/yukiny0811/FontVertexBuilder", exact: "1.0.0"),
     ],
     targets: [
         .target(
@@ -29,26 +29,6 @@ let package = Package(
                 "SCSound"
             ],
             resources: [.process("Resources")]
-        ),
-        .target(
-            name: "iShapeTriangulation",
-            dependencies: [
-                "iGeometry"
-            ]
-        ),
-        .target(
-            name: "iGeometry",
-            dependencies: [
-                "SimpleSimdSwift",
-            ]
-        ),
-        .target(
-            name: "FontVertexBuilder",
-            dependencies: [
-                "iShapeTriangulation",
-                "SimpleSimdSwift",
-                "SwiftyCoreText"
-            ]
         ),
         .target(
             name: "SCSound"

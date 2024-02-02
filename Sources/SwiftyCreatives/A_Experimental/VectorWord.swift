@@ -10,7 +10,7 @@ import CoreText
 import SimpleSimdSwift
 import FontVertexBuilder
 
-open class VectorWord: VectorText {
+open class VectorWord: PathText {
     public var posBuffer: MTLBuffer?
     public var finalVertices: [f3] = []
     func createAndSetBuffer(from triangulatedPaths: [TriangulatedLetterPath]) {
@@ -22,7 +22,7 @@ open class VectorWord: VectorText {
         }
         posBuffer = ShaderCore.device.makeBuffer(bytes: finalVertices, length: finalVertices.count * f3.memorySize)
     }
-    public override init(text: String, fontName: String = "AppleSDGothicNeo-Bold", fontSize: Float = 10.0, bounds: CGSize = .zero, pivot: f2 = .zero, textAlignment: CTTextAlignment = .natural, verticalAlignment: VectorText.VerticalAlignment = .center, kern: Float = 0.0, lineSpacing: Float = 0.0, isClockwiseFont: Bool = true) {
+    public override init(text: String, fontName: String = "AppleSDGothicNeo-Bold", fontSize: Float = 10.0, bounds: CGSize = .zero, pivot: f2 = .zero, textAlignment: CTTextAlignment = .natural, verticalAlignment: PathText.VerticalAlignment = .center, kern: Float = 0.0, lineSpacing: Float = 0.0, isClockwiseFont: Bool = true) {
         super.init(text: text, fontName: fontName, fontSize: fontSize, bounds: bounds, pivot: pivot, textAlignment: textAlignment, verticalAlignment: verticalAlignment, kern: kern, lineSpacing: lineSpacing, isClockwiseFont: isClockwiseFont)
         let triangulatedPaths = GlyphUtil.MainFunctions.triangulate(self.calculatedPaths, isClockwiseFont: isClockwiseFont)
         createAndSetBuffer(from: triangulatedPaths)

@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "fontvertexbuilder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yukiny0811/FontVertexBuilder",
+      "state" : {
+        "revision" : "b34c94e079cd95b03e44ad0bec962f7526e26530",
+        "version" : "1.0.0"
+      }
+    },
+    {
       "identity" : "googleappmeasurement",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",

@@ -19,7 +19,7 @@ public class VectorTextFactoryRaw {
     private var bounds: CGSize
     private var pivot: f2
     private var textAlignment: CTTextAlignment
-    private var verticalAlignment: VectorText.VerticalAlignment
+    private var verticalAlignment: PathText.VerticalAlignment
     private var kern: Float
     private var lineSpacing: Float
     private var isClockwiseFont: Bool
@@ -28,7 +28,7 @@ public class VectorTextFactoryRaw {
     public var cachedBuffer: [Character: LetterCache] = [:]
     
     public func cacheCharacter(char: Character) {
-        let vectorText = VectorText(text: String(char), fontName: fontName, fontSize: fontSize, bounds: bounds, pivot: pivot, textAlignment: textAlignment, verticalAlignment: verticalAlignment, kern: kern, lineSpacing: lineSpacing, isClockwiseFont: isClockwiseFont)
+        let vectorText = PathText(text: String(char), fontName: fontName, fontSize: fontSize, bounds: bounds, pivot: pivot, textAlignment: textAlignment, verticalAlignment: verticalAlignment, kern: kern, lineSpacing: lineSpacing, isClockwiseFont: isClockwiseFont)
         let resultTuple = GlyphUtil.MainFunctions.triangulateWithoutLetterOffset(vectorText.calculatedPaths, isClockwiseFont: isClockwiseFont)
         let path = resultTuple.paths.first!
         guard let offset = resultTuple.letterOffsets.first else {
@@ -71,7 +71,7 @@ public class VectorTextFactoryRaw {
                 bounds: CGSize = .zero,
                 pivot: f2 = .zero,
                 textAlignment: CTTextAlignment = .natural,
-                verticalAlignment: VectorText.VerticalAlignment = .center,
+                verticalAlignment: PathText.VerticalAlignment = .center,
                 kern: Float = 0.0,
                 lineSpacing: Float = 0.0,
                 isClockwiseFont: Bool = true
